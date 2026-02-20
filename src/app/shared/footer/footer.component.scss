@@ -1,70 +1,132 @@
-.custom-footer {
-  background-color: #003366;
-  color: #ffffff;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
+/* --- SLANTED FOOTER --- */
+.slanted-footer {
   position: relative;
-  z-index: 10;
+  padding-top: 60px;  /* Altura del recorte */
+  padding-bottom: 20px;
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-slanted-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #003366;
+  /* Recorte hacia arriba: inclinado desde la izquierda superior */
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  z-index: 0;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
 }
 
 .custom-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
-.custom-text,
-.custom-card-footer,
+/* Estilos de Texto */
+.university-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  display: inline-block;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  .dept-title {
+    color: #FFFFFF; // Naranja/Amarillo institucional
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 8px 0;
+    font-size: 1.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    i {
+      color: #ffcc00;
+      width: 20px;
+    }
+  }
+}
+
 .custom-link {
   color: #ffffff;
   text-decoration: none;
-  font-size: 0.9rem;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #ffcc00;
+  }
 }
 
-.custom-link:hover {
-  color: #ffcc00;
-}
-
+/* Redes Sociales */
 .custom-title {
   text-transform: uppercase;
-  margin: 1rem 0 0.5rem;
-  font-size: 1rem;
-  letter-spacing: 1px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
 
 .custom-social-list {
   list-style: none;
   padding: 0;
-  margin: 0.5rem 0 0;
-}
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 
-.custom-social-list li {
-  display: inline-block;
-  margin: 0 0.25rem;
-}
+  li a {
+    color: #ffffff;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    display: inline-block;
 
-.custom-social-list li a {
-  color: #ffffff;
-  font-size: 1.2rem;
+    &:hover {
+      color: #ffcc00;
+      transform: translateY(-5px);
+    }
+  }
 }
-
-.custom-social-list li a:hover {
-  color: #ffcc00;
-}
-
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .custom-footer {
-    padding: 1.5rem 1rem;
+  .slanted-footer {
+    margin-top: 60px;
+    padding-top: 60px;
   }
-  .custom-text,
-  .custom-card-footer,
-  .custom-link {
-    font-size: 0.8rem;
+
+  .footer-slanted-bg {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
   }
-  .custom-title {
+
+  .university-name {
     font-size: 0.9rem;
+
+  }
+
+  .contact-card {
+    width: 100%;
+    padding: 15px;
   }
 }
-

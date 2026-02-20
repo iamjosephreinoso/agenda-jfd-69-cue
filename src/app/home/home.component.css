@@ -1,15 +1,31 @@
+/* --- ESTRUCTURA DEL HEADER SLANTED --- */
+
+.wrapper{
+    background-color: transparent;
+}
 
 .hero-section {
     position: relative;
-    height: 50vh;
-    background-image: url('assets/img/banner.avif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 45vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    overflow: hidden;
+    background-color: #003366;
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    /* Corte diagonal igual al de investigación */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    z-index: 1;
 }
 
 .overlay {
@@ -18,119 +34,113 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
+    background: linear-gradient(135deg, rgba(0, 51, 102, 1) 0%, rgba(0, 0, 0, 0.6) 100%); /* Azul translúcido */
+    z-index: 2;
 }
 
-/* Contenido principal centrado */
 .hero-content {
     position: relative;
-    z-index: 2;
-    color: #fff;
-    padding: 20px;
-    max-width: 90%;
+    z-index: 3;
+    margin-top: -50px; /* Sube un poco el logo */
 }
 
 .hero-logo {
-    max-width: 250px;
-    margin-bottom: 20px;
+    max-width: 280px;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
 }
-.main-content {
-    padding: 20px 20px;
+
+/* --- TÍTULO FLOTANTE (ESTILO PÍLDORA) --- */
+.title-container {
+    position: relative;
+    z-index: 10;
+    margin-top: -120px; /* Lo hace flotar sobre el corte diagonal */
+    padding: 0 15px;
 }
 
 .floating-title {
     font-family: 'Montserrat', sans-serif;
-    position: relative;
-    top: -100px;
-    z-index: 5;
-    padding: 30px 40px;
-    align-content: center;
+    padding: 40px;
     text-align: center;
-    align-self: center;
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 900;
     color: #003366;
-    -webkit-text-stroke: 1.5px #003366;
-    text-stroke: 0.5px #003366;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
     width: fit-content;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
-    box-shadow: 0 0 25px rgba(0, 51, 102, 0.4);
+    margin: 0 auto;
+    /* Bordes redondeados tipo píldora como el timeline */
+    border-radius: 20px 80px 20px 80px;
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.2);
+    border-left: 10px solid #003366;
+    border-right: 10px solid #f39c12;/* Detalle naranja salesiano */
+    line-height: 1.1;
 }
 
-
 .floating-title .subtitle {
-    display: block; /* para que aparezca debajo */
-    font-size: 2rem; /* más pequeño que el título */
+    display: block;
+    font-size: 2rem;
     font-weight: normal;
-    margin-top: 0.5em;
-    color: #003366; /* o el color que uses */
-    -webkit-text-stroke: 0px #003366; /* para navegadores WebKit (Chrome, Safari) */
-    text-stroke: 0px #003366; /* estándar, aunque poco soportado aún */
+    margin-top: 10px;
+    color: #003366;
     font-family: 'Caveat Brush', cursive;
+    line-height: 1;
 }
 
 .floating-title .subtitle2 {
-    display: block; /* ya está */
+    display: block;
     font-size: 1.5rem;
-    font-weight: normal;
-    margin: 0.3rem auto; /* centrado horizontalmente */
-    color: #003366;
-    -webkit-text-stroke: 0px #003366;
-    text-stroke: 0px #003366;
-    font-family: 'Bebas Neue', sans-serif;
-    background-color: #ffcc00;
-    width: 15%;
-    text-align: center; /* centra el texto dentro del bloque */
-    border-radius: 5px; /* opcional para suavizar bordes */
-}
-
-
-.hero-title {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    top: -30px; /* Empuja hacia arriba para flotar entre secciones */
-    z-index: 5;
-    background: rgb(255, 255, 255, 0.9);
-    padding: 30px 30px;
-    text-align: center;
-    font-size: 4rem;
     font-weight: bold;
-    color: #003366;
-    border: 3px solid #003366;
+    margin: 15px auto 0;
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #f39c12;
+    padding: 5px 25px;
     width: fit-content;
-    margin: auto;
-    border-radius: 15px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    border-radius: 50px 10px 50px 10px; /* Asimetría diagonal */
 }
 
-footer.custom-footer {
-    position: relative;
-    z-index: 10;
-    background-color: #003366;
-    color: #fff;
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content {
+    padding: 60px 20px;
+    background-color: transparent;
 }
 
-
-/* Responsive para móviles */
+/* --- AJUSTES RESPONSIVE (COMPACTO) --- */
 @media (max-width: 768px) {
-    .floating-title {
-        max-width: 80%;
-        width: fit-content;
-        font-size: 1.8rem;
-        -webkit-text-stroke: 1px #003366;
-        text-stroke: 1px #003366;
-
+    .hero-section {
+        height: 45vh;
     }
+
+    .header-background {
+        clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+    }
+
+    .hero-logo {
+        max-width: 200px;
+    }
+
+    .title-container {
+        margin-top: -80px;
+    }
+
+    .floating-title {
+        max-width: 95%;
+        padding: 25px 20px;
+        font-size: 1.8rem;
+        border-radius: 15px 40px 15px 40px;
+        line-height: 1.2; /* Interlineado compacto */
+    }
+
     .floating-title .subtitle {
         font-size: 1.5rem;
-
+        margin-top: 5px;
+        line-height: 1.1;
     }
+
     .floating-title .subtitle2 {
-        font-size: 1.3rem;
-        width: 50%;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        padding: 3px 20px;
     }
 }

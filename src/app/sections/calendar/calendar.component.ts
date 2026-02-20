@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-calendar',
@@ -21,4 +22,17 @@ export class CalendarComponent {
     { name: 'Jueves 25', color: '#003366' },
     { name: 'Viernes 26', color: '#003366' },
   ];
+
+    @ViewChild('carousel', { static: true }) carousel!: ElementRef;
+
+    scrollNext() {
+        // Obtenemos el ancho del visor para que el salto sea de una tarjeta exacta
+        const width = this.carousel.nativeElement.offsetWidth;
+        this.carousel.nativeElement.scrollLeft += width;
+    }
+
+    scrollPrev() {
+        const width = this.carousel.nativeElement.offsetWidth;
+        this.carousel.nativeElement.scrollLeft -= width;
+    }
 }

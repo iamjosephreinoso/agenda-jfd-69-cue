@@ -1,165 +1,153 @@
 <div class="wrapper">
-    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('../../../assets/img/banner.avif'); background-color: rgba(0, 0, 0, 0.2); background-blend-mode: multiply;">
-        <div class="content-center brand">
-            <h1 class="floating-title">
-                <img src="assets/img/logoupscolor.png" alt="Logo UPS" class="hero-logo" />
-                MENOS FORMATOS, MÁS CONEXIÓN GENUINA
-            </h1>
+    <header class="slanted-header">
+        <div class="header-background" [style.background-image]="'url(assets/img/banner.avif)'">
+            <div class="header-overlay"></div>
         </div>
-        <div class="filter"></div>
-    </div>
+
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="assets/img/logoupsblanco.png" alt="Logo UPS" class="ups-logo-slanted" />
+            </div>
+            <h1 class="slanted-title">MENOS FORMATOS, MÁS CONEXIÓN GENUINA</h1>
+            <p class="slanted-subtitle">Coordinación de Investigación Sede Cuenca</p>
+
+        </div>
+    </header>
     <div class="container_cro">
-        <h4 style="color: black; font-size: 1.2rem;">Coordinación de Investigación Sede Cuenca</h4><br>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <a class="nav-link"
-                   [ngClass]="{ 'active': activeTab === 'tab1' }"
-                   id="tab1-tab"
-                   data-toggle="tab"
-                   href="#tab1"
-                   role="tab"
-                   aria-controls="tab1"
-                   [attr.aria-selected]="activeTab === 'tab1'">Lunes, 15 de Septiembre</a>
+            <li class="nav-item">
+                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab1' }" (click)="activeTab = 'tab1'" role="button">Lunes, 15 de Septiembre</a>
             </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link"
-                   [ngClass]="{ 'active': activeTab === 'tab2' }"
-                   id="tab2-tab"
-                   data-toggle="tab"
-                   href="#tab2"
-                   role="tab"
-                   aria-controls="tab2"
-                   [attr.aria-selected]="activeTab === 'tab2'">Martes, 16 de Septiembre</a>
+            <li class="nav-item">
+                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab2' }" (click)="activeTab = 'tab2'" role="button">Martes, 16 de Septiembre</a>
             </li>
         </ul>
 
-        <div class="tab-content mt-3" id="myTabContent">
-            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab1' }" id="tab1" role="tabpanel">
+        <div class="tab-content mt-5">
+            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab1' }">
                 <ul class="timeline">
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>KICK-OFF ENERGIZANTE</h6>
-                            <p>Edificio Guillermo Mensi</p>
-                            <small class="text-muted">08h00 - 08h15</small>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">01</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">08h00 - 08h15</span><h5>KICK-OFF ENERGIZANTE</h5></div>
+                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
+                            <div class="timeline-body"><p>P. Juan Cárdenas Tapia sbd. PhD.</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>FASE 1: "CONOCIMIENTO PROFUNDO"</h6>
-                            <p>Edificio Guillermo Mensi</p>
-                            <small class="text-muted">08h15 - 10h00</small>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">02</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">08h15 - 10h00</span><h5>FASE 1: "CONOCIMIENTO PROFUNDO"</h5></div>
+                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>RECESO</h6>
-                            <small class="text-muted">10h00 - 10h15</small>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">03</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">10h00 - 10h15</span><h5>RECESO</h5></div>
+                            <div class="timeline-body"><p>Tiempo de descanso y café</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>FASE 2A: "FORMULACIÓN DESAFÍOS"</h6>
-                            <p>Edificio Guillermo Mensi</p>
-                            <small class="text-muted">10h30 - 12h00</small>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">04</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">10h30 - 12h00</span><h5>FASE 2A: "FORMULACIÓN DESAFÍOS"</h5></div>
+                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6> 12h00 - FIN DE LA JORNADA MATUTINA</h6>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">05</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">12h00</span><h5>FIN JORNADA MATUTINA</h5></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>ACTIVACIÓN POST-ALMUERZO</h6>
-                            <p>Edificio Guillermo Mensi</p>
-                            <small class="text-muted">14h00 - 14h15</small><br><br>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">06</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">14h00 - 14h15</span><h5>ACTIVACIÓN POST-ALMUERZO</h5></div>
+                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>FASE 2B: "SOLUCIONES CRUZADAS"</h6>
-                            <p>Edificio Guillermo Mensi</p>
-                            <small class="text-muted">14h15 - 15h30</small><br><br>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">07</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">14h15 - 15h30</span><h5>FASE 2B: "SOLUCIONES CRUZADAS"</h5></div>
+                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>RECESO</h6>
-                            <small class="text-muted">15h30 - 15h45</small>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">08</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">15h30 - 15h45</span><h5>RECESO</h5></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>FASE 3: "NETWORKING GENERATIVO"</h6>
-                            <p>Edificio Guillermo Mensi</p>
-                            <small class="text-muted">15h45 - 17h00</small><br><br>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">09</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">15h45 - 17h00</span><h5>FASE 3: "NETWORKING GENERATIVO"</h5></div>
+                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>FASE 4: "PRÓXIMOS PASOS SIMPLES"</h6>
-                            <p>Edificio Guillermo Mensi</p>
-                            <small class="text-muted">17h00 - 18h00</small><br><br>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">10</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">17h00 - 18h00</span><h5>FASE 4: "PRÓXIMOS PASOS SIMPLES"</h5></div>
+                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6> 18h00 - FIN DE LA JORNADA</h6>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">11</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">18h00</span><h5>FIN DE LA JORNADA</h5></div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab2' }" id="tab2" role="tabpanel">
+
+            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab2' }">
                 <ul class="timeline">
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>ACTIVACIÓN RÁPIDA</h6>
-                            <p>Edificio Guillermo Mensi</p>
-                            <small class="text-muted">15h00 - 15h10</small><br><br>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">01</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">15h00 - 15h10</span><h5>ACTIVACIÓN RÁPIDA</h5></div>
+                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>MEGA FASE 1: "CONEXIONES INSTITUCIONALES"</h6>
-                            <p>Edificio Guillermo Mensi</p>
-                            <small class="text-muted">15h10 - 16h20</small><br><br>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">02</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">15h10 - 16h20</span><h5>MEGA FASE 1: "CONEXIONES INSTITUCIONALES"</h5></div>
+                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>RECESO</h6>
-                            <small class="text-muted">16h20 - 16h35</small>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">03</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">16h20 - 16h35</span><h5>RECESO</h5></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>MEGA FASE 2: "COMPROMISO GENUINO"</h6>
-                            <p>Edificio Guillermo Mensi</p>
-                            <small class="text-muted">16h35 - 17h45</small><br><br>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">04</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">16h35 - 17h45</span><h5>MEGA FASE 2: "COMPROMISO GENUINO"</h5></div>
+                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>CELEBRACIÓN FINAL</h6>
-                            <p>Edificio Guillermo Mensi</p>
-                            <small class="text-muted">17h45 - 18h00</small><br><br>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">05</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">17h45 - 18h00</span><h5>CELEBRACIÓN FINAL</h5></div>
+                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6> 18h00 - FIN DE LA JORNADA</h6>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">06</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">18h00</span><h5>FIN DE LA JORNADA</h5></div>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <!-- Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </div>
-

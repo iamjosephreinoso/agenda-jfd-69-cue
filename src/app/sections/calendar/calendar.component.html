@@ -1,192 +1,162 @@
-<div class="calendar-container">
-    <h2 class="calendar-title">Primera Semana</h2>
-    <div class="calendar-days">
-        <div class="calendar-card">
-            <div class="calendar-header" style="background-color:#003366">Lunes 15/09</div>
-            <div class="calendar-body">
-                <ul class="timeline">
-                    <li class="timeline-item">
-                        <a [routerLink]="['/investigation']" [queryParams]="{ tab: 1 }" class="timeline-link">
-                            <div class="timeline-content">
-                                <h6>Formación de Investigación</h6>
-                                <p>Día 1</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+<div class="calendar-wrapper">
+
+    <div class="calendar-container">
+        <h2 class="calendar-main-title">Primera Semana</h2>
+
+        <div class="carousel-master">
+            <button class="nav-btn prev" (click)="scrollPrev()" aria-label="Anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="carousel-viewport" #carousel>
+                <div class="carousel-track">
+
+                    <div class="calendar-card color-1">
+                        <div class="calendar-header">
+                            <span class="day-label">Lunes</span>
+                            <span class="date-label">15 de Septiembre</span>
+                        </div>
+                        <div class="calendar-body">
+                            <ul class="calendar-timeline">
+                                <li class="timeline-pill">
+                                    <a [routerLink]="['/investigation']" [queryParams]="{ tab: 'tab1' }">
+                                        <div class="pill-icon"><i class="fas fa-microscope"></i></div>
+                                        <div class="pill-info">
+                                            <h6>Formación de Investigación</h6>
+                                            <p>Jornada Intensiva - Día 1</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="calendar-card color-2">
+                        <div class="calendar-header">
+                            <span class="day-label">Martes</span>
+                            <span class="date-label">16 de Septiembre</span>
+                        </div>
+                        <div class="calendar-body">
+                            <ul class="calendar-timeline">
+                                <li class="timeline-pill">
+                                    <a [routerLink]="['/investigation']" [queryParams]="{ tab: 'tab2' }">
+                                        <div class="pill-icon"><i class="fas fa-chart-line"></i></div>
+                                        <div class="pill-info">
+                                            <h6>Formación de Investigación</h6>
+                                            <p>Jornada Intensiva - Día 2</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="calendar-card color-3">
+                        <div class="calendar-header">
+                            <span class="day-label">Miércoles</span>
+                            <span class="date-label">17 de Septiembre</span>
+                        </div>
+                        <div class="calendar-body empty-state">
+                            <i class="fas fa-hourglass-half"></i>
+                            <p>Actividades en proceso de validación académica</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
-        <div class="calendar-card">
-            <div class="calendar-header" style="background-color:#003366">Martes 16/09</div>
-            <div class="calendar-body">
-                <ul class="timeline">
-                    <li class="timeline-item">
-                        <a [routerLink]="['/investigation']" [queryParams]="{ tab: 2 }" class="timeline-link">
-                            <div class="timeline-content">
-                                <h6>Formación de Investigación</h6>
-                                <p>Día 2</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="calendar-card">
-            <div class="calendar-header" style="background-color:#003366">Miércoles 17/09</div>
-            <div class="calendar-body">
-                <ul class="timeline">
-                    <!--<li class="timeline-item">
-                        <a [routerLink]="['/general_call']" class="timeline-link">
-                            <div class="timeline-content">
-                                <h6>CONVOCATORIA GENERAL</h6>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="timeline-item">
-                        <a [routerLink]="['/unadedvi']" class="timeline-link">
-                            <div class="timeline-content">
-                                <h6>Carreras en Línea</h6>
-                            </div>
-                        </a>
-                    </li>-->
-                </ul>
-            </div>
-        </div>
-        <div class="calendar-card">
-            <div class="calendar-header" style="background-color:#003366">Jueves 18/09</div>
-            <div class="calendar-body">
-                <ul class="timeline">
-                    <li class="timeline-item">
-                        <a [routerLink]="['/teacher_training']" [queryParams]="{ tab: 1 }" class="timeline-link">
-                            <div class="timeline-content">
-                                <h6>Formación Docente</h6>
-                                <p>Día 1</p>
-                            </div>
-                        </a>
-                    </li>
-                    <!--<p>
-                        <button routerLink="/form"
-                                style="font-family: 'Caveat Brush', cursive; width: 90%; background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 1.4rem">
-                            Inscripciones Taller Práctico 1 <b>*OBLIGATORIO</b>
-                        </button>
-                    </p>-->
-                </ul>
-            </div>
-        </div>
-        <div class="calendar-card">
-            <div class="calendar-header" style="background-color:#003366">Viernes 19/09</div>
-            <div class="calendar-body">
-                <ul class="timeline">
-                    <li class="timeline-item">
-                        <a [routerLink]="['/teacher_training']" [queryParams]="{ tab: 2 }" class="timeline-link">
-                            <div class="timeline-content">
-                                <h6>Formación Docente</h6>
-                                <p>Día 2</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+
+            <button class="nav-btn next" (click)="scrollNext()" aria-label="Siguiente">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
     </div>
-    <p>
-        <button
-                routerLink="/groups"
-                style="font-family: 'Caveat Brush', cursive; width: 100%; background-color: #003366; color: white; border: none; padding: 20px 20px; border-radius: 5px; cursor: pointer; font-size: 1.7rem">
-            <i class="fas fa-search"></i> Ver información sobre grupos de trabajo
+
+    <div class="action-wrapper">
+        <button routerLink="/groups" class="btn-slanted-main">
+            <i class="fas fa-users-cog"></i> Ver información sobre grupos de trabajo
         </button>
-    </p>
-</div>
-<div class="calendar-container">
-    <h2 class="calendar-title">Segunda Semana</h2>
-    <div class="calendar-days">
-        <div class="calendar-card">
-            <div class="calendar-header" style="background-color:#003366">Lunes 22/09</div>
-            <div class="calendar-body">
-                <ul class="timeline">
-                    <li class="timeline-item">
-                        <a [routerLink]="['/lala']" [queryParams]="{ tab: 1 }" class="timeline-link">
-                            <div class="timeline-content">
+    </div>
+
+    <div class="calendar-container">
+        <h2 class="calendar-main-title">Segunda Semana</h2>
+
+        <div class="calendar-days">
+            <div class="calendar-card color-1">
+                <div class="calendar-header">Lunes 22/09</div>
+                <div class="calendar-body">
+                    <ul class="calendar-timeline">
+                        <li class="timeline-pill">
+                            <a [routerLink]="['/lala']" [queryParams]="{ tab: 'tab1' }">
                                 <h6>Consejería Académica (LALA)</h6>
                                 <p>Grupo 1</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="calendar-card">
-            <div class="calendar-header" style="background-color:#003366">Martes 23/09</div>
-            <div class="calendar-body">
-                <ul class="timeline">
-                    <li class="timeline-item">
-                        <a [routerLink]="['/lala']" [queryParams]="{ tab: 2 }" class="timeline-link">
-                            <div class="timeline-content">
-                                <h6>Consejería Académica (LALA)</h6>
-                                <p>Grupo 2</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="calendar-card">
-            <div class="calendar-header" style="background-color:#003366">Miércoles 24/09</div>
-            <div class="calendar-body">
-                <ul class="timeline">
-                    <li class="timeline-item">
-                        <a class="timeline-link">
-                            <div class="timeline-content">
-                                <h6>Reunión de Directores de Carrera y Unidad de Titulación</h6>
-                                <p>11h00 - 12h30</p>
-                                <p>Auditorio Mons. Luna Tobar</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="timeline-item">
-                        <a class="timeline-link">
-                            <div class="timeline-content">
-                                <h6>Reunión por Carreras</h6>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="calendar-card">
-            <div class="calendar-header" style="background-color:#003366">Jueves 25/09</div>
-            <div class="calendar-body">
-                <ul class="timeline">
-                    <!--<li class="timeline-item">
-                        <a [routerLink]="['/avac']" class="timeline-link">
-                            <div class="timeline-content">
-                                <h6>Ambientes Virtuales de Aprendizaje Cooperativo (AVAC)</h6>
-                            </div>
-                        </a>
-                    </li>-->
-                    <li class="timeline-item">
-                        <a [routerLink]="['/unissma']" class="timeline-link">
-                            <div class="timeline-content">
-                                <h6>UNISSMA</h6>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="calendar-card">
-            <div class="calendar-header" style="background-color:#003366">Viernes 26/09</div>
-            <div class="calendar-body">
-                <ul class="timeline">
-                        <li class="timeline-item">
-                            <a class="timeline-link">
-                                <div class="timeline-content">
-                                    <h6>Reunión por Carreras</h6>
-                                </div>
                             </a>
                         </li>
-                </ul>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="calendar-card color-2">
+                <div class="calendar-header">Martes 23/09</div>
+                <div class="calendar-body">
+                    <ul class="calendar-timeline">
+                        <li class="timeline-pill">
+                            <a [routerLink]="['/lala']" [queryParams]="{ tab: 'tab2' }">
+                                <h6>Consejería Académica (LALA)</h6>
+                                <p>Grupo 2</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="calendar-card color-3">
+                <div class="calendar-header">Miércoles 24/09</div>
+                <div class="calendar-body">
+                    <ul class="calendar-timeline">
+                        <li class="timeline-pill">
+                            <a class="no-link">
+                                <h6>Directores de Carrera y Unidad de Titulación</h6>
+                                <p class="time-info"><i class="far fa-clock"></i> 11h00 - 12h30</p>
+                                <p class="loc-info"><i class="fas fa-map-marker-alt"></i> Mons. Luna Tobar</p>
+                            </a>
+                        </li>
+                        <li class="timeline-pill">
+                            <a class="no-link secondary">
+                                <h6>Reunión por Carreras</h6>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="calendar-card color-4">
+                <div class="calendar-header">Jueves 25/09</div>
+                <div class="calendar-body">
+                    <ul class="calendar-timeline">
+                        <li class="timeline-pill">
+                            <a [routerLink]="['/unissma']">
+                                <h6>UNISSMA</h6>
+                                <p>Sesión General</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="calendar-card color-5">
+                <div class="calendar-header">Viernes 26/09</div>
+                <div class="calendar-body">
+                    <ul class="calendar-timeline">
+                        <li class="timeline-pill">
+                            <a class="no-link">
+                                <h6>Reunión por Carreras</h6>
+                                <p>Cierre de Jornadas</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+
 </div>
