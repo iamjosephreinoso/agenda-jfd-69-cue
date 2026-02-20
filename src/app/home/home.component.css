@@ -1,0 +1,136 @@
+
+.hero-section {
+    position: relative;
+    height: 50vh;
+    background-image: url('assets/img/banner.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Contenido principal centrado */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+    max-width: 90%;
+}
+
+.hero-logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+.main-content {
+    padding: 20px 20px;
+}
+
+.floating-title {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    top: -100px;
+    z-index: 5;
+    padding: 30px 40px;
+    align-content: center;
+    text-align: center;
+    align-self: center;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #003366;
+    -webkit-text-stroke: 1.5px #003366;
+    text-stroke: 0.5px #003366;
+    width: fit-content;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 51, 102, 0.4);
+}
+
+
+.floating-title .subtitle {
+    display: block; /* para que aparezca debajo */
+    font-size: 2rem; /* más pequeño que el título */
+    font-weight: normal;
+    margin-top: 0.5em;
+    color: #003366; /* o el color que uses */
+    -webkit-text-stroke: 0px #003366; /* para navegadores WebKit (Chrome, Safari) */
+    text-stroke: 0px #003366; /* estándar, aunque poco soportado aún */
+    font-family: 'Caveat Brush', cursive;
+}
+
+.floating-title .subtitle2 {
+    display: block; /* ya está */
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 0.3rem auto; /* centrado horizontalmente */
+    color: #003366;
+    -webkit-text-stroke: 0px #003366;
+    text-stroke: 0px #003366;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #ffcc00;
+    width: 15%;
+    text-align: center; /* centra el texto dentro del bloque */
+    border-radius: 5px; /* opcional para suavizar bordes */
+}
+
+
+.hero-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    top: -30px; /* Empuja hacia arriba para flotar entre secciones */
+    z-index: 5;
+    background: rgb(255, 255, 255, 0.9);
+    padding: 30px 30px;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #003366;
+    border: 3px solid #003366;
+    width: fit-content;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer.custom-footer {
+    position: relative;
+    z-index: 10;
+    background-color: #003366;
+    color: #fff;
+}
+
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .floating-title {
+        max-width: 80%;
+        width: fit-content;
+        font-size: 1.8rem;
+        -webkit-text-stroke: 1px #003366;
+        text-stroke: 1px #003366;
+
+    }
+    .floating-title .subtitle {
+        font-size: 1.5rem;
+
+    }
+    .floating-title .subtitle2 {
+        font-size: 1.3rem;
+        width: 50%;
+    }
+}

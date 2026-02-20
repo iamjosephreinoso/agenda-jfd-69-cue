@@ -1,0 +1,145 @@
+/* ================= Contenedor general del calendario ================= */
+.calendar-container {
+    display: flex;
+    flex-direction: column;   /* primero título, luego tarjetas */
+    align-items: center;
+    margin: 30px auto;
+    gap: 20px;
+    width: 90%;
+    background: rgba(0, 51, 102, 0.01);
+    border-radius: 20px;
+    position: relative;
+    top: -80px;
+    z-index: 5;
+    /* box-shadow: 0 0 25px rgba(0, 51, 102, 0.4); */
+}
+
+/* ================= Título del calendario ================= */
+.calendar-title {
+    display: block;
+    font-size: 2.2rem;
+    margin: 0.3rem auto;
+    color: #003366;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #ffcc00;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* ================= Contenedor de días/tarjetas ================= */
+.calendar-days {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+
+}
+
+/* ================= Cada tarjeta del calendario ================= */
+.calendar-card {
+    flex: 1 1 200px;
+    max-width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 51, 102, 0.4);
+    background-color: white;
+}
+
+/* Header de cada card */
+.calendar-header {
+    color: white;
+    font-size: 1.4rem;
+    padding: 10px;
+    font-family: 'Caveat Brush', cursive;
+}
+
+/* Body de cada card */
+/* ================= Body de cada card ================= */
+.calendar-body {
+    background: #ffffff;
+    min-height: 120px;
+    padding: 0px; /* eliminamos padding para que timeline ocupe todo */
+    display: flex;
+    justify-content: center;  /* centra horizontal */
+    align-items: center;      /* centra vertical */
+    flex-direction: column;
+}
+
+/* ================= Línea de tiempo dentro de body ================= */
+.timeline {
+    display: flex;
+    flex-direction: column; /* si hay varias notas, se apilan verticalmente */
+    justify-content: center; /* centra vertical */
+    align-items: center;     /* centra horizontal */
+    width: 100%;             /* ocupa todo el ancho */
+    height: 100%;            /* ocupa todo el alto de calendar-body */
+    padding: 15px;
+    margin: 0;
+    list-style: none;
+}
+
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    padding: 10px 5px;
+    box-sizing: border-box;
+}
+
+.timeline-item .timeline-content {
+    border-color: #003366;
+    border-style: solid;
+    border-width: 0.2px;
+    border-right: 5px solid #f39c12;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.timeline-content h6 {
+    color: #003366;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.timeline-content p {
+    font-family: 'Fira Sans', sans-serif;
+    color: #003366;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* ================= Responsive ================= */
+/* 📱 Móviles pequeños */
+@media (max-width: 600px) {
+    .calendar-container { width: 95%; padding: 15px; }
+    .calendar-title { width: 80%; font-size: 1.6rem; padding: 8px; }
+    .calendar-card { flex: 1 1 100%; max-width: 100%; }
+    .calendar-body { min-height: 80px; }
+}
+
+/* 📱 Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .calendar-container { width: 90%; padding: 20px; }
+    .calendar-title { width: 50%; font-size: 1.8rem; }
+    .calendar-card { flex: 1 1 45%; }
+}
+
+/* 💻 Escritorio */
+@media (min-width: 1025px) {
+    .calendar-container { width: 80%; }
+    .calendar-title { width: 30%; font-size: 2.2rem; }
+    .calendar-card { flex: 1 1 18%; }
+}

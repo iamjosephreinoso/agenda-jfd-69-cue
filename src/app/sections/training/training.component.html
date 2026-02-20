@@ -1,0 +1,178 @@
+<div class="wrapper">
+    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/banner.avif'); background-color: rgba(0, 0, 0, 0.2); background-blend-mode: multiply;">
+        <div class="filter"></div>
+        <div class="content-center brand">
+            <h1 class="floating-title">
+                <img src="assets/img/logoupscolor.png" alt="Logo UPS" class="hero-logo" />
+                FORMACIÓN GENERAL DOCENTE</h1>
+        </div>
+    </div>
+    <div class="container_cro">
+        <h4 style="color: black; font-size: 1.2rem;" >Vicerrectorado Académico</h4><br>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link"
+                   [ngClass]="{ 'active': activeTab === 'tab1' }"
+                   id="tab1-tab"
+                   data-toggle="tab"
+                   href="#tab1"
+                   role="tab"
+                   aria-controls="tab1"
+                   [attr.aria-selected]="activeTab === 'tab1'">Jueves, 18 de Septiembre</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link"
+                   [ngClass]="{ 'active': activeTab === 'tab2' }"
+                   id="tab2-tab"
+                   data-toggle="tab"
+                   href="#tab2"
+                   role="tab"
+                   aria-controls="tab2"
+                   [attr.aria-selected]="activeTab === 'tab2'">Viernes, 19 de Septiembre</a>
+            </li>
+        </ul>
+
+        <div class="tab-content mt-3" id="myTabContent">
+            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab1' }" id="tab1" role="tabpanel">
+                <ul class="timeline">
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>Momento de Oración</h6>
+                            <p>Teatro Carlos Crespi</p>
+                            <p>Departamento de Pastoral</p>
+                            <small class="text-muted">08h30 - 08h40</small>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>Intervención del Rector</h6>
+                            <p>Teatro Carlos Crespi</p>
+                            <p>P. Juan Cárdenas sdb. PhD.</p>
+                            <small class="text-muted">08h40 - 10h10</small>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>RECESO</h6>
+                            <small class="text-muted">10h10 - 10h40</small>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>Charla: La ventaja injusta - Cómo la IA esta forjando los gigantes empresariales del mañana</h6>
+                            <p>Teatro Carlos Crespi</p>
+                            <p>Ing. Charlie Arellano MSc.</p>
+                            <small class="text-muted">10h40 - 12h40</small>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6> 12h40 - FIN DE LA JORNADA MATUTINA</h6>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>Taller Práctico 1</h6>
+                            <p>Salas de Cómputo - Edificio Cornelio Merchán</p>
+                            <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <small class="text-muted">14h30 - 16h00</small><br><br>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>RECESO</h6>
+                            <small class="text-muted">16h00 - 16h30</small>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>Taller Práctico 1</h6>
+                            <p>Salas de Cómputo - Edificio Cornelio Merchán</p>
+                            <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <small class="text-muted">16h30 - 17h30</small><br><br>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6> 17h30 - FIN DE LA JORNADA</h6>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab2' }" id="tab2" role="tabpanel">
+                <ul class="timeline">
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>Taller Práctico 1</h6>
+                            <p>Salas de Cómputo - Edificio Cornelio Merchán</p>
+                            <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <small class="text-muted">08h30 - 10h30</small><br><br>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>RECESO</h6>
+                            <small class="text-muted">10h30 - 11h00</small>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>El uso de la inteligencia artificial en la academia límites y alcances</h6>
+                            <p>Teatro Carlos Crespi</p>
+                            <p>Lcdo. José Juncosa PhD.</p>
+                            <small class="text-muted">11h00 - 11h30</small>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>Presentación del Libro: Prospectiva Universitaria, Retos y Oportunidad al 2033</h6>
+                            <p>Teatro Carlos Crespi</p>
+                            <p>Lcdo. Fernando Pesantez. PhD.</p>
+                            <small class="text-muted">11h30 - 12h00</small>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6> 12h00 - FIN DE LA JORNADA MATUTINA</h6>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>Taller 2: Prospectiva Universitaria, Retos y Oportunidades al 2033</h6>
+                            <p>Aulas - Edificio Guillermo Mensi</p>
+                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; font-size: 0.8rem; border-radius: 5px; cursor: pointer;">Ver Información</button></p>
+                            <small class="text-muted">14h30 - 16h00</small>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>RECESO</h6>
+                            <small class="text-muted">16h00 - 16h30</small>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6>Plenaria</h6>
+                            <p>Teatro Carlos Crespi</p>
+                            <p>Líderes del Taller</p>
+                            <small class="text-muted">16h30 - 17h30</small>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-content">
+                            <h6> 17h30 - FIN DE LA JORNADA</h6>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div>
+

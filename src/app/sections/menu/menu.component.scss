@@ -1,0 +1,83 @@
+/* General wrapper styling */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;
+  overflow-x: hidden; /* Evitar que se desborde horizontalmente */
+}
+
+/* Contenedor principal */
+.container_tar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* Limitar el ancho máximo del contenedor */
+  box-sizing: border-box;
+}
+
+/* Estilo para cada tarjeta */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 30%; /* Hacemos que las tarjetas ocupen el 30% del ancho disponible */
+  max-width: 30%; /* Máximo ancho de tarjeta */
+  margin: 10px;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilo para el cuerpo de la tarjeta */
+.card-body {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 30%; /* 2 tarjetas por fila en pantallas medianas */
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; /* 1 tarjeta por fila en pantallas pequeñas */
+    max-width: 100%;
+  }
+}
+
+.card-header {
+  background-color: #003366; /* Azul sólido */
+  color: #ffffff; /* Letras blancas */
+  padding: 10px 15px; /* Espaciado interno */
+  font-size: 1.1em; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Centrar el texto */
+  border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+  margin: 0; /* Evitar márgenes extra */
+  text-decoration: none; /* Eliminar subrayado */
+}

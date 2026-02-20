@@ -1,0 +1,18 @@
+# Node modules
+/node_modules/
+
+# Angular build artifacts
+/dist/
+
+# Angular environment files
+/src/environments/
+
+# npm packages lock
+package-lock.json
+
+# Angular internal files
+/.angular/
+
+# IDEs and editor files
+/.idea/
+.vercel

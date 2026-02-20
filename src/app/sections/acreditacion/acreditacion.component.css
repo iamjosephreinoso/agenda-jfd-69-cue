@@ -1,0 +1,212 @@
+/* Estilo general del contenedor */
+.container_cro {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo del título */
+.h1-seo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.container_cro p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Estilos de la línea de tiempo */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    list-style: none;
+}
+
+/* Línea vertical */
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    background: #ddd;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Cada evento */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Alternar lados */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* Círculos numerados */
+.timeline-item::before {
+    content: attr(data-num);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+    color: #2f4f5f;
+    border: 5px solid #007bff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarjetas de eventos */
+.timeline-content {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Etiqueta de categoría (colores alternados) */
+.timeline-item:nth-child(odd) .timeline-content {
+    border-left: 5px solid #001f4d;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    border-right: 5px solid #f39c12;
+}
+
+.timeline-content h6 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2f4f5f;
+}
+
+.timeline-content p {
+    font-size: 14px;
+    color: #6f6f6f;
+}
+
+/* Íconos */
+.timeline-content .icon {
+    font-size: 30px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    background: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left;
+        padding-left: 40px;
+    }
+
+    .timeline-item::before {
+        left: 20px;
+    }
+}
+
+/* Centrar los enlaces dentro del contenedor de navegación */
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Opcionalmente, puedes ajustar el color del texto, el fondo o los bordes */
+.nav-link {
+    color: #000;
+    font-weight: bold;
+}
+
+/* Cambiar la apariencia activa del tab */
+.nav-link.active {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+/* ------------------------------------------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #003366;
+    color: #fff;
+    padding: 50px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #003366;
+    border-radius: 8px;
+}
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+p {
+    font-size: 18px;
+    font-weight: bold;
+}
+.progress-container {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.progress-bar {
+    width: 70%;
+    height: 20px;
+    background-color: #ffcc00;
+    border-radius: 10px;
+}
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.notify-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

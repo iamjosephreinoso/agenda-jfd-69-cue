@@ -1,0 +1,75 @@
+<div class="wrapper">
+    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/banner.avif'); background-color: rgba(0, 0, 0, 0.2); background-blend-mode: multiply;">
+        <div class="filter"></div>
+        <div class="content-center brand">
+            <h1 class="floating-title">
+                <img src="assets/img/logoupscolor.png" alt="Logo UPS" class="hero-logo" />
+                GRUPOS DE TRABAJO</h1>
+        </div>
+    </div>
+
+    <main class="app-main container">
+        <div class="search-container">
+            <mat-form-field>
+                <mat-label>Buscar Docente <mat-icon matPrefix style="color: #000000;">search</mat-icon></mat-label><br><br>
+
+                <input
+                        matInput
+                        placeholder="Nombre del Docente"
+                        [(ngModel)]="filtroGrupo"
+                        (input)="filtrar()"
+                />
+            </mat-form-field>
+        </div>
+
+        <section *ngIf="gruposPaginados.length > 0; else noData">
+            <div class="row">
+                <div
+                        class="col-md-4 mb-3"
+                        *ngFor="let grupo of gruposPaginados"
+                >
+                    <mat-card class="result-card h-100">
+                        <mat-card-title>{{ grupo.NOMBRE }}</mat-card-title>
+                        <mat-card-actions>
+                            <button
+                                    mat-raised-button
+                                    color="primary"
+                                    style="font-weight: normal;"
+                                    (click)="mostrarDetalle(grupo)"
+                            >
+                                Ver Información
+                            </button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </div>
+
+            <!-- Paginación manual -->
+            <div class="pagination-controls text-center mt-4">
+                <button
+                        mat-raised-button
+                        style="color: #F0F0F0; background-color: #003366;"
+                        (click)="paginaAnterior()"
+                        [disabled]="currentPage === 1"
+                >
+                    Anterior
+                </button>
+
+                <span style="margin: 0 1rem; color: black;">Página {{ currentPage }} de {{ totalPages }}</span>
+
+                <button
+                        mat-raised-button
+                        style="color: #F0F0F0; background-color: #003366;"
+                        (click)="paginaSiguiente()"
+                        [disabled]="currentPage === totalPages"
+                >
+                    Siguiente
+                </button>
+            </div>
+        </section>
+
+        <ng-template #noData>
+            <p class="text-center text-muted">No existe docente.</p>
+        </ng-template>
+    </main>
+</div>

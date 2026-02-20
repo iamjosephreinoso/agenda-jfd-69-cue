@@ -1,0 +1,43 @@
+<div class="wrapper">
+    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/banner.avif'); background-color: rgba(0, 0, 0, 0.2); background-blend-mode: multiply;">
+        <div class="filter"></div>
+        <div class="content-center brand">
+            <h1 class="floating-title">
+                <img src="assets/img/logoupscolor.png" alt="Logo UPS" class="hero-logo" />
+                INSCRIPCIONES TALLERES</h1>
+        </div>
+    </div>
+
+    <main class="app-main container">
+
+        <form [formGroup]="miFormulario" (ngSubmit)="enviarFormulario()">
+            <label>Cédula:</label>
+            <input formControlName="cedula" type="text"><br>
+
+            <label>Nombres:</label>
+            <input formControlName="nombres" type="text" (input)="toUpperCase('nombres', $event)"><br>
+
+            <label>Apellidos:</label>
+            <input formControlName="apellidos" type="text" (input)="toUpperCase('apellidos', $event)"><br>
+
+            <label>Correo Institucional:</label>
+            <input formControlName="correo" type="email"><br>
+
+            <label>Taller:</label>
+            <select formControlName="curso" (change)="onCursoChange($event)">
+                <option value="">-- Seleccione un Taller --</option>
+                <option *ngFor="let c of cursos" [value]="c">{{ c }}</option>
+            </select><br>
+
+            <label *ngIf="gruposDisponibles.length > 0">Grupo:</label>
+            <select *ngIf="gruposDisponibles.length > 0" formControlName="grupo">
+                <option value="">-- Seleccione un Grupo --</option>
+                <option *ngFor="let g of gruposDisponibles" [value]="g">{{ g }} ({{ cuposPorGrupo[g] || 0 }}/{{ maxCuposPorGrupo }})</option>
+            </select><br>
+
+            <button type="submit" style="background-color: #003366;">Inscribirse</button>
+            <br><br>
+            <a style="color: black">*Nota: Para validar su asistencia, debe ingresar únicamente al taller en el que se encuentra inscrito.</a>
+        </form>
+    </main>
+</div>

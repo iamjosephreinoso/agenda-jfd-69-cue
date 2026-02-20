@@ -1,0 +1,61 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { GroupsComponent } from './groups/groups.component';
+import { TrainingComponent } from './training/training.component';
+import { MenuComponent } from './menu/menu.component';
+import {AppModule} from "../app.module";
+import {RouterLink, RouterLinkWithHref} from "@angular/router";
+import { UnissmaComponent } from './unissma/unissma.component';
+import { LalaComponent } from './lala/lala.component';
+import { LineaComponent } from './linea/linea.component';
+import { AvacComponent } from './avac/avac.component';
+import { AcreditacionComponent } from './acreditacion/acreditacion.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatInputModule} from "@angular/material/input";
+import {MatIconModule} from "@angular/material/icon";
+import { FormComponent } from './form/form.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { GeneralCallComponent } from './general-call/general-call.component';
+
+@NgModule({
+    imports: [
+        CommonModule,
+        FormsModule,
+        NgbModule,
+        AppModule,
+        RouterLinkWithHref,
+        RouterLink,
+        MatFormFieldModule,
+        MatCardModule,
+        MatButtonModule,
+        MatPaginatorModule,
+        MatInputModule,
+        MatIconModule,
+        ReactiveFormsModule,
+    ],
+    exports: [
+        TrainingComponent,
+        MenuComponent,
+        CalendarComponent
+    ],
+    declarations: [
+        GroupsComponent,
+        MenuComponent,
+        TrainingComponent,
+        UnissmaComponent,
+        LalaComponent,
+        LineaComponent,
+        AvacComponent,
+        AcreditacionComponent,
+        FormComponent,
+        CalendarComponent,
+        GeneralCallComponent
+    ]
+})
+export class SectionsModule { }
