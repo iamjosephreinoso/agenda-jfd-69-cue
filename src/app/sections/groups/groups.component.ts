@@ -51,56 +51,6 @@ export class GroupsComponent implements OnInit {
         this.currentPage = 1;
     }
 
-    mostrarDetalle(grupo: any): void {
-        Swal.fire({
-            title: `<span style="font-size:20px; color: #0b1011;">${grupo.NOMBRE}</span>`,
-            html: `
-                <table style="width: 100%; font-size: 14px; border-collapse: collapse; border: 1px solid #003366; padding: 0px;">
-                      <tr>
-                        <td style="text-align: left; border: 1px solid #003366; padding: 8px; color: #0b1011;"><strong>Investigación</strong></td>
-                        <td style="text-align: left; border: 1px solid #003366; padding: 8px; color: #0b1011;">${ grupo.INVESTIGACION }</td>
-                      </tr>
-                      <!--<tr>
-                        <td style="text-align: left; border: 1px solid #003366; padding: 8px; color: #0b1011;"><strong>Carreras en Línea</strong></td>
-                        <td style="text-align: left; border: 1px solid #003366; padding: 8px; color: #0b1011;">${ grupo.LINEA }</td>
-                      </tr>-->
-                      <tr>
-                        <td style="text-align: left; border: 1px solid #003366; padding: 8px; color: #0b1011;"><strong>Formación General Docente - Taller Práctico 1</strong></td>
-                        <td style="text-align: left; border: 1px solid #003366; padding: 8px; color: #0b1011;">
-                            ${ !grupo.curso ?  'Sin Inscripción' :
-                            grupo.curso.toLowerCase() === 'generación de contenido educativo con ia' && grupo.grupo == "Grupo 1" ? grupo.curso + ' - Sala de Cómputo 1' :
-                                grupo.curso.toLowerCase() === 'generación de contenido educativo con ia' && grupo.grupo == "Grupo 2" ? grupo.curso + ' - Sala de Cómputo 2' :
-                                    grupo.curso.toLowerCase() === 'generación de contenido educativo con ia' && grupo.grupo == "Grupo 3" ? grupo.curso + ' - Sala de Cómputo 3' :
-                            grupo.curso.toLowerCase() === 'herramientas de gamificación con ia en la enseñanza' && grupo.grupo == "Grupo 1" ? grupo.curso + ' - Sala de Cómputo 4' :
-                                grupo.curso.toLowerCase() === 'herramientas de gamificación con ia en la enseñanza' && grupo.grupo == "Grupo 2" ? grupo.curso + ' - Sala de Cómputo 5' :
-                                    grupo.curso.toLowerCase() === 'herramientas de gamificación con ia en la enseñanza' && grupo.grupo == "Grupo 3" ? grupo.curso + ' - Sala de Cómputo 6' :
-                            grupo.curso.toLowerCase() === 'realidad aumentada con ia' && grupo.grupo == "Grupo 1" ? grupo.curso +' - Sala de Cómputo 7' :
-                                grupo.curso.toLowerCase() === 'realidad aumentada con ia' && grupo.grupo == "Grupo 2" ? grupo.curso +' - Sala de Cómputo 9' :
-                                    grupo.curso.toLowerCase() === 'realidad aumentada con ia' && grupo.grupo == "Grupo 3" ? grupo.curso +' - Sala de Cómputo Audivisuales 1' :
-                            grupo.curso.toLowerCase() === 'metaversos para la educación' && grupo.grupo == "Grupo 1" ? grupo.curso +' - Sala de Cómputo Audivisuales 2' :
-                                grupo.curso.toLowerCase() === 'metaversos para la educación' && grupo.grupo == "Grupo 2" ? grupo.curso +' - Sala de Cómputo Administrativas 1' :
-                                    grupo.curso.toLowerCase() === 'metaversos para la educación' && grupo.grupo == "Grupo 3" ? grupo.curso +' - Sala de Cómputo Administrativas 3' :
-                                'Curso desconocido'
-                            }
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style="text-align: left; border: 1px solid #003366; padding: 8px; color: #0b1011;"><strong>Formación General Docente - Taller 2</strong></td>
-                        <td style="text-align: left; border: 1px solid #003366; padding: 8px; color: #0b1011;">${ grupo.JD2 }</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align: left; border: 1px solid #003366; padding: 8px; color: #0b1011;"><strong>Consejería Académica - LALA</strong></td>
-                        <td style="text-align: left; border: 1px solid #003366; padding: 8px; color: #0b1011;">${ grupo.LALA }</td>
-                      </tr>
-                    </table>
-            `,
-            icon: 'info',
-            iconColor: '#003366',
-            confirmButtonText: 'Cerrar',
-            confirmButtonColor: '#003366'
-        });
-    }
-
     get totalPages(): number {
         return Math.ceil(this.gruposFiltrados.length / this.pageSize);
     }
@@ -127,4 +77,34 @@ export class GroupsComponent implements OnInit {
             this.currentPage++;
         }
     }
+
+    // Dentro de tu clase GroupsComponent
+    obtenerAula(grupo: any): string {
+        if (!grupo.curso) return 'Sin Inscripción';
+
+        const cursoNorm = grupo.curso.toLowerCase();
+
+        if (cursoNorm.includes('generación de contenido')) {
+            return 'Generación de Contenido Educativo con IA - Auditorio Luna Tobar';
+        }
+
+        // 2. Herramientas de Gamificación con IA
+        if (cursoNorm.includes('gamificación')) {
+            return 'Herramientas de Gamificación con IA - Auditorio Aurelio Pischedda';
+        }
+
+        // 3. Realidad Aumentada con IA
+        if (cursoNorm.includes('realidad aumentada')) {
+            return 'Realidad Aumentada con IA - Auditorio Luis Arba';
+        }
+
+        // 4. Ciencias de Datos con IA
+        if (cursoNorm.includes('datos')) {
+            return 'Ciencias de Datos con IA - Auditorio Leonidas Proaño';
+        }
+        return 'Aula por asignar';
+    }
+
 }
+
+

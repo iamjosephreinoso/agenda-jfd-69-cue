@@ -1,75 +1,89 @@
 <div class="wrapper">
-    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/banner.avif'); background-color: rgba(0, 0, 0, 0.2); background-blend-mode: multiply;">
-        <div class="filter"></div>
-        <div class="content-center brand">
-            <h1 class="floating-title">
-                <img src="assets/img/logoupscolor.png" alt="Logo UPS" class="hero-logo" />
-                GRUPOS DE TRABAJO</h1>
+    <header class="slanted-header">
+        <div class="header-background" style="background-image: url('assets/img/banner.avif');">
+            <div class="header-overlay"></div>
         </div>
-    </div>
+        <div class="header-content">
+            <img src="assets/img/logoupsblanco.png" alt="Logo UPS" class="ups-logo-slanted" />
+            <h1 class="slanted-title">GRUPOS DE TRABAJO</h1>
+        </div>
+    </header>
 
     <main class="app-main container">
-        <div class="search-container">
-            <mat-form-field>
-                <mat-label>Buscar Docente <mat-icon matPrefix style="color: #000000;">search</mat-icon></mat-label><br><br>
-
-                <input
-                        matInput
-                        placeholder="Nombre del Docente"
-                        [(ngModel)]="filtroGrupo"
-                        (input)="filtrar()"
-                />
-            </mat-form-field>
+        <div class="search-section">
+            <div class="search-pill-container">
+                <label class="search-label">Buscar Docente</label>
+                <div class="input-pill-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input
+                            type="text"
+                            placeholder="Escriba el nombre del docente..."
+                            [(ngModel)]="filtroGrupo"
+                            (input)="filtrar()"
+                            class="search-input-pill"
+                    />
+                </div>
+            </div>
         </div>
 
-        <section *ngIf="gruposPaginados.length > 0; else noData">
+        <section *ngIf="gruposPaginados.length > 0; else noData" class="results-section">
             <div class="row">
-                <div
-                        class="col-md-4 mb-3"
-                        *ngFor="let grupo of gruposPaginados"
-                >
-                    <mat-card class="result-card h-100">
-                        <mat-card-title>{{ grupo.NOMBRE }}</mat-card-title>
-                        <mat-card-actions>
-                            <button
-                                    mat-raised-button
-                                    color="primary"
-                                    style="font-weight: normal;"
-                                    (click)="mostrarDetalle(grupo)"
-                            >
-                                Ver Información
+                <div class="col-md-4 mb-4" *ngFor="let grupo of gruposPaginados; let i = index">
+                    <div class="result-card-premium" [class.is-expanded]="grupo.expandido">
+                        <div class="card-pill-header">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="card-content">
+                            <h5 class="teacher-name">{{ grupo.NOMBRE }}</h5>
+                        </div>
+
+                        <div class="card-expanded-content" *ngIf="grupo.expandido">
+                            <div class="info-pill blue">
+                                <strong>Jornadas Generales - Taller Práctico</strong>
+                                <span>{{ obtenerAula(grupo) }}</span>
+                            </div>
+                            <div class="info-pill yellow">
+                                <strong>Taller de Elaboración de Instrumentos de Valoración de OVAS</strong>
+                                <span>{{ grupo.OVAS }}</span>
+                            </div>
+                            <div class="info-pill blue">
+                                <strong>Jornadas de Investigación</strong>
+                                <span>{{ grupo.INVESTIGACION }}</span>
+                            </div>
+                            <div class="info-pill yellow">
+                                <strong>Consejería Académica LALA</strong>
+                                <span>{{ grupo.LALA }}</span>
+                            </div>
+                        </div>
+
+                        <div class="card-footer-action">
+                            <button class="btn-detail-pill" (click)="grupo.expandido = !grupo.expandido">
+                                {{ grupo.expandido ? 'OCULTAR' : 'VER MÁS' }}
+                                <i class="fas" [ngClass]="grupo.expandido ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
                             </button>
-                        </mat-card-actions>
-                    </mat-card>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Paginación manual -->
-            <div class="pagination-controls text-center mt-4">
-                <button
-                        mat-raised-button
-                        style="color: #F0F0F0; background-color: #003366;"
-                        (click)="paginaAnterior()"
-                        [disabled]="currentPage === 1"
-                >
-                    Anterior
+            <div class="pagination-slanted">
+                <button class="nav-pill-btn" (click)="paginaAnterior()" [disabled]="currentPage === 1">
+                    <i class="fas fa-arrow-left"></i> Anterior
                 </button>
-
-                <span style="margin: 0 1rem; color: black;">Página {{ currentPage }} de {{ totalPages }}</span>
-
-                <button
-                        mat-raised-button
-                        style="color: #F0F0F0; background-color: #003366;"
-                        (click)="paginaSiguiente()"
-                        [disabled]="currentPage === totalPages"
-                >
-                    Siguiente
+                <div class="page-indicator">
+                    <span>Página <strong>{{ currentPage }}</strong> de {{ totalPages }}</span>
+                </div>
+                <button class="nav-pill-btn" (click)="paginaSiguiente()" [disabled]="currentPage === totalPages">
+                    Siguiente <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
         </section>
 
         <ng-template #noData>
-            <p class="text-center text-muted">No existe docente.</p>
+            <div class="no-data-card">
+                <i class="fas fa-user-slash"></i>
+                <p>No se encontró el docente solicitado.</p>
+            </div>
         </ng-template>
     </main>
 </div>

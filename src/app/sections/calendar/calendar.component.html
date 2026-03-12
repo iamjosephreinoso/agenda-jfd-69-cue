@@ -1,162 +1,202 @@
-<div class="calendar-wrapper">
-
+<div class="calendar-wrapper"> <br><br>
     <div class="calendar-container">
-        <h2 class="calendar-main-title">Primera Semana</h2>
+        <h3 class="calendar-main-title">Primera Semana</h3>
 
-        <div class="carousel-master">
-            <button class="nav-btn prev" (click)="scrollPrev()" aria-label="Anterior">
-                <i class="fas fa-chevron-left"></i>
-            </button>
+        <div class="hybrid-calendar">
 
-            <div class="carousel-viewport" #carousel>
-                <div class="carousel-track">
-
-                    <div class="calendar-card color-1">
-                        <div class="calendar-header">
-                            <span class="day-label">Lunes</span>
-                            <span class="date-label">15 de Septiembre</span>
-                        </div>
-                        <div class="calendar-body">
-                            <ul class="calendar-timeline">
-                                <li class="timeline-pill">
-                                    <a [routerLink]="['/investigation']" [queryParams]="{ tab: 'tab1' }">
-                                        <div class="pill-icon"><i class="fas fa-microscope"></i></div>
-                                        <div class="pill-info">
-                                            <h6>Formación de Investigación</h6>
-                                            <p>Jornada Intensiva - Día 1</p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="calendar-item color-1" [routerLink]="['/teacher_training']" [queryParams]="{ tab: 'tab1' }">
+                <div class="date-section">
+                    <span class="day">16</span>
+                    <span class="month">MARZO</span>
+                </div>
+                <div class="content-section">
+                    <div class="header-info">
+                        <!--<span class="time"><i class="far fa-clock"></i> 08h00</span>-->
+                        <span class="category">Jornadas Generales</span>
                     </div>
-
-                    <div class="calendar-card color-2">
-                        <div class="calendar-header">
-                            <span class="day-label">Martes</span>
-                            <span class="date-label">16 de Septiembre</span>
-                        </div>
-                        <div class="calendar-body">
-                            <ul class="calendar-timeline">
-                                <li class="timeline-pill">
-                                    <a [routerLink]="['/investigation']" [queryParams]="{ tab: 'tab2' }">
-                                        <div class="pill-icon"><i class="fas fa-chart-line"></i></div>
-                                        <div class="pill-info">
-                                            <h6>Formación de Investigación</h6>
-                                            <p>Jornada Intensiva - Día 2</p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="calendar-card color-3">
-                        <div class="calendar-header">
-                            <span class="day-label">Miércoles</span>
-                            <span class="date-label">17 de Septiembre</span>
-                        </div>
-                        <div class="calendar-body empty-state">
-                            <i class="fas fa-hourglass-half"></i>
-                            <p>Actividades en proceso de validación académica</p>
-                        </div>
-                    </div>
-
+                    <!--<h4>Formación de Investigación</h4>-->
+                </div>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Teatro Carlos Crespi</p>
+                <div class="action-icon">
+                    <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
 
-            <button class="nav-btn next" (click)="scrollNext()" aria-label="Siguiente">
+            <div class="calendar-item color-2" [routerLink]="['/teacher_training']" [queryParams]="{ tab: 'tab2' }">
+                <div class="date-section">
+                    <span class="day">17</span>
+                    <span class="month">MARZO</span>
+                </div>
+                <div class="content-section">
+                    <div class="header-info">
+                        <!--<span class="time"><i class="far fa-clock"></i> 08h00</span>-->
+                        <span class="category">Jornadas Generales</span>
+                    </div>
+                    <!--<h4>Jornada Aplicada D2</h4>-->
+                </div>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Teatro Carlos Crespi</p>
+                <div class="action-icon">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="calendar-item color-1" [routerLink]="['/ovas_investigation']" [queryParams]="{ tab: 'tab1' }">
+                <div class="date-section">
+                    <span class="day">18</span>
+                    <span class="month">MARZO</span>
+                </div>
+                <div class="content-section">
+                    <div class="header-info">
+                        <!--<span class="time"><i class="far fa-clock"></i> 08h00</span>-->
+                        <span class="category">Taller de Elaboración de Instrumentos de Valoración de OVAS</span>
+                        <span class="category">Jornadas de Investigación</span>
+                    </div>
+                    <!--<h4>Jornada Aplicada D2</h4>-->
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Edificio Guillermo Mensi</p>
+                </div>
+                <div class="action-icon">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+
+            <div class="calendar-item color-2" [routerLink]="['/ovas_investigation']" [queryParams]="{ tab: 'tab2' }">
+                <div class="date-section">
+                    <span class="day">19</span>
+                    <span class="month">MARZO</span>
+                </div>
+                <div class="content-section">
+                    <div class="header-info">
+                        <span class="category">Taller de Elaboración de Instrumentos de Valoración de OVAS</span>
+                        <span class="category">Jornadas de Investigación</span>
+                    </div>
+                </div>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Edificio Guillermo Mensi</p>
+                <div class="action-icon">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="calendar-item color-1" [routerLink]="['/ovas_investigation']" [queryParams]="{ tab: 'tab3' }">
+                <div class="date-section">
+                    <span class="day">20</span>
+                    <span class="month">MARZO</span>
+                </div>
+                <div class="content-section">
+                    <div class="header-info">
+                        <span class="category">Taller de Elaboración de Instrumentos de Valoración de OVAS</span>
+                        <span class="category">Jornadas de Investigación</span>
+                    </div>
+                </div>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Edificio Guillermo Mensi</p>
+                <div class="action-icon">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-action">
+            <button routerLink="/form" class="btn-ups-style">
+                <i class="fas fa-user-plus"></i> INSCRIPCIONES TALLER
+            </button>
+
+            <button routerLink="/groups" class="btn-ups-style">
+                <i class="fas fa-users"></i> VER GRUPOS DE TRABAJO
+            </button>
+        </div>
+    </div>
+
+    <br>
+    <h3 class="calendar-main-title">Segunda Semana</h3>
+
+    <div class="hybrid-calendar">
+
+        <div class="calendar-item color-1" [routerLink]="['/lala']" [queryParams]="{ tab: 'tab1' }">
+            <div class="date-section">
+                <span class="day">23</span>
+                <span class="month">MARZO</span>
+            </div>
+            <div class="content-section">
+                <div class="header-info">
+                    <span class="category">Formación Consejería Académica - Grupo 1</span>
+                </div>
+            </div>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Sede Cuenca</p>
+            <div class="action-icon">
                 <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-    </div>
-
-    <div class="action-wrapper">
-        <button routerLink="/groups" class="btn-slanted-main">
-            <i class="fas fa-users-cog"></i> Ver información sobre grupos de trabajo
-        </button>
-    </div>
-
-    <div class="calendar-container">
-        <h2 class="calendar-main-title">Segunda Semana</h2>
-
-        <div class="calendar-days">
-            <div class="calendar-card color-1">
-                <div class="calendar-header">Lunes 22/09</div>
-                <div class="calendar-body">
-                    <ul class="calendar-timeline">
-                        <li class="timeline-pill">
-                            <a [routerLink]="['/lala']" [queryParams]="{ tab: 'tab1' }">
-                                <h6>Consejería Académica (LALA)</h6>
-                                <p>Grupo 1</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="calendar-card color-2">
-                <div class="calendar-header">Martes 23/09</div>
-                <div class="calendar-body">
-                    <ul class="calendar-timeline">
-                        <li class="timeline-pill">
-                            <a [routerLink]="['/lala']" [queryParams]="{ tab: 'tab2' }">
-                                <h6>Consejería Académica (LALA)</h6>
-                                <p>Grupo 2</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="calendar-card color-3">
-                <div class="calendar-header">Miércoles 24/09</div>
-                <div class="calendar-body">
-                    <ul class="calendar-timeline">
-                        <li class="timeline-pill">
-                            <a class="no-link">
-                                <h6>Directores de Carrera y Unidad de Titulación</h6>
-                                <p class="time-info"><i class="far fa-clock"></i> 11h00 - 12h30</p>
-                                <p class="loc-info"><i class="fas fa-map-marker-alt"></i> Mons. Luna Tobar</p>
-                            </a>
-                        </li>
-                        <li class="timeline-pill">
-                            <a class="no-link secondary">
-                                <h6>Reunión por Carreras</h6>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="calendar-card color-4">
-                <div class="calendar-header">Jueves 25/09</div>
-                <div class="calendar-body">
-                    <ul class="calendar-timeline">
-                        <li class="timeline-pill">
-                            <a [routerLink]="['/unissma']">
-                                <h6>UNISSMA</h6>
-                                <p>Sesión General</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="calendar-card color-5">
-                <div class="calendar-header">Viernes 26/09</div>
-                <div class="calendar-body">
-                    <ul class="calendar-timeline">
-                        <li class="timeline-pill">
-                            <a class="no-link">
-                                <h6>Reunión por Carreras</h6>
-                                <p>Cierre de Jornadas</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
-    </div>
 
+        <div class="calendar-item color-2" [routerLink]="['/unissma_lala']" [queryParams]="{ tab: 'tab1' }">
+            <div class="date-section">
+                <span class="day">24</span>
+                <span class="month">MARZO</span>
+            </div>
+            <div class="content-section">
+                <div class="header-info">
+                    <span class="category">UNISSMA</span>
+                    <span class="category">Formación Consejería Académica - Grupo 2</span>
+                </div>
+
+            </div>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Sede Cuenca</p>
+            <div class="action-icon">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+
+        <div class="calendar-item color-1 empty">
+            <div class="date-section">
+                <span class="day">25</span>
+                <span class="month">MARZO</span>
+            </div>
+            <div class="content-section">
+                <div class="header-info">
+                    <span class="category">Reuniones de Carreras</span>
+                </div>
+
+            </div>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Sede Cuenca</p>
+            <div class="action-icon">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+
+        <div class="calendar-item color-2 empty">
+            <div class="date-section">
+                <span class="day">26</span>
+                <span class="month">MARZO</span>
+            </div>
+            <div class="content-section">
+                <div class="header-info">
+                    <div class="header-info">
+                        <span class="category">Reuniones de Carreras</span>
+                    </div>
+                </div>
+
+            </div>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Sede Cuenca</p>
+            <div class="action-icon">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <div class="calendar-item color-1 empty">
+            <div class="date-section">
+                <span class="day">27</span>
+                <span class="month">MARZO</span>
+            </div>
+            <div class="content-section">
+                <div class="header-info">
+                    <div class="header-info">
+                        <span class="category">Reuniones de Carreras</span>
+                    </div>
+                </div>
+
+            </div>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Sede Cuenca</p>
+            <div class="action-icon">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+
+    </div>
 </div>

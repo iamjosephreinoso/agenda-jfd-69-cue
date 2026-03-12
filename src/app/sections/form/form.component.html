@@ -1,43 +1,85 @@
 <div class="wrapper">
-    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/banner.avif'); background-color: rgba(0, 0, 0, 0.2); background-blend-mode: multiply;">
-        <div class="filter"></div>
-        <div class="content-center brand">
-            <h1 class="floating-title">
-                <img src="assets/img/logoupscolor.png" alt="Logo UPS" class="hero-logo" />
-                INSCRIPCIONES TALLERES</h1>
+    <header class="slanted-header">
+        <div class="header-background" style="background-image: url('assets/img/banner.avif');">
+            <div class="header-overlay"></div>
         </div>
-    </div>
+        <div class="header-content">
+            <img src="assets/img/logoupsblanco.png" alt="Logo UPS" class="ups-logo-slanted" />
+            <h1 class="slanted-title">INSCRIPCIONES TALLERES</h1>
+        </div>
+    </header>
 
-    <main class="app-main container">
+        <main class="app-main container">
+            <div class="form-card-container">
+                <form [formGroup]="miFormulario" (ngSubmit)="enviarFormulario()" class="pill-form">
+                    <h4 class="form-instruction">Complete sus datos institucionales</h4>
 
-        <form [formGroup]="miFormulario" (ngSubmit)="enviarFormulario()">
-            <label>Cédula:</label>
-            <input formControlName="cedula" type="text"><br>
+                    <div class="input-group-pill">
+                        <label><i class="fas fa-id-card"></i> Cédula:</label>
+                        <div class="search-input-wrapper" style="display: flex; gap: 10px;">
+                            <input formControlName="cedula" type="text" maxlength="10" placeholder="Ej: 0102030405" style="flex: 1;">
 
-            <label>Nombres:</label>
-            <input formControlName="nombres" type="text" (input)="toUpperCase('nombres', $event)"><br>
+                            <button type="button"
+                                    (click)="buscarDocenteManualmente()"
+                                    class="btn-search-docente"
+                                    [disabled]="miFormulario.get('cedula').value?.length !== 10">
+                                <i class="fas fa-search"></i> BUSCAR
+                            </button>
+                        </div>
+                    </div>
 
-            <label>Apellidos:</label>
-            <input formControlName="apellidos" type="text" (input)="toUpperCase('apellidos', $event)"><br>
+                    <div class="input-group-pill">
+                        <label><i class="fas fa-user"></i> Nombres y Apellidos Completos:</label>
+                        <input formControlName="nombres"
+                               type="text"
+                               (input)="toUpperCase('nombres', $event)"
+                               [placeholder]="'NOMBRES COMPLETOS'">
+                    </div>
 
-            <label>Correo Institucional:</label>
-            <input formControlName="correo" type="email"><br>
+                    <div class="input-group-pill">
+                        <label><i class="fas fa-envelope"></i> Correo Institucional:</label>
+                        <input formControlName="correo"
+                               type="email"
+                               [placeholder]="'usuario@ups.edu.ec'">
+                    </div>
 
-            <label>Taller:</label>
-            <select formControlName="curso" (change)="onCursoChange($event)">
-                <option value="">-- Seleccione un Taller --</option>
-                <option *ngFor="let c of cursos" [value]="c">{{ c }}</option>
-            </select><br>
+                    <div class="input-group-pill select-pill">
+                        <label>
+                            <i class="fas fa-chalkboard-teacher"></i> Taller:
+                        </label>
+                        <div class="custom-select-wrapper">
+                            <select formControlName="curso" class="pill-select">
+                                <option value="" disabled selected>-- Seleccione un Taller --</option>
+                                <option *ngFor="let c of cursos"
+                                        [value]="c"
+                                        [disabled]="(cuposPorGrupo[c] || 0) >= maxCupos">
 
-            <label *ngIf="gruposDisponibles.length > 0">Grupo:</label>
-            <select *ngIf="gruposDisponibles.length > 0" formControlName="grupo">
-                <option value="">-- Seleccione un Grupo --</option>
-                <option *ngFor="let g of gruposDisponibles" [value]="g">{{ g }} ({{ cuposPorGrupo[g] || 0 }}/{{ maxCuposPorGrupo }})</option>
-            </select><br>
+                                        {{ (cuposPorGrupo[c] || 0) >= maxCupos ? '🔴' : '🟢' }}
 
-            <button type="submit" style="background-color: #003366;">Inscribirse</button>
-            <br><br>
-            <a style="color: black">*Nota: Para validar su asistencia, debe ingresar únicamente al taller en el que se encuentra inscrito.</a>
-        </form>
-    </main>
+                                        {{ c }}
+
+                                    — [Cupos: {{ cuposPorGrupo[c] || 0 }} de {{ maxCupos }}]
+                                </option>
+                            </select>
+                            <div class="select-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <small *ngIf="cargandoCupos" class="animate-pulse" style="color: #003366; font-size: 0.75rem; margin-top: 5px; display: block;">
+                            <i class="fas fa-sync fa-spin"></i> Verificando disponibilidad de cupos...
+                        </small>
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="submit" class="btn-enviar-slanted" [disabled]="miFormulario.invalid || (cuposActuales[miFormulario.value.curso] >= maxCupos)">
+                            <i class="fas fa-check-circle"></i> FINALIZAR INSCRIPCIÓN
+                        </button>
+                        <p class="nota-footer">
+                            <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
+                            Para registrar su asistencia, es necesario ingresar al <strong>taller en el que se encuentra inscrito</strong>.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </main>
 </div>

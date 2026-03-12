@@ -1,178 +1,162 @@
 <div class="wrapper">
-    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/banner.avif'); background-color: rgba(0, 0, 0, 0.2); background-blend-mode: multiply;">
-        <div class="filter"></div>
-        <div class="content-center brand">
-            <h1 class="floating-title">
-                <img src="assets/img/logoupscolor.png" alt="Logo UPS" class="hero-logo" />
-                FORMACIÓN GENERAL DOCENTE</h1>
+    <header class="slanted-header">
+        <div class="header-background" [style.background-image]="'url(assets/img/banner.avif)'">
+            <div class="header-overlay"></div>
         </div>
-    </div>
+
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="assets/img/logoupsblanco.png" alt="Logo UPS" class="ups-logo-slanted" />
+            </div>
+            <h1 class="slanted-title">JORNADAS GENERALES</h1>
+            <p class="slanted-subtitle">Vicerrectorado Académico</p>
+        </div>
+    </header>
+
     <div class="container_cro">
-        <h4 style="color: black; font-size: 1.2rem;" >Vicerrectorado Académico</h4><br>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
+            <li class="nav-item">
                 <a class="nav-link"
                    [ngClass]="{ 'active': activeTab === 'tab1' }"
-                   id="tab1-tab"
-                   data-toggle="tab"
-                   href="#tab1"
-                   role="tab"
-                   aria-controls="tab1"
-                   [attr.aria-selected]="activeTab === 'tab1'">Jueves, 18 de Septiembre</a>
+                   [routerLink]="['/teacher_training']"
+                   [queryParams]="{ tab: 'tab1' }">
+                    Lunes, 16 de Marzo
+                </a>
             </li>
-            <li class="nav-item" role="presentation">
+            <li class="nav-item">
                 <a class="nav-link"
                    [ngClass]="{ 'active': activeTab === 'tab2' }"
-                   id="tab2-tab"
-                   data-toggle="tab"
-                   href="#tab2"
-                   role="tab"
-                   aria-controls="tab2"
-                   [attr.aria-selected]="activeTab === 'tab2'">Viernes, 19 de Septiembre</a>
+                   [routerLink]="['/teacher_training']"
+                   [queryParams]="{ tab: 'tab2' }">
+                    Martes, 17 de Marzo
+                </a>
             </li>
         </ul>
 
-        <div class="tab-content mt-3" id="myTabContent">
-            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab1' }" id="tab1" role="tabpanel">
+        <div class="tab-content mt-5">
+            <div class="tab-pane" [ngClass]="{ 'show active': activeTab === 'tab1' }" *ngIf="activeTab === 'tab1'">
                 <ul class="timeline">
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>Momento de Oración</h6>
-                            <p>Teatro Carlos Crespi</p>
-                            <p>Departamento de Pastoral</p>
-                            <small class="text-muted">08h30 - 08h40</small>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">01</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">08h30 - 08h40</span><h5>Momento de Oración</h5></div>
+                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
+                            <div class="timeline-body"><p>Departamento de Pastoral</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>Intervención del Rector</h6>
-                            <p>Teatro Carlos Crespi</p>
-                            <p>P. Juan Cárdenas sdb. PhD.</p>
-                            <small class="text-muted">08h40 - 10h10</small>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">02</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">08h40 - 10h10</span><h5>Intervención del Rector</h5></div>
+                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
+                            <div class="timeline-body"><p>P. Juan Cárdenas sdb. PhD.</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>RECESO</h6>
-                            <small class="text-muted">10h10 - 10h40</small>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">03</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">10h10 - 10h40</span><h5>RECESO</h5></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>Charla: La ventaja injusta - Cómo la IA esta forjando los gigantes empresariales del mañana</h6>
-                            <p>Teatro Carlos Crespi</p>
-                            <p>Ing. Charlie Arellano MSc.</p>
-                            <small class="text-muted">10h40 - 12h40</small>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">04</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">10h40 - 12h40</span><h5>Charla: Evaluación de los aprendizajes integrando inteligencia artificial</h5></div>
+                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
+                            <div class="timeline-body"><p>Xavier Mas Gárcia UOC</p></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6> 12h40 - FIN DE LA JORNADA MATUTINA</h6>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">05</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">12h40</span><h5>FIN DE LA JORNADA MATUTINA</h5></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>Taller Práctico 1</h6>
-                            <p>Salas de Cómputo - Edificio Cornelio Merchán</p>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">06</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">14h15 - 16h00</span><h5>Taller de Inteligencia Artificial en Educación</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
                             <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
-                            <small class="text-muted">14h30 - 16h00</small><br><br>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>RECESO</h6>
-                            <small class="text-muted">16h00 - 16h30</small>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">07</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">16h00 - 16h30</span><h5>RECESO</h5></div>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>Taller Práctico 1</h6>
-                            <p>Salas de Cómputo - Edificio Cornelio Merchán</p>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">08</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">16h30 - 17h30</span><h5>Taller de Inteligencia Artificial en Educación</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
                             <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
-                            <small class="text-muted">16h30 - 17h30</small><br><br>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6> 17h30 - FIN DE LA JORNADA</h6>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">09</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">17h30</span><h5>FIN DE LA JORNADA VESPERTINA</h5></div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab2' }" id="tab2" role="tabpanel">
+
+            <div class="tab-pane" [ngClass]="{ 'show active': activeTab === 'tab2' }" *ngIf="activeTab === 'tab2'">
                 <ul class="timeline">
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>Taller Práctico 1</h6>
-                            <p>Salas de Cómputo - Edificio Cornelio Merchán</p>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">01</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">09h00 - 10h30</span><h5>Metodología de construcción de evaluaciones de alto impacto </h5></div>
+                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
+                            <div class="timeline-body"><p>Equipo Técnico del CACES</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">02</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">10h30 - 11h00</span><h5>RECESO</h5></div>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">03</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">11h00 - 12h30</span><h5>Briefing de evaluación y taller práctico</h5></div>
+                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
+                            <div class="timeline-body"><p>Equipo Técnico del CACES</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">04</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">12h30 - 13h00</span><h5>Mecanismos de aseguramiento de la calidad del perfil de egreso en la UPS</h5></div>
+                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
+                            <div class="timeline-body"><p>Ing. Germán Parra MSc.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">05</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">13H00</span><h5>FIN DE LA JORNADA MATUTINA</h5></div>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">06</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">14h30 - 16h30</span><h5>Taller de Inteligencia Artificial en Educación</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
                             <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
-                            <small class="text-muted">08h30 - 10h30</small><br><br>
                         </div>
                     </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>RECESO</h6>
-                            <small class="text-muted">10h30 - 11h00</small>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>El uso de la inteligencia artificial en la academia límites y alcances</h6>
-                            <p>Teatro Carlos Crespi</p>
-                            <p>Lcdo. José Juncosa PhD.</p>
-                            <small class="text-muted">11h00 - 11h30</small>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>Presentación del Libro: Prospectiva Universitaria, Retos y Oportunidad al 2033</h6>
-                            <p>Teatro Carlos Crespi</p>
-                            <p>Lcdo. Fernando Pesantez. PhD.</p>
-                            <small class="text-muted">11h30 - 12h00</small>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6> 12h00 - FIN DE LA JORNADA MATUTINA</h6>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>Taller 2: Prospectiva Universitaria, Retos y Oportunidades al 2033</h6>
-                            <p>Aulas - Edificio Guillermo Mensi</p>
-                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; font-size: 0.8rem; border-radius: 5px; cursor: pointer;">Ver Información</button></p>
-                            <small class="text-muted">14h30 - 16h00</small>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>RECESO</h6>
-                            <small class="text-muted">16h00 - 16h30</small>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6>Plenaria</h6>
-                            <p>Teatro Carlos Crespi</p>
-                            <p>Líderes del Taller</p>
-                            <small class="text-muted">16h30 - 17h30</small>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <div class="timeline-content">
-                            <h6> 17h30 - FIN DE LA JORNADA</h6>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">07</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">16H30</span><h5>FIN DE LA JORNADA VESPERTINA</h5></div>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <!-- Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </div>
-

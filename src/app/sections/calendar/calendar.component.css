@@ -1,332 +1,141 @@
-/* --- CONTENEDOR PRINCIPAL --- */
+/* --- ESTILOS GENERALES --- */
 .calendar-wrapper {
     position: relative;
-    top: -60px; /* Ajuste para que flote sobre el slanted header */
+    top: -60px;
     z-index: 10;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.calendar-container {
-    max-width: 1200px;
-    margin: 0 auto 60px;
-    padding: 0 15px;
-}
-
-/* --- TÍTULO ESTILO PÍLDORA SLANTED --- */
 .calendar-main-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.2rem;
+    background: #ffcc00;
     color: #003366;
-    background-color: transparent;
-    border: 2px solid #f39c12;
     width: fit-content;
     padding: 10px 40px;
-    margin: 0 auto 30px;
-    border-radius: 50px 10px 50px 10px; /* Asimetría diagonal */
-    box-shadow: 0 5px 15px rgba(0, 51, 102, 0.2);
-    letter-spacing: 2px;
+    margin: 0 auto 40px;
+    border-radius: 50px 15px 50px 15px;
+    font-size: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.2);
 }
 
-/* --- GRID DE TARJETAS --- */
-.calendar-days {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* --- CARD ESTILO TIMELINE PILL --- */
-.calendar-card {
-    flex: 1 1 200px;
-    max-width: 230px;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-    border-bottom: 8px solid transparent; /* Se colorea dinámicamente */
-
-    &:hover {
-        transform: translateY(-5px);
-    }
-}
-
-.calendar-header {
-    background-color: #003366;
-    color: white;
-    font-family: 'Caveat Brush', cursive;
-    font-size: 1.5rem;
-    padding: 15px;
-    text-align: center;
-}
-
-.calendar-body {
-    min-height: 140px;
-    padding: 15px;
+/* --- DISEÑO MÓVIL (VERTICAL POR DEFECTO) --- */
+.hybrid-calendar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
-    &.empty {
-        color: #ccc;
-        font-style: italic;
-        text-align: center;
-    }
-}
-
-/* --- ÍTEMS DENTRO DE LA CARD --- */
-.calendar-timeline {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    .timeline-pill {
-        margin-bottom: 10px;
-
-        a {
-            text-decoration: none;
-            display: block;
-            padding: 12px;
-            background: #f8f9fa;
-            border-radius: 10px 30px 10px 30px; /* Píldora asimétrica */
-            border-left: 5px solid #003366;
-            transition: 0.2s;
-
-            h6 {
-                margin: 0;
-                color: #003366;
-                font-weight: 800;
-                font-size: 0.9rem;
-                line-height: 1.2;
-            }
-
-            p {
-                margin: 5px 0 0;
-                font-size: 0.8rem;
-                color: #666;
-            }
-
-            &:hover {
-                background: #e9ecef;
-                border-left-width: 10px;
-            }
-        }
-    }
-}
-
-/* --- COLORES DINÁMICOS --- */
-.color-1 { border-bottom-color: #003366; .timeline-pill a { border-left-color: #003366; } }
-.color-2 { border-bottom-color: #f39c12; .timeline-pill a { border-left-color: #f39c12; } }
-
-/* --- BOTÓN DE ACCIÓN SLANTED --- */
-.action-container {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.btn-slanted-action {
-    font-family: 'Caveat Brush', cursive;
-    background-color: #003366;
-    color: white;
-    border: none;
-    padding: 20px 50px;
-    font-size: 1.8rem;
-    cursor: pointer;
-    border-radius: 10px 50px 10px 50px;
-    transition: 0.3s;
-    box-shadow: 0 10px 20px rgba(0, 51, 102, 0.3);
-
-    &:hover {
-        background-color: #f39c12;
-        transform: scale(1.02);
-    }
-}
-
-/* --- RESPONSIVE COMPACTO --- */
-@media (max-width: 768px) {
-    .calendar-main-title { width: 90%; font-size: 1.6rem; }
-    .calendar-card { flex: 1 1 100%; max-width: 100%; }
-    .calendar-body { min-height: auto; }
-    .btn-slanted-action { width: 95%; font-size: 1.4rem; padding: 15px; }
-}
-
-/* --- LÓGICA DEL CARRUSEL --- */
-.carousel-viewport {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory; /* Hace que las tarjetas se peguen al borde */
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    padding: 20px 0;
-
-    /* Ocultar barra de scroll en navegadores modernos */
-    &::-webkit-scrollbar { display: none; }
-    scrollbar-width: none;
-}
-
-.carousel-track {
-    display: flex;
-    flex-wrap: nowrap !important; /* Evita que las tarjetas bajen a la siguiente línea */
-    gap: 25px;
-    padding-left: calc(50% - 125px); /* Centra la primera tarjeta */
-    padding-right: calc(50% - 125px);
-}
-
-/* --- TARJETAS --- */
-.calendar-card {
-    flex: 0 0 250px; /* Ancho fijo para el carrusel */
-    scroll-snap-align: center; /* Cada tarjeta se centra al deslizar */
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border-bottom: 8px solid transparent;
-
-    /* Efecto de enfoque para la tarjeta central */
-    &:not(:focus-within) {
-        opacity: 0.9;
-    }
-}
-
-/* --- INDICADOR MÓVIL --- */
-.carousel-indicator {
-    text-align: center;
-    color: #003366;
-    font-size: 0.8rem;
-    margin-top: 10px;
-    opacity: 0.6;
-    font-weight: bold;
-    display: none; /* Solo visible en pantallas pequeñas */
-}
-
-/* --- AJUSTES RESPONSIVE --- */
-@media (max-width: 1024px) {
-    .carousel-indicator {
-        display: block;
-    }
-
-    .carousel-track {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .calendar-card {
-        scroll-snap-align: start;
-        flex: 0 0 280px;
-    }
-}
-
-/* Mantener tus estilos de color-1, color-2, etc. y timeline-pill de los pasos anteriores */
-
-
-.carousel-master {
-    position: relative;
-    display: flex;
-    align-items: center;
-    max-width: 800px; /* Ancho máximo de la tarjeta central */
+    gap: 15px;
+    max-width: 1000px;
     margin: 0 auto;
-    gap: 20px;
 }
 
-.carousel-viewport {
-    flex: 1;
-    overflow: hidden; /* Ocultamos el scrollbar */
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    display: flex;
-}
-
-.carousel-track {
-    display: flex;
-    width: 100%;
-}
-
-/* --- TARJETA GIGANTE (1 a la vez) --- */
-.calendar-card {
-    flex: 0 0 100%; /* Ocupa todo el visor */
-    scroll-snap-align: center;
-    background: white;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.15);
-    margin: 10px 0;
-    border-bottom: 12px solid transparent;
-    overflow: hidden;
-}
-
-.calendar-header {
-    background: #003366;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-
-    .day-label { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 2px; }
-    .date-label { font-family: 'Caveat Brush', cursive; font-size: 1.8rem; opacity: 0.9; }
-}
-
-.calendar-body {
-    padding: 40px;
-    min-height: 250px;
+.calendar-item {
+    background: #fff;
+    border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 8px solid #003366;
+    transition: 0.3s;
 }
 
-/* --- ESTILO PILL XL --- */
-.timeline-pill {
-    width: 100%;
-    list-style: none;
+.date-section {
+    min-width: 60px;
+    text-align: center;
+    border-right: 1px solid #eee;
+    margin-right: 15px;
+    padding-right: 10px;
+}
 
-    a {
-        display: flex;
-        align-items: center;
+.date-section .day { display: block; font-size: 1.8rem; font-weight: 900; color: #003366; line-height: 1; }
+.date-section .month { font-size: 0.7rem; font-weight: 800; color: #ffcc00; }
+
+.content-section { flex: 1; }
+.content-section h4 { font-size: 1rem; margin: 5px 0; color: #333; }
+.header-info { display: flex; gap: 10px; font-size: 0.75rem; font-weight: 700; }
+.header-info .time { color: #888; }
+.header-info .category { color: #003366; text-transform: uppercase; }
+.location { font-size: 0.8rem; color: #666; margin: 0; }
+
+.action-icon { color: #ddd; }
+
+/* --- DISEÑO WEB (HORIZONTAL CON MEDIA QUERY) --- */
+@media (min-width: 1024px) {
+    .hybrid-calendar {
+        flex-direction: row; /* Cambio a horizontal */
+        max-width: 1200px;
+        justify-content: center;
+        align-items: stretch;
         gap: 20px;
-        background: #fcfcfc;
-        padding: 30px;
-        border-radius: 20px 60px 20px 60px;
-        border-left: 10px solid #003366;
-        text-decoration: none;
-        transition: 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-
-        .pill-icon { font-size: 2.5rem; color: #ffcc00; }
-        h6 { font-size: 1.4rem; color: #003366; font-weight: 900; margin: 0; }
-        p { font-size: 1.1rem; color: #666; margin: 5px 0 0; }
-
-        &:hover { transform: scale(1.02); background: white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
     }
+
+    .calendar-item {
+        flex: 1; /* Todos miden lo mismo */
+        flex-direction: column; /* Apilamos fecha sobre contenido dentro del card */
+        text-align: center;
+        padding: 30px 20px;
+        border-left: none;
+        border-bottom: 10px solid #003366;
+        border-radius: 25px;
+    }
+
+    .date-section {
+        border-right: none;
+        border-bottom: 2px solid #f0f0f0;
+        margin-right: 0;
+        margin-bottom: 15px;
+        padding-right: 0;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
+    .date-section .day { font-size: 2.5rem; }
+
+    .header-info { justify-content: center; flex-direction: column; margin-bottom: 10px; }
+
+    .calendar-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 51, 102, 0.15);
+    }
+
+    .action-icon { display: none; } /* Ocultamos flecha en web */
 }
 
-/* --- BOTONES DE NAVEGACIÓN --- */
-.nav-btn {
-    flex: 0 0 60px;
-    height: 60px;
-    background: #ffcc00;
+/* Colores dinámicos */
+.color-1 { border-color: #003366; .month, .category { color: #003366 !important; } }
+.color-2 { border-color: #ffcc00; .month, .category { color: #003366 !important; } }
+
+/* Botón Final */
+.footer-action { text-align: center; margin-top: 50px; }
+.btn-ups-style {
+    background: #003366;
+    color: #fff;
+    padding: 15px 40px;
     border: none;
-    border-radius: 50px 10px 50px 10px; /* Estilo Slanted */
-    color: #003366;
-    font-size: 1.5rem;
+    border-radius: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
     cursor: pointer;
     transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+.btn-ups-style:hover { background: #ffcc00; color: #003366; }
 
-    &:hover { background: #003366; color: white; transform: rotate(-5deg) scale(1.1); }
+.footer-action {
+    display: flex;
+    flex-direction: row;    /* En PC van de lado a lado */
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
 }
 
-/* Colores de fondo dinámicos */
-.color-1 { border-bottom-color: #9b59b6; .timeline-pill a { border-left-color: #9b59b6; } }
-.color-2 { border-bottom-color: #f39c12; .timeline-pill a { border-left-color: #f39c12; } }
-.color-3 { border-bottom-color: #1abc9c; .timeline-pill a { border-left-color: #1abc9c; } }
+@media (max-width: 600px) {
+    .footer-action {
+        flex-direction: column; /* En celular se apilan */
+        align-items: center;
+    }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .carousel-master { gap: 10px; }
-    .nav-btn { flex: 0 0 45px; height: 45px; font-size: 1.1rem; }
-    .calendar-header .day-label { font-size: 2rem; }
-    .calendar-body { padding: 20px; }
-    .timeline-pill a { padding: 20px; flex-direction: column; text-align: center; }
+    .btn-ups-style {
+        width: 100%;           /* El botón ocupa todo el ancho en móvil */
+        max-width: 300px;
+    }
 }

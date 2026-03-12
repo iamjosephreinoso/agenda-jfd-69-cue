@@ -8,7 +8,9 @@
             <div class="logo-container">
                 <img src="assets/img/logoupsblanco.png" alt="Logo UPS" class="ups-logo-slanted" />
             </div>
-            <h1 class="slanted-title">MENOS FORMATOS, MÁS CONEXIÓN GENUINA</h1>
+            <h1 class="slanted-title">Taller de Elaboración de Instrumentos de Valoración de OVAS</h1>
+            <p class="slanted-subtitle">Vicerrectorado Académico</p>
+            <h1 class="slanted-title">FORMACIÓN EN INVESTIGACIÓN</h1>
             <p class="slanted-subtitle">Coordinación de Investigación Sede Cuenca</p>
 
         </div>
@@ -16,10 +18,13 @@
     <div class="container_cro">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab1' }" (click)="activeTab = 'tab1'" role="button">Lunes, 15 de Septiembre</a>
+                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab1' }" (click)="activeTab = 'tab1'" role="button">Miércoles, 18 de Marzo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab2' }" (click)="activeTab = 'tab2'" role="button">Martes, 16 de Septiembre</a>
+                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab2' }" (click)="activeTab = 'tab2'" role="button">Jueves, 19 de Marzo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab3' }" (click)="activeTab = 'tab3'" role="button">Viernes, 20 de Marzo</a>
             </li>
         </ul>
 
@@ -29,74 +34,55 @@
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">01</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">08h00 - 08h15</span><h5>KICK-OFF ENERGIZANTE</h5></div>
-                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
-                            <div class="timeline-body"><p>P. Juan Cárdenas Tapia sbd. PhD.</p></div>
+                            <div class="timeline-meta"><span class="time">08h00 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
                         </div>
                     </li>
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">02</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">08h15 - 10h00</span><h5>FASE 1: "CONOCIMIENTO PROFUNDO"</h5></div>
-                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
+                            <div class="timeline-meta"><span class="time">09h45 - 10h15</span><h5>RECESO</h5></div>
                         </div>
                     </li>
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">03</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">10h00 - 10h15</span><h5>RECESO</h5></div>
-                            <div class="timeline-body"><p>Tiempo de descanso y café</p></div>
+                            <div class="timeline-meta"><span class="time">10h15 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
                         </div>
                     </li>
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">04</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">10h30 - 12h00</span><h5>FASE 2A: "FORMULACIÓN DESAFÍOS"</h5></div>
-                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
+                            <div class="timeline-meta"><span class="time">12h00</span><h5>FIN JORNADA MATUTINA</h5></div>
                         </div>
                     </li>
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">05</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">12h00</span><h5>FIN JORNADA MATUTINA</h5></div>
+                            <div class="timeline-meta"><span class="time">14h00 - 18h00</span><h5>Talleres de Investigación</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
                         </div>
                     </li>
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">06</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">14h00 - 14h15</span><h5>ACTIVACIÓN POST-ALMUERZO</h5></div>
-                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
+                            <div class="timeline-meta"><span class="time">16h00 - 16h15</span><h5>RECESO</h5></div>
                         </div>
                     </li>
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">07</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">14h15 - 15h30</span><h5>FASE 2B: "SOLUCIONES CRUZADAS"</h5></div>
-                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
+                            <div class="timeline-meta"><span class="time">16h15 - 18h00</span><h5>Talleres de Investigación</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
                         </div>
                     </li>
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">08</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">15h30 - 15h45</span><h5>RECESO</h5></div>
-                        </div>
-                    </li>
-                    <li class="timeline-item color-1">
-                        <div class="timeline-badge">09</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">15h45 - 17h00</span><h5>FASE 3: "NETWORKING GENERATIVO"</h5></div>
-                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-item color-2">
-                        <div class="timeline-badge">10</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">17h00 - 18h00</span><h5>FASE 4: "PRÓXIMOS PASOS SIMPLES"</h5></div>
-                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-item color-1">
-                        <div class="timeline-badge">11</div>
                         <div class="timeline-panel">
                             <div class="timeline-meta"><span class="time">18h00</span><h5>FIN DE LA JORNADA</h5></div>
                         </div>
@@ -109,39 +95,116 @@
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">01</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">15h00 - 15h10</span><h5>ACTIVACIÓN RÁPIDA</h5></div>
-                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
+                            <div class="timeline-meta"><span class="time">08h00 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
                         </div>
                     </li>
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">02</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">15h10 - 16h20</span><h5>MEGA FASE 1: "CONEXIONES INSTITUCIONALES"</h5></div>
-                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
+                            <div class="timeline-meta"><span class="time">09h45 - 10h15</span><h5>RECESO</h5></div>
                         </div>
                     </li>
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">03</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">16h20 - 16h35</span><h5>RECESO</h5></div>
+                            <div class="timeline-meta"><span class="time">10h15 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
                         </div>
                     </li>
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">04</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">16h35 - 17h45</span><h5>MEGA FASE 2: "COMPROMISO GENUINO"</h5></div>
-                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
+                            <div class="timeline-meta"><span class="time">12h00</span><h5>FIN JORNADA MATUTINA</h5></div>
                         </div>
                     </li>
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">05</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">17h45 - 18h00</span><h5>CELEBRACIÓN FINAL</h5></div>
-                            <div class="timeline-body"><p>Edificio Guillermo Mensi</p></div>
+                            <div class="timeline-meta"><span class="time">14h00 - 18h00</span><h5>Talleres de Investigación</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo3()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
                         </div>
                     </li>
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">06</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">16h00 - 16h15</span><h5>RECESO</h5></div>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">07</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">16h15 - 18h00</span><h5>Talleres de Investigación</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo3()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">08</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">18h00</span><h5>FIN DE LA JORNADA</h5></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab3' }">
+                <ul class="timeline">
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">01</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">08h00 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">02</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">09h45 - 10h15</span><h5>RECESO</h5></div>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">03</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">10h15 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">04</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">12h00</span><h5>FIN JORNADA MATUTINA</h5></div>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">05</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">14h00 - 18h00</span><h5>Talleres de Investigación</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo4()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">06</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">16h00 - 16h15</span><h5>RECESO</h5></div>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">07</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-meta"><span class="time">16h15 - 18h00</span><h5>Talleres de Investigación</h5></div>
+                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
+                            <p><button (click)="showGroupInfo4()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                        </div>
+                    </li>
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">08</div>
                         <div class="timeline-panel">
                             <div class="timeline-meta"><span class="time">18h00</span><h5>FIN DE LA JORNADA</h5></div>
                         </div>

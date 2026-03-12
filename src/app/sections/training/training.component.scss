@@ -1,220 +1,267 @@
-/* Estilo general del contenedor */
+/* --- CONFIGURACIÓN GENERAL --- */
 .container_cro {
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 40px auto;
   padding: 20px;
   font-family: 'Fira Sans', sans-serif;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 15px;
+}
+
+.main-subtitle {
   text-align: center;
-}
-
-/* Estilo del título */
-.h1-seo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.container_cro p {
-  color: #ccc;
-  font-size: 1rem;
+  color: #333;
+  font-weight: 700;
   margin-bottom: 30px;
 }
 
-/* Estilos de la línea de tiempo */
+/* --- LÍNEA DE TIEMPO ESTRUCTURA --- */
 .timeline {
   position: relative;
-  padding: 20px 0;
   list-style: none;
+  padding: 40px 0;
+  overflow: hidden; /* Evita desbordamientos */
 }
 
-/* Línea vertical */
+/* Línea Vertical Gris Central */
 .timeline::before {
   content: "";
   position: absolute;
-  width: 5px;
-  background: #ddd;
   top: 0;
   bottom: 0;
   left: 50%;
+  width: 6px;
+  background: #e9ecef;
   transform: translateX(-50%);
 }
 
-/* Cada evento */
 .timeline-item {
   position: relative;
-  width: 50%;
-  padding: 20px;
-  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
-/* Alternar lados */
-.timeline-item:nth-child(odd) {
-  left: 0;
-  text-align: right;
+.timeline-item::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.timeline-item:nth-child(even) {
-  left: 50%;
-  text-align: left;
-}
-
-/* Círculos numerados */
-.timeline-item::before {
-  content: attr(data-num);
+/* --- CÍRCULOS NUMERADOS (CENTRO) --- */
+.timeline-badge {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #fff;
-  border-radius: 50%;
-  top: 20px;
   left: 50%;
-  transform: translate(-50%);
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 50px;
-  color: #2f4f5f;
-  border: 5px solid #007bff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Tarjetas de eventos */
-.timeline-content {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  display: block;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Etiqueta de categoría (colores alternados) */
-.timeline-item:nth-child(odd) .timeline-content {
-  border-left: 5px solid #001f4d;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-  border-right: 5px solid #f39c12;
-}
-
-.timeline-content h6 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #2f4f5f;
-}
-
-.timeline-content p {
-  font-size: 14px;
-  color: #6f6f6f;
-}
-
-/* Íconos */
-.timeline-content .icon {
-  font-size: 30px;
-  color: #fff;
-  padding: 10px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: #007bff;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .timeline::before {
-    left: 20px;
-  }
-
-  .timeline-item {
-    width: 100%;
-    left: 0 !important;
-    text-align: left;
-    padding-left: 40px;
-  }
-
-  .timeline-item::before {
-    left: 20px;
-  }
-}
-
-/* Centrar los enlaces dentro del contenedor de navegación */
-.nav-tabs {
+  background: #fff;
+  z-index: 10;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-/* Opcionalmente, puedes ajustar el color del texto, el fondo o los bordes */
-.nav-link {
-  color: #000;
-  font-weight: bold;
-}
-
-/* Cambiar la apariencia activa del tab */
-.nav-link.active {
-  background-color: #f8f9fa;
-  color: #007bff;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #003366;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 900;
   color: #fff;
-  padding: 50px;
-}
-.container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  background: #003366;
-  border-radius: 8px;
-}
-h1 {
-  font-size: 36px;
-  font-weight: bold;
-}
-p {
-  font-size: 18px;
-  font-weight: bold;
+  box-shadow: 0 0 0 10px #fff, 0 8px 15px rgba(0,0,0,0.1);
 }
 
-.floating-title {
+/* --- PANELES (PÍLDORAS) --- */
+.timeline-panel {
   position: relative;
-  z-index: 5;
-  padding: 30px 40px;
-  align-content: center;
-  text-align: center;
-  align-self: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #003366;
-  width: fit-content;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  box-shadow: 0 0 25px rgba(0, 51, 102, 0.4);
+  width: 43%;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid #eee;
 }
 
+/* Lado Izquierdo (Impares) */
+.timeline-item:nth-child(odd) .timeline-panel {
+  float: left;
+  border-right: 15px solid;
+  border-radius: 60px 20px 20px 60px;
+  text-align: right;
+  padding: 15px 45px 15px 25px;
+}
+
+/* Lado Derecho (Pares) */
+.timeline-item:nth-child(even) .timeline-panel {
+  float: right;
+  border-left: 15px solid;
+  border-radius: 20px 60px 60px 20px;
+  text-align: left;
+  padding: 15px 25px 15px 45px;
+}
+
+/* --- ESTILOS DE TEXTO --- */
+.timeline-meta .time {
+  display: block;
+  color: #003366;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.timeline-meta h5 {
+  font-weight: 700;
+  color: #003366;
+  font-size: 0.95rem;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+.timeline-body p {
+  font-size: 0.85rem;
+  color: #777;
+  margin: 0;
+}
+
+/* --- PALETA DE COLORES --- */
+.color-1 {
+  .timeline-badge { background: #003366; }
+  .timeline-panel { border-color: #003366; color: #003366; }
+}
+
+.color-2 {
+  .timeline-badge { background: #ffcc00; }
+  .timeline-panel { border-color: #ffcc00; color: #ffcc00; }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .timeline::before { left: 30px; }
+  .timeline-badge { left: 30px; width: 45px; height: 45px; font-size: 18px; }
+
+  .timeline-panel {
+    width: calc(100% - 80px) !important;
+    float: right !important;
+    text-align: left !important;
+    border-radius: 15px 40px 40px 15px !important;
+    border-left: 12px solid !important;
+    border-right: none !important;
+    padding: 15px 25px !important;
+  }
+}
+
+/* --- HEADER & TABS --- */
 .hero-logo {
   display: block;
   max-width: 150px;
   z-index: 2;
   margin: 0 auto 20px auto;
 }
+.floating-title { font-size: 1.6rem; color: #003366; background: rgba(255,255,255,0.90); padding: 25px; border-radius: 8px; text-align: center; font-weight: bold; }
+.nav-tabs { border: none; justify-content: center; margin-bottom: 20px; }
+.nav-link { border: none !important; font-weight: bold; color: #666; cursor: pointer; }
+.nav-link.active { color: #003366; border-bottom: 3px solid #003366 !important; background: transparent; }
 
-@media (max-width: 768px) {
-  .floating-title {
-    max-width: 80%;
-    width: fit-content;
-    font-size: 1.2rem;
-  }
-  .hero-logo{
-    max-width: 100px;
+/* --- SLANTED HEADER --- */
+.slanted-header {
+  position: relative;
+  height: 500px; // Altura del banner
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #003366; // Color de respaldo (azul UPS)
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  /* El recorte diagonal */
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  z-index: 1;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Degradado para mejorar legibilidad */
+  background: linear-gradient(135deg, rgba(0, 51, 102, 1) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: -40px; // Compensa el efecto visual del corte
+}
+
+.ups-logo-slanted {
+  max-width: 250px;
+  background: transparent;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+}
+
+.slanted-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  max-width: 1000px;
+}
+
+.slanted-subtitle {
+  color: #ffcc00; // Naranja Salesiano
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* --- BOTÓN INICIO --- */
+.btn-home-slanted {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: white;
+    color: #003366;
+    transform: scale(1.05);
   }
 }
 
+/* --- AJUSTES RESPONSIVE --- */
+@media (max-width: 768px) {
+  .slanted-header {
+    height: 400px;
+  }
+
+  .header-background {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
+  .slanted-title {
+    font-size: 1.6rem;
+  }
+
+  .ups-logo-slanted {
+    max-width: 180px;
+  }
+}
