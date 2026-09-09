@@ -22,13 +22,30 @@ import {MatIconModule} from "@angular/material/icon";
 import { FormComponent } from './form/form.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { GeneralCallComponent } from './general-call/general-call.component';
+import { InvestigacionComponent } from './investigacion/investigacion.component';
+
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+    { path: 'teacher_training', component: TrainingComponent},
+    { path: 'signup', component: MenuComponent },
+    { path: 'groups', component: GroupsComponent },
+    { path: 'ovas_investigation', component: InvestigacionComponent },
+    { path: 'unissma_lala', component: UnissmaComponent},
+    { path: 'unadedvi', component: LineaComponent},
+    { path: 'lala', component: LalaComponent},
+    { path: 'acreditation', component: AcreditacionComponent},
+    { path: 'avac', component: AvacComponent},
+    { path: 'form', component: FormComponent},
+    { path: 'general_call', component: GeneralCallComponent}
+];
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         NgbModule,
-        AppModule,
+        RouterModule.forChild(routes),
         RouterLinkWithHref,
         RouterLink,
         MatFormFieldModule,
@@ -55,7 +72,8 @@ import { GeneralCallComponent } from './general-call/general-call.component';
         AcreditacionComponent,
         FormComponent,
         CalendarComponent,
-        GeneralCallComponent
+        GeneralCallComponent,
+        InvestigacionComponent
     ]
 })
 export class SectionsModule { }

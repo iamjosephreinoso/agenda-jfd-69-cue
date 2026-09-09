@@ -12,3 +12,166 @@
   letter-spacing: 1px !important;
   padding: 10px 30px !important;
 }
+
+/* --- REUSABLE MODERN HERO LAYOUT --- */
+.modern-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    min-height: 80vh;
+    gap: 40px;
+}
+
+/* --- COLUMNA IZQUIERDA (COLLAGE) --- */
+.collage-container {
+    flex: 1;
+    position: relative;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 650px;
+}
+
+.pill-group {
+    position: relative;
+    width: 650px;
+    height: 650px;
+}
+
+/* La imagen real completa */
+.image-collage-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/img/banner.avif');
+    /* Hacemos un poco de zoom y enfocamos la esquina inferior derecha donde está el mural */
+    background-size: 140%; 
+    background-position: 100% 80%; 
+    
+    /* 
+       MÁSCARA GIGANTE (Con huecos más pequeños para mostrar más edificio)
+    */
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' width='800' height='800'><g transform='rotate(45, 400, 400)'><rect x='100' y='200' width='125' height='450' rx='62.5' ry='62.5' fill='black' /><rect x='230' y='50' width='180' height='700' rx='90' ry='90' fill='black' /><rect x='415' y='100' width='170' height='390' rx='85' ry='85' fill='black' /><rect x='415' y='495' width='170' height='250' rx='85' ry='85' fill='black' /><rect x='590' y='250' width='115' height='350' rx='57.5' ry='57.5' fill='black' /></g></svg>");
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' width='800' height='800'><g transform='rotate(45, 400, 400)'><rect x='100' y='200' width='125' height='450' rx='62.5' ry='62.5' fill='black' /><rect x='230' y='50' width='180' height='700' rx='90' ry='90' fill='black' /><rect x='415' y='100' width='170' height='390' rx='85' ry='85' fill='black' /><rect x='415' y='495' width='170' height='250' rx='85' ry='85' fill='black' /><rect x='590' y='250' width='115' height='350' rx='57.5' ry='57.5' fill='black' /></g></svg>");
+    
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: transform 0.5s ease;
+}
+
+.pill-group:hover .image-collage-mask {
+    transform: scale(1.02);
+}
+
+/* Formas decorativas base (sólidas) */
+.pill {
+    position: absolute;
+    border-radius: 200px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
+    transform: rotate(45deg); 
+}
+
+.pill-group:hover .pill {
+    transform: rotate(45deg) scale(1.02);
+}
+
+/* Píldoras decorativas de colores */
+.blue-pill { background-color: #003366; }
+.yellow-pill { background-color: #ffcc00; }
+
+/* Decorativas realineadas para el nuevo tamaño de 650x650 */
+.pos-1 { width: 40px; height: 40px; left: 50px; top: 100px; } /* Punto top left */
+.pos-2 { width: 120px; height: 220px; left: -30px; top: 380px; } /* Píldora bottom left */
+.pos-6 { width: 50px; height: 50px; left: 520px; top: 550px; } /* Punto bottom right */
+.pos-7 { width: 120px; height: 200px; left: 550px; top: -10px; } /* Píldora top right */
+
+/* --- COLUMNA DERECHA (TEXTO) --- */
+.hero-text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.brand-header {
+    margin-bottom: 30px;
+}
+
+.hero-logo {
+    max-width: 250px;
+    display: block;
+}
+
+.top-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Naranja/Amarillo brillante */
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.top-tag .tag-text {
+    color: #888;
+}
+
+.top-tag .tag-divider {
+    color: #ffcc00;
+}
+
+.main-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #333;
+    margin: 0 0 25px 0;
+    letter-spacing: -1px;
+}
+
+.main-title .highlight {
+    color: #003366; /* Color de acento para la palabra clave */
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .modern-hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 20px 20px 20px;
+    }
+
+    .hero-text-container {
+        align-items: center;
+    }
+
+    .top-tag {
+        justify-content: center;
+    }
+
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .collage-container {
+        transform: scale(0.7);
+        height: 400px;
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+}

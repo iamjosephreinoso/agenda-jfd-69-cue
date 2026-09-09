@@ -26,9 +26,7 @@ import { environment } from '../environments/environment';
     declarations: [
         AppComponent,
         NavbarComponent,
-        FooterComponent,
-        InvestigacionComponent,
-
+        FooterComponent
     ],
     exports: [
         FooterComponent

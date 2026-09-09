@@ -8,7 +8,7 @@ import {Toast} from "bootstrap";
 @Component({
     selector: 'app-form',
     templateUrl: './form.component.html',
-    styleUrls: ['./form.component.css']
+    styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
 
@@ -50,6 +50,13 @@ export class FormComponent implements OnInit {
         this.cargarCuposTotales();
 
         this.miFormulario.get('cedula')?.valueChanges.subscribe(valor => {
+            if (valor) {
+                const cleanValor = valor.toString().replace(/\D/g, '');
+                if (valor !== cleanValor) {
+                    this.miFormulario.get('cedula')?.setValue(cleanValor, { emitEvent: false });
+                    valor = cleanValor;
+                }
+            }
             if (!valor || valor.length < 10) {
                 this.miFormulario.patchValue({ nombres: '', correo: '' }, { emitEvent: false });
             }
@@ -73,10 +80,12 @@ export class FormComponent implements OnInit {
 
     buscarDocenteManualmente() {
         const cedula = this.miFormulario.get('cedula')?.value;
+        const cleanCedula = cedula ? cedula.toString().replace(/\D/g, '') : '';
         // Buscamos en el array del Excel (padronDocentes)
-        const docente = this.padronDocentes.find(d =>
-            String(d.CEDULA).padStart(10, '0') === cedula
-        );
+        const docente = this.padronDocentes.find(d => {
+            const dCedula = d.CEDULA ? String(d.CEDULA).padStart(10, '0').replace(/\D/g, '') : '';
+            return dCedula === cleanCedula && cleanCedula !== '';
+        });
         if (docente) {
             this.miFormulario.patchValue({
                 nombres: docente.NOMBRE ? docente.NOMBRE.toUpperCase() : '',

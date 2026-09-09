@@ -33,9 +33,11 @@ export class GroupsComponent implements OnInit {
     procesarDatosUnidos(excelData: any[], firestoreData: any[]): void {
         // Excel ya viene como objetos usando sheet_to_json
         this.gruposOriginal = excelData.map(excelRow => {
-            const matched = firestoreData.find(fireRow =>
-                fireRow.cedula?.toString().trim() === excelRow['CEDULA']?.toString().trim()
-            );
+            const matched = firestoreData.find(fireRow => {
+                const fireCedula = fireRow.cedula ? fireRow.cedula.toString().replace(/\D/g, '') : '';
+                const excelCedula = excelRow['CEDULA'] ? excelRow['CEDULA'].toString().replace(/\D/g, '') : '';
+                return fireCedula === excelCedula && fireCedula !== '';
+            });
             return { ...excelRow, ...matched };
         });
 

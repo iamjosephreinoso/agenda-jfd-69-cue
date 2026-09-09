@@ -1,38 +1,31 @@
-import { Component } from '@angular/core';
-import { ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.css']
+  styleUrls: ['./calendar.component.scss']
 })
-export class CalendarComponent {
-  days = [
-    { name: 'Lunes 15', color: '#003366', events: ['Investigación Día 1'] },
-    { name: 'Martes 16', color: '#003366', events: ['Investigación Dia 2']  },
-    { name: 'Miércoles 17', color: '#003366', events: ['Carreras en Línea']  },
-    { name: 'Jueves 18', color: '#003366', events: ['Formación Docente General Día 1', 'Inscribete al Taller Práctico Aquí'] },
-    { name: 'Viernes 19', color: '#003366', events: ['Formación Docente General Día 2'] },
-  ];
+export class CalendarComponent implements OnInit {
+    hoveredDay: number | null = null;
+    todayDay: number = 0;
+    todayMonth: number = 0;
 
-  days2 = [
-    { name: 'Lunes 22', color: '#003366' },
-    { name: 'Martes 23', color: '#003366' },
-    { name: 'Miércoles 24', color: '#003366' },
-    { name: 'Jueves 25', color: '#003366' },
-    { name: 'Viernes 26', color: '#003366' },
-  ];
-
-    @ViewChild('carousel', { static: true }) carousel!: ElementRef;
-
-    scrollNext() {
-        // Obtenemos el ancho del visor para que el salto sea de una tarjeta exacta
-        const width = this.carousel.nativeElement.offsetWidth;
-        this.carousel.nativeElement.scrollLeft += width;
+    ngOnInit() {
+        // Use current date for "today" highlight
+        const today = new Date();
+        this.todayDay = today.getDate();
+        this.todayMonth = today.getMonth(); // March is 2
     }
 
-    scrollPrev() {
-        const width = this.carousel.nativeElement.offsetWidth;
-        this.carousel.nativeElement.scrollLeft -= width;
+    setHover(day: number | null) {
+        this.hoveredDay = day;
+    }
+
+    isToday(day: number, monthStr: string): boolean {
+        // Simple mock check for demonstration if it's March
+        if (monthStr === 'MARZO' && this.todayMonth === 2 && this.todayDay === day) {
+            return true;
+        }
+        return false;
     }
 }

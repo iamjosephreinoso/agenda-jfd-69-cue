@@ -7,7 +7,7 @@ import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home.component';
-import {SectionsModule} from "../sections/sections.module";
+import { SectionsModule } from '../sections/sections.module';
 
 @NgModule({
     imports: [
@@ -15,9 +15,11 @@ import {SectionsModule} from "../sections/sections.module";
         FormsModule,
         NgbModule,
         NouisliderModule,
-        RouterModule,
+        RouterModule.forChild([
+            { path: '', component: HomeComponent }
+        ]),
         JwBootstrapSwitchNg2Module,
-        SectionsModule,
+        SectionsModule
     ],
     declarations: [
         HomeComponent,

@@ -4,22 +4,46 @@
 </header>
 
 <div class="wrapper">
-    <div class="hero-section slanted-header">
-        <div class="header-background" style="background-image: url('assets/img/banner.avif');">
-            <div class="overlay"></div>
-        </div>
-        <div class="hero-content">
-            <img src="assets/img/logoupsblanco.png" alt="Logo UPS" class="hero-logo" />
-        </div>
-    </div>
+    <section class="modern-hero">
+        <!-- Izquierda: Collage de píldoras -->
+        <div class="collage-container">
+            <div class="pill-group">
+                <!-- La imagen real, derecha y completa, cortada por las píldoras -->
+                <div class="image-collage-mask"></div>
 
-    <div class="title-container">
-        <h1 class="floating-title">
-            JORNADAS DE FORMACIÓN DOCENTE
-            <span class="subtitle">Periodo 2026 - 2026</span>
-            <span class="subtitle2">Sede Cuenca</span>
-        </h1>
-    </div>
+                <!-- Decorative solid pills -->
+                <div class="pill decorative-pill blue-pill pos-1"></div>
+                <div class="pill decorative-pill yellow-pill pos-2"></div>
+                <div class="pill decorative-pill yellow-pill pos-6"></div>
+                <div class="pill decorative-pill blue-pill pos-7"></div>
+            </div>
+        </div>
+        
+        <!-- Derecha: Texto -->
+        <div class="hero-text-container">
+
+
+            <div class="brand-header">
+                <img src="assets/img/logoupscolor.png" alt="Logo UPS" class="hero-logo" />
+            </div>
+
+            <h1 class="main-title">
+                JORNADAS DE <br>
+                <span class="highlight">FORMACIÓN</span> DOCENTE
+            </h1>
+
+            <div class="top-tag">
+                <span class="tag-text">Sede Cuenca</span>
+                <span class="tag-divider">•</span>
+                <span class="tag-text">Periodo 2026 - 2027</span>
+            </div>
+            <!--
+            <div class="hero-actions">
+                <a class="btn-primary">SEDE CUENCA</a>
+            </div>
+            -->
+        </div>
+    </section>
 
     <div class="main-content">
         <app-calendar></app-calendar>

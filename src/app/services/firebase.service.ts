@@ -53,7 +53,7 @@ export class FirebaseService {
 
     // Ejemplo de lo que debería tener tu servicio para los duplicados:
     checkUserInscription(cedula: string, curso: string): Promise<boolean> {
-        return this.firestore.collection('usuarios', ref =>
+        return this.firestore.collection('inscritos_cue_68', ref =>
             ref.where('cedula', '==', cedula)
                 .where('curso', '==', curso)
         ).get().toPromise().then(snap => !snap.empty);

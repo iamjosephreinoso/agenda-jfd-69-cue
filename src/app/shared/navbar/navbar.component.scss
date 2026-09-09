@@ -1,14 +1,57 @@
-.navbar-brand {
-  color: white !important;
+/* Estado transparente (inicio de la página sobre fondo claro) */
+.navbar-transparent .navbar-brand {
+  color: #003366 !important; /* Azul oscuro para que se vea sobre el fondo blanco/gris */
 }
 
-.navbar-brand::after {
-  color: white;
-  font-weight: bold;
+.navbar-transparent .navbar-brand::after {
+  color: #003366;
 }
 
-.navbar-nav .nav-item .nav-link {
-  color: white !important;
+/* Estado con color (después de hacer scroll, la barra se vuelve azul) */
+.navbar:not(.navbar-transparent) .navbar-brand {
+  color: #ffffff !important;
+}
+
+.navbar:not(.navbar-transparent) .navbar-brand::after {
+  color: #ffffff;
+}
+
+/* Decoraciones de fondo (manchitas tipo píldora) */
+.nav-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden; /* Mantiene las formas dentro de la barra */
+  opacity: 0; /* Invisibles en estado transparente */
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+/* Solo se muestran cuando la barra pierde la clase transparent (al hacer scroll) */
+.navbar:not(.navbar-transparent) .nav-decorations {
+  opacity: 1;
+}
+
+.nav-pill {
+  position: absolute;
+  border-radius: 200px;
+  background-color: #ffcc00; /* Amarillo UPS */
+  opacity: 0.05; /* Marca de agua sutil */
+  transform: rotate(45deg);
+}
+
+/* Posiciones de las manchitas */
+.nav-pill-1 { width: 80px; height: 200px; top: -100px; left: 20%; }
+.nav-pill-2 { width: 120px; height: 300px; top: -150px; right: 15%; }
+.nav-pill-3 { width: 40px; height: 40px; top: 10px; right: 35%; border-radius: 50%; opacity: 0.1;}
+
+/* Asegurar que el contenido del menú quede por encima de las decoraciones */
+.navbar .container {
+  position: relative;
+  z-index: 1;
 }
 
 /* General wrapper styling */

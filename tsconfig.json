@@ -17,11 +17,9 @@
       "es2016",
       "dom"
     ],
-    "module": "es2015"
+    "module": "es2020"
   },
   "exclude": [
-    "node_modules",
-    "src/app/home/home.module.ts",
-    "src/app/sections/sections.module.ts"
+    "node_modules"
   ]
 }
