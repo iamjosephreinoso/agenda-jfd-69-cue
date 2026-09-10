@@ -57,126 +57,346 @@
         </ul>
 
         <div class="tab-content mt-5">
+            <!-- TAB 1: LUNES 16 DE MARZO -->
             <div class="tab-pane" [ngClass]="{ 'show active': activeTab === 'tab1' }" *ngIf="activeTab === 'tab1'">
                 <ul class="timeline">
+                    <!-- 01: Momento de Oración -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">01</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">08h30 - 08h40</span><h5>Momento de Oración</h5></div>
-                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
-                            <div class="timeline-body"><p>Departamento de Pastoral</p></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h30 - 08h40
+                                </span>
+                                <span class="card-tag">Inauguración</span>
+                            </div>
+                            <h4 class="card-title">Momento de Oración</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Teatro Carlos Crespi</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-church"></i></div>
+                                    <span>Departamento de Pastoral</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 02: Intervención del Rector -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">02</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">08h40 - 10h10</span><h5>Intervención del Rector</h5></div>
-                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
-                            <div class="timeline-body"><p>P. Juan Cárdenas sdb. PhD.</p></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h40 - 10h10
+                                </span>
+                                <span class="card-tag">Apertura</span>
+                            </div>
+                            <h4 class="card-title">Intervención del Rector</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Teatro Carlos Crespi</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
+                                    <span>P. Juan Cárdenas sdb. PhD.</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-1">
+
+                    <!-- 03: Receso -->
+                    <li class="timeline-item color-1 is-break">
                         <div class="timeline-badge">03</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">10h10 - 10h40</span><h5>RECESO</h5></div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 10h10 - 10h40
+                                </span>
+                                <span class="card-tag break-tag">Coffee Break</span>
+                            </div>
+                            <div class="break-content">
+                                <div class="break-icon"><i class="fas fa-coffee"></i></div>
+                                <div class="break-text">
+                                    <h4 class="card-title">RECESO</h4>
+                                    <p class="break-desc">Tiempo libre y refrigerio</p>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 04: Charla IA -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">04</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">10h40 - 12h40</span><h5>Charla: Evaluación de los aprendizajes integrando inteligencia artificial</h5></div>
-                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
-                            <div class="timeline-body"><p>Xavier Mas García - Universitat Oberta de Catalunya</p></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 10h40 - 12h40
+                                </span>
+                                <span class="card-tag">Conferencia Magistral</span>
+                            </div>
+                            <h4 class="card-title">Evaluación de los aprendizajes integrando inteligencia artificial</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Teatro Carlos Crespi</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                                    <span>Xavier Mas García — Universitat Oberta de Catalunya</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-1">
+
+                    <!-- 05: Fin Jornada Matutina -->
+                    <li class="timeline-item color-1 is-closure">
                         <div class="timeline-badge">05</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">12h40</span><h5>FIN DE LA JORNADA MATUTINA</h5></div>
+                        <div class="timeline-panel closure-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 12h40
+                                </span>
+                                <span class="card-tag closure-tag">Receso de Almuerzo</span>
+                            </div>
+                            <div class="closure-content">
+                                <div class="closure-icon"><i class="fas fa-utensils"></i></div>
+                                <div class="closure-text">
+                                    <h4 class="card-title">FIN DE LA JORNADA MATUTINA</h4>
+                                    <p class="closure-desc">Reanudación en la jornada vespertina</p>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 06: Taller IA -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">06</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">14h15 - 16h00</span><h5>Taller de Inteligencia Artificial en Educación</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 14h15 - 16h00
+                                </span>
+                                <span class="card-tag">Taller Práctico</span>
+                            </div>
+                            <h4 class="card-title">Taller de Inteligencia Artificial en Educación</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Auditorios Edificio Guillermo Mensi</span>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <button class="btn-location-pill" (click)="showGroupInfo()">
+                                    <i class="fas fa-location-dot"></i> Ver Ubicaciones
+                                </button>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-1">
+
+                    <!-- 07: Receso -->
+                    <li class="timeline-item color-1 is-break">
                         <div class="timeline-badge">07</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">16h00 - 16h30</span><h5>RECESO</h5></div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 16h00 - 16h30
+                                </span>
+                                <span class="card-tag break-tag">Coffee Break</span>
+                            </div>
+                            <div class="break-content">
+                                <div class="break-icon"><i class="fas fa-coffee"></i></div>
+                                <div class="break-text">
+                                    <h4 class="card-title">RECESO</h4>
+                                    <p class="break-desc">Tiempo libre y refrigerio</p>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 08: Taller IA -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">08</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">16h30 - 17h30</span><h5>Taller de Inteligencia Artificial en Educación</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 16h30 - 17h30
+                                </span>
+                                <span class="card-tag">Taller Práctico</span>
+                            </div>
+                            <h4 class="card-title">Taller de Inteligencia Artificial en Educación</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Auditorios Edificio Guillermo Mensi</span>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <button class="btn-location-pill" (click)="showGroupInfo()">
+                                    <i class="fas fa-location-dot"></i> Ver Ubicaciones
+                                </button>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-1">
+
+                    <!-- 09: Fin de la Jornada Vespertina -->
+                    <li class="timeline-item color-1 is-closure">
                         <div class="timeline-badge">09</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">17h30</span><h5>FIN DE LA JORNADA VESPERTINA</h5></div>
+                        <div class="timeline-panel closure-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 17h30
+                                </span>
+                                <span class="card-tag closure-tag">Cierre del Día</span>
+                            </div>
+                            <div class="closure-content">
+                                <div class="closure-icon"><i class="fas fa-flag-checkered"></i></div>
+                                <div class="closure-text">
+                                    <h4 class="card-title">FIN DE LA JORNADA VESPERTINA</h4>
+                                    <p class="closure-desc">Culminación exitosa de las actividades del día</p>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
 
+            <!-- TAB 2: MARTES 17 DE MARZO -->
             <div class="tab-pane" [ngClass]="{ 'show active': activeTab === 'tab2' }" *ngIf="activeTab === 'tab2'">
                 <ul class="timeline">
+                    <!-- 01: Metodología CACES -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">01</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">09h00 - 10h30</span><h5>Metodología de construcción de evaluaciones de alto impacto </h5></div>
-                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
-                            <div class="timeline-body"><p>Equipo Técnico del CACES</p></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 09h00 - 10h30
+                                </span>
+                                <span class="card-tag">Capacitación</span>
+                            </div>
+                            <h4 class="card-title">Metodología de construcción de evaluaciones de alto impacto</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Teatro Carlos Crespi</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-users-gear"></i></div>
+                                    <span>Equipo Técnico del CACES</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-2">
+
+                    <!-- 02: Receso -->
+                    <li class="timeline-item color-2 is-break">
                         <div class="timeline-badge">02</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">10h30 - 11h00</span><h5>RECESO</h5></div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 10h30 - 11h00
+                                </span>
+                                <span class="card-tag break-tag">Coffee Break</span>
+                            </div>
+                            <div class="break-content">
+                                <div class="break-icon"><i class="fas fa-coffee"></i></div>
+                                <div class="break-text">
+                                    <h4 class="card-title">RECESO</h4>
+                                    <p class="break-desc">Tiempo libre y refrigerio</p>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 03: Briefing de evaluación -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">03</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">11h00 - 13h00</span><h5>Briefing de evaluación y taller práctico</h5></div>
-                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
-                            <div class="timeline-body"><p>Equipo Técnico del CACES</p></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 11h00 - 13h00
+                                </span>
+                                <span class="card-tag">Taller Práctico</span>
+                            </div>
+                            <h4 class="card-title">Briefing de evaluación y taller práctico</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Teatro Carlos Crespi</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-users-gear"></i></div>
+                                    <span>Equipo Técnico del CACES</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <!--
-                    <li class="timeline-item color-2">
+
+                    <!-- 04: Fin de la jornada matutina -->
+                    <li class="timeline-item color-2 is-closure">
                         <div class="timeline-badge">04</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">12h30 - 13h00</span><h5>Mecanismos de aseguramiento de la calidad del perfil de egreso en la UPS</h5></div>
-                            <div class="timeline-body"><p>Teatro Carlos Crespi</p></div>
-                            <div class="timeline-body"><p>Ing. Germán Parra MSc.</p></div>
-                        </div>
-                    </li> -->
-                    <li class="timeline-item color-2">
-                        <div class="timeline-badge">04</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">13H00</span><h5>FIN DE LA JORNADA MATUTINA</h5></div>
+                        <div class="timeline-panel closure-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 13h00
+                                </span>
+                                <span class="card-tag closure-tag">Receso de Almuerzo</span>
+                            </div>
+                            <div class="closure-content">
+                                <div class="closure-icon"><i class="fas fa-utensils"></i></div>
+                                <div class="closure-text">
+                                    <h4 class="card-title">FIN DE LA JORNADA MATUTINA</h4>
+                                    <p class="closure-desc">Reanudación en la jornada vespertina</p>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 05: Taller IA -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">05</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">14h30 - 16h30</span><h5>Taller de Inteligencia Artificial en Educación</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 14h30 - 16h30
+                                </span>
+                                <span class="card-tag">Taller Práctico</span>
+                            </div>
+                            <h4 class="card-title">Taller de Inteligencia Artificial en Educación</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Auditorios Edificio Guillermo Mensi</span>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <button class="btn-location-pill" (click)="showGroupInfo()">
+                                    <i class="fas fa-location-dot"></i> Ver Ubicaciones
+                                </button>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-2">
+
+                    <!-- 06: Fin Jornada Vespertina / Clausura -->
+                    <li class="timeline-item color-2 is-closure">
                         <div class="timeline-badge">06</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">16H30</span><h5>FIN DE LA JORNADA VESPERTINA</h5></div>
+                        <div class="timeline-panel closure-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 16h30
+                                </span>
+                                <span class="card-tag closure-tag">Clausura General</span>
+                            </div>
+                            <div class="closure-content">
+                                <div class="closure-icon"><i class="fas fa-award"></i></div>
+                                <div class="closure-text">
+                                    <h4 class="card-title">FIN DE LA JORNADA VESPERTINA</h4>
+                                    <p class="closure-desc">Clausura oficial de las Jornadas de Formación Docente</p>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>

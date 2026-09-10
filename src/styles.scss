@@ -131,12 +131,13 @@
 }
 
 .main-title {
-    font-size: 4.5rem;
+    font-size: clamp(1.85rem, 5.5vw, 4.5rem);
     font-weight: 900;
     line-height: 1.1;
     color: #333;
     margin: 0 0 25px 0;
     letter-spacing: -1px;
+    word-break: break-word;
 }
 
 .main-title .highlight {
@@ -160,7 +161,7 @@
     }
 
     .main-title {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     .collage-container {
@@ -170,8 +171,31 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .main-title {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-hero {
+        padding: 40px 15px 20px 15px;
+    }
+
+    .main-title {
+        font-size: 1.85rem;
+        margin-bottom: 15px;
+    }
+
+    .collage-container {
+        transform: scale(0.5);
+        height: 300px;
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 360px) {
+    .main-title {
+        font-size: 1.6rem;
     }
 }

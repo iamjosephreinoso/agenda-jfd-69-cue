@@ -43,7 +43,7 @@ import { environment } from '../environments/environment';
         MatFormFieldModule,
         MatInputModule,
         ReactiveFormsModule,
-        AngularFireModule.initializeApp(environment.firebase),
+        //AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule
     ],
     providers: []
