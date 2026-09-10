@@ -4,7 +4,7 @@ import {ActivatedRoute} from "@angular/router";
 @Component({
   selector: 'app-unissma',
   templateUrl: './unissma.component.html',
-  styleUrls: ['./unissma.component.css']
+  styleUrls: ['./unissma.component.scss']
 })
 export class UnissmaComponent implements OnInit {
 

@@ -62,19 +62,22 @@
 
 .search-pill-container {
   background: #ffffff;
-  padding: 25px 35px;
-  border-radius: 20px 60px 20px 60px;
-  box-shadow: 0 15px 35px rgba(0, 51, 102, 0.15);
-  border-left: 8px solid #ffcc00;
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.06);
+  border: 1px solid rgba(0, 51, 102, 0.05);
+  display: flex;
+  flex-direction: column;
 }
 
 .search-label {
   display: block;
-  font-weight: 800;
+  font-weight: 700;
   color: #003366;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
 }
 
 .input-pill-wrapper {
@@ -91,18 +94,24 @@
 
   .search-input-pill {
     width: 100%;
-    padding: 15px 15px 15px 50px;
-    border: 2px solid #f0f4f8;
+    padding: 16px 20px 16px 55px;
+    border: 1px solid rgba(0, 51, 102, 0.1);
     background: #f8fafc;
-    border-radius: 50px;
+    border-radius: 12px;
     font-size: 1rem;
+    font-weight: 500;
+    color: #003366;
     outline: none;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+      color: #99aabf;
+    }
 
     &:focus {
       border-color: #003366;
-      background: #fff;
-      box-shadow: 0 5px 15px rgba(0, 51, 102, 0.05);
+      background: #ffffff;
+      box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.1);
     }
   }
 }
@@ -110,60 +119,128 @@
 /* --- TARJETAS DE RESULTADOS --- */
 .result-card-premium {
   background: #ffffff;
-  border-radius: 25px;
-  padding: 30px;
-  text-align: center;
-  height: 100%;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: left;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  border-bottom: 8px solid #003366;
+  box-shadow: 0 6px 15px rgba(0, 51, 102, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 51, 102, 0.06);
+  border-left: 6px solid #003366;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 51, 102, 0.1), 0 4px 8px rgba(0, 0, 0, 0.03);
+    border-left-color: #ffcc00;
+    
+    .card-pill-header {
+      background: #003366;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+  }
+
+  &.is-expanded {
+    border-left-color: #ffcc00;
+    background: #fafcfd;
   }
 }
 
 .card-pill-header {
-  width: 60px;
-  height: 60px;
-  background: rgba(0, 51, 102, 0.05);
-  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background: #f0f8ff;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
-  color: #ffcc00;
-  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #003366;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
 }
 
 .teacher-name {
   color: #003366;
   font-weight: 800;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 1.3;
+  font-size: 1.15rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.card-expanded-content {
+  margin: 15px 0;
+  text-align: left;
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Mini Píldoras de Información */
+.info-pill {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 51, 102, 0.06);
+  border-left: 4px solid #003366;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateX(4px);
+  }
+
+  strong {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #667b99;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+
+  span {
+    font-size: 0.9rem;
+    color: #003366;
+    font-weight: 700;
+  }
+
+  &.yellow { 
+    border-left-color: #ffcc00; 
+    background: #fffdf5;
+  }
+  &.blue { 
+    border-left-color: #003366; 
+    background: #f5fbff;
+  }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .btn-detail-pill {
-  background: #003366;
-  color: #fff;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 50px 10px 50px 10px;
+  background: transparent;
+  color: #003366;
+  border: 2px solid rgba(0, 51, 102, 0.1);
+  padding: 10px 20px;
+  border-radius: 8px;
   font-weight: 700;
   font-size: 0.85rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  margin-top: 10px;
 
-  i { margin-left: 5px; font-size: 0.7rem; }
+  i { margin-left: 5px; }
 
   &:hover {
-    background: #ffcc00;
-    color: #003366;
+    background: #003366;
+    color: #ffffff;
+    border-color: #003366;
   }
 }
 
@@ -221,74 +298,698 @@
   .pagination-slanted { flex-direction: column; gap: 10px; }
 }
 
-/* --- ESTILOS DE LA TARJETA EXPANDIBLE --- */
-.result-card-premium {
-  background: #ffffff;
-  border-radius: 25px;
-  padding: 30px;
+/* --- CONFIGURACIÓN GENERAL --- */
+.container_cro {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Fira Sans', sans-serif;
+  background-color: transparent;
+  border-radius: 15px;
+}
+
+.main-subtitle {
   text-align: center;
-  height: fit-content; /* Permite que crezca según el contenido */
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* --- LÍNEA DE TIEMPO ESTRUCTURA --- */
+.timeline {
+  position: relative;
+  list-style: none;
+  padding: 40px 0;
+}
+
+/* Línea Vertical Central (Fondo) */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #003366; /* Base oscura */
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Efecto que se pinta de celeste de arriba hacia abajo */
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  background: #00bfff; /* Celeste brillante */
+  transform: translateX(-50%);
+  border-radius: 2px;
+  z-index: 1;
+  animation: fillVerticalLine 2s ease-out 0.3s forwards;
+  height: 0;
+}
+
+@keyframes fillVerticalLine {
+  0% { height: 0; }
+  100% { height: 100%; }
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.timeline-item::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* --- CÍRCULOS NUMERADOS (CENTRO) --- */
+.timeline-badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ffffff;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: 900;
+  box-shadow: 0 0 0 6px #ffffff, 0 8px 20px rgba(0, 51, 102, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efecto celeste y resplandor al pasar el mouse */
+.timeline-item:hover .timeline-badge {
+  transform: translate(-50%, -50%) scale(1.15);
+  box-shadow: 0 0 0 5px #ffffff, 0 0 25px rgba(0, 191, 255, 0.9);
+}
+
+/* --- PANELES (NUEVAS TARJETAS MODERNAS) --- */
+.timeline-panel {
+  position: relative;
+  width: 44%;
+  background: #ffffff;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.06), 0 2px 5px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 51, 102, 0.08) !important;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  text-align: left !important;
+  padding: 22px 26px !important;
+}
+
+.timeline-panel:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 51, 102, 0.12), 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Lado Izquierdo (Impares) */
+.timeline-item:nth-child(odd) .timeline-panel {
+  float: left;
+  border-right: 6px solid #003366 !important;
+}
+
+/* Lado Derecho (Pares) */
+.timeline-item:nth-child(even) .timeline-panel {
+  float: right;
+  border-left: 6px solid #ffcc00 !important;
+}
+
+/* Top bar: Hora y Categoría */
+.card-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.card-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 13px;
+  border-radius: 30px;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  background: #f1f5f9;
+  color: #003366;
+  border: 1px solid rgba(0, 51, 102, 0.08);
+
+  i {
+    font-size: 0.78rem;
+    opacity: 0.85;
+  }
+}
+
+.card-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 11px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background: #003366;
+  color: #ffffff;
+}
+
+/* Título de la tarjeta */
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #1e293b;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.3px;
+}
+
+/* Metadatos (Ubicación y Ponente) */
+.card-meta {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  border-bottom: 8px solid #003366;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-  &.is-expanded {
-    border-bottom-color: #ffcc00;
-    transform: scale(1.02);
-  }
+  gap: 9px;
 }
 
-.card-expanded-content {
-  margin: 20px 0;
-  text-align: left;
-  animation: slideDown 0.3s ease-out;
-}
-
-/* Mini Píldoras de Información */
-.info-pill {
-  padding: 12px 15px;
-  border-radius: 12px 30px 12px 30px;
-  margin-bottom: 10px;
-  background: #f8fafc;
-  border-left: 6px solid #003366;
-
-  strong {
-    display: block;
-    font-size: 10px;
-    text-transform: uppercase;
-    color: #003366;
-  }
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.4;
 
   span {
-    font-size: 13px;
-    color: #444;
     font-weight: 500;
   }
 
-  &.yellow { border-left-color: #ffcc00; }
-  &.blue { border-left-color: #003366; }
+  .meta-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    color: #003366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+
+  &.location .meta-icon {
+    color: #dc2626;
+    background: #fef2f2;
+  }
+
+  &.speaker .meta-icon {
+    color: #003366;
+    background: #eef4fa;
+  }
 }
 
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Botón Ver Ubicaciones */
+.card-action {
+  margin-top: 15px;
+  display: flex;
 }
 
-.btn-detail-pill {
-  background: #003366;
-  color: #fff;
+.btn-location-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #003366, #004d99);
+  color: #ffffff !important;
   border: none;
-  padding: 12px 30px;
-  border-radius: 50px 12px 50px 12px;
-  font-weight: 800;
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
   cursor: pointer;
-  transition: 0.3s;
-  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.22);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  i {
+    font-size: 0.85rem;
+    color: #ffcc00;
+  }
 
   &:hover {
+    background: linear-gradient(135deg, #ffcc00, #f5b700);
+    color: #003366 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 204, 0, 0.4);
+
+    i {
+      color: #003366;
+    }
+  }
+}
+
+/* --- LADO IZQUIERDO: COLOR-1 (AZUL UPS) --- */
+.color-1,
+.timeline-item:nth-child(odd) {
+  .timeline-badge {
+    background: linear-gradient(135deg, #003366, #004d99);
+    color: #ffffff;
+    box-shadow: 0 0 0 6px #ffffff, 0 8px 20px rgba(0, 51, 102, 0.25);
+  }
+
+  .timeline-panel {
+    border-right: 6px solid #003366 !important;
+    border-left: 1px solid rgba(0, 51, 102, 0.08) !important;
+    border-color: rgba(0, 51, 102, 0.12) !important;
+  }
+
+  .card-tag {
+    background: #003366;
+    color: #ffffff;
+  }
+
+  .card-time-badge {
+    background: #f1f5f9;
+    color: #003366;
+    border: 1px solid rgba(0, 51, 102, 0.12);
+  }
+
+  .meta-row.speaker .meta-icon {
+    color: #003366;
+    background: #eef4fa;
+  }
+
+  /* Receso en el lado izquierdo (Azul) */
+  &.is-break .timeline-panel,
+  .break-panel {
+    background: linear-gradient(135deg, #ffffff 65%, #f0f7fc 100%);
+    border-right: 6px solid #003366 !important;
+    border-left: 1px solid rgba(0, 51, 102, 0.15) !important;
+
+    .card-time-badge {
+      background: #eaf2fa;
+      color: #003366;
+      border-color: rgba(0, 51, 102, 0.2);
+    }
+
+    .card-tag.break-tag {
+      background: #003366;
+      color: #ffffff;
+    }
+
+    .break-icon {
+      background: #e6f0fa;
+      color: #003366;
+    }
+
+    .break-text .card-title {
+      color: #003366;
+    }
+
+    .break-text .break-desc {
+      color: #64748b;
+    }
+  }
+
+  /* Cierre en el lado izquierdo (Azul) */
+  &.is-closure .timeline-panel,
+  .closure-panel {
+    background: linear-gradient(135deg, #ffffff 65%, #f0f7fc 100%);
+    border-right: 6px solid #003366 !important;
+    border-left: 1px solid rgba(0, 51, 102, 0.15) !important;
+
+    .card-time-badge {
+      background: #eaf2fa;
+      color: #003366;
+    }
+
+    .card-tag.closure-tag {
+      background: #003366;
+      color: #ffffff;
+    }
+
+    .closure-icon {
+      background: #e6f0fa;
+      color: #003366;
+    }
+
+    .closure-text .card-title {
+      color: #003366;
+    }
+
+    .closure-text .closure-desc {
+      color: #64748b;
+    }
+  }
+}
+
+/* --- LADO DERECHO: COLOR-2 (AMARILLO SALESIANO) --- */
+.color-2,
+.timeline-item:nth-child(even) {
+  .timeline-badge {
+    background: linear-gradient(135deg, #ffcc00, #f5b700);
+    color: #003366;
+    box-shadow: 0 0 0 6px #ffffff, 0 8px 20px rgba(255, 204, 0, 0.35);
+  }
+
+  .timeline-panel {
+    border-left: 6px solid #ffcc00 !important;
+    border-right: 1px solid rgba(255, 204, 0, 0.25) !important;
+    border-color: rgba(255, 204, 0, 0.25) !important;
+  }
+
+  .card-tag {
     background: #ffcc00;
     color: #003366;
   }
+
+  .card-time-badge {
+    background: #fff9e6;
+    color: #997300;
+    border: 1px solid rgba(255, 204, 0, 0.25);
+  }
+
+  .meta-row.speaker .meta-icon {
+    color: #b38600;
+    background: #fff9e6;
+  }
+
+  /* Receso en el lado derecho (Amarillo) */
+  &.is-break .timeline-panel,
+  .break-panel {
+    background: linear-gradient(135deg, #ffffff 65%, #fffbf0 100%);
+    border-left: 6px solid #ffcc00 !important;
+    border-right: 1px solid rgba(255, 204, 0, 0.35) !important;
+
+    .card-time-badge {
+      background: #fff8db;
+      color: #8c6500;
+      border-color: rgba(255, 204, 0, 0.35);
+    }
+
+    .card-tag.break-tag {
+      background: #ffcc00;
+      color: #003366;
+    }
+
+    .break-icon {
+      background: #fff8db;
+      color: #d48800;
+    }
+
+    .break-text .card-title {
+      color: #785200;
+    }
+
+    .break-text .break-desc {
+      color: #8c734b;
+    }
+  }
+
+  /* Cierre en el lado derecho (Amarillo) */
+  &.is-closure .timeline-panel,
+  .closure-panel {
+    background: linear-gradient(135deg, #ffffff 65%, #fffbf0 100%);
+    border-left: 6px solid #ffcc00 !important;
+    border-right: 1px solid rgba(255, 204, 0, 0.35) !important;
+
+    .card-time-badge {
+      background: #fff8db;
+      color: #8c6500;
+      border-color: rgba(255, 204, 0, 0.35);
+    }
+
+    .card-tag.closure-tag {
+      background: #ffcc00;
+      color: #003366;
+    }
+
+    .closure-icon {
+      background: #fff8db;
+      color: #d48800;
+    }
+
+    .closure-text .card-title {
+      color: #785200;
+    }
+
+    .closure-text .closure-desc {
+      color: #8c734b;
+    }
+  }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .timeline::before,
+  .timeline::after {
+    left: 30px;
+  }
+  .timeline-badge {
+    left: 30px;
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+    box-shadow: 0 0 0 4px #fff, 0 3px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  .timeline-panel {
+    width: calc(100% - 70px) !important;
+    float: right !important;
+    text-align: left !important;
+    padding: 18px 20px !important;
+    border-radius: 16px !important;
+  }
+
+  /* En móviles siempre el borde de acento a la izquierda */
+  .timeline-item:nth-child(odd) .timeline-panel,
+  .timeline-item.color-1 .timeline-panel {
+    border-right: 1px solid rgba(0, 51, 102, 0.08) !important;
+    border-left: 6px solid #003366 !important;
+  }
+
+  .timeline-item:nth-child(even) .timeline-panel,
+  .timeline-item.color-2 .timeline-panel {
+    border-right: 1px solid rgba(255, 204, 0, 0.25) !important;
+    border-left: 6px solid #ffcc00 !important;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+  }
+
+  .card-top-bar {
+    margin-bottom: 10px;
+  }
+
+  .meta-row {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-panel {
+    padding: 15px 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .card-title {
+    font-size: 0.98rem;
+  }
+
+  .card-time-badge {
+    font-size: 0.78rem;
+    padding: 4px 10px;
+  }
+
+  .card-tag {
+    font-size: 0.68rem;
+    padding: 3px 8px;
+  }
+
+  .break-panel .break-content,
+  .closure-panel .closure-content {
+    gap: 12px;
+  }
+
+  .break-panel .break-icon,
+  .closure-panel .closure-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    font-size: 1.05rem;
+  }
+}
+
+/* --- HEADER & TABS --- */
+.hero-logo {
+  display: block;
+  max-width: 150px;
+  z-index: 2;
+  margin: 0 auto 20px auto;
+}
+.floating-title { font-size: 1.6rem; color: #003366; background: rgba(255,255,255,0.90); padding: 25px; border-radius: 8px; text-align: center; font-weight: bold; }
+.nav-tabs { border: none; justify-content: center; margin-bottom: 20px; }
+.nav-link { border: none !important; font-weight: bold; color: #666; cursor: pointer; }
+.nav-link.active { color: #003366; border-bottom: 3px solid #003366 !important; background: transparent; }
+
+/* --- SLANTED HEADER --- */
+.slanted-header {
+  position: relative;
+  height: 500px; // Altura del banner
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #003366; // Color de respaldo (azul UPS)
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  /* El recorte diagonal */
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  z-index: 1;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Degradado para mejorar legibilidad */
+  background: linear-gradient(135deg, rgba(0, 51, 102, 1) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: -40px; // Compensa el efecto visual del corte
+}
+
+.ups-logo-slanted {
+  max-width: 250px;
+  background: transparent;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+}
+
+.slanted-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  max-width: 1000px;
+}
+
+.slanted-subtitle {
+  color: #ffcc00; // Naranja Salesiano
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* --- BOTÓN INICIO --- */
+.btn-home-slanted {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: white;
+    color: #003366;
+    transform: scale(1.05);
+  }
+}
+
+/* --- AJUSTES RESPONSIVE --- */
+@media (max-width: 768px) {
+  .slanted-header {
+    height: 400px;
+  }
+
+  .header-background {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
+  .slanted-title {
+    font-size: 1.6rem;
+  }
+
+  .ups-logo-slanted {
+    max-width: 180px;
+  }
+}
+
+
+
+.brand-header {
+    margin-bottom: 30px;
+}
+.main-title {
+    font-size: clamp(1.5rem, 4vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: #333;
+    margin: 0 0 25px 0;
+    letter-spacing: -0.5px;
+    word-break: break-word;
+
+    @media (max-width: 1024px) {
+        font-size: 2.4rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 1.4rem;
+    }
+}
+
+.main-title .highlight {
+    color: #003366; /* Color de acento para la palabra clave */
+    font-family: 'Montserrat', sans-serif;
+}
+.top-tag {
+    justify-content: center;
+    flex-wrap: wrap;
 }

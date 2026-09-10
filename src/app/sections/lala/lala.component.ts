@@ -4,7 +4,7 @@ import {ActivatedRoute} from "@angular/router";
 @Component({
   selector: 'app-lala',
   templateUrl: './lala.component.html',
-  styleUrls: ['./lala.component.css']
+  styleUrls: ['./lala.component.scss']
 })
 export class LalaComponent implements OnInit {
 

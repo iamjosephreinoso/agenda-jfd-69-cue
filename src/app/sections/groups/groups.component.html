@@ -11,20 +11,19 @@
         </div>
         
         <div class="hero-text-container">
-            <div class="top-tag">
-                <span class="tag-text">Sede Cuenca</span>
-                <span class="tag-divider">•</span>
-                <span class="tag-text">Jornadas Docentes</span>
-            </div>
-
             <div class="brand-header">
                 <img src="assets/img/logoupscolor.png" alt="Logo UPS" class="hero-logo" />
             </div>
 
             <h1 class="main-title">
-                GRUPOS DE<br>
+                GRUPOS DE <br>
                 <span class="highlight">TRABAJO</span>
             </h1>
+
+            <div class="top-tag">
+                <span class="tag-text">Sede Cuenca</span>
+                <span class="tag-divider">•</span>
+            </div>
         </div>
     </section>
 
@@ -58,12 +57,12 @@
 
                         <div class="card-expanded-content" *ngIf="grupo.expandido">
                             <div class="info-pill blue">
-                                <strong>Jornadas Generales - Taller Práctico</strong>
-                                <span>{{ obtenerAula(grupo) }}</span>
+                                <strong>Jornadas Generales </strong>
+                                <span>{{ grupo.JDF }}</span>
                             </div>
                             <div class="info-pill yellow">
-                                <strong>Taller de Elaboración de Instrumentos de Valoración de OVAS</strong>
-                                <span>{{ grupo.OVAS }}</span>
+                                <strong>Jornadas de Técnicas de Rúbricas y Aulas Bases</strong>
+                                <span>{{ grupo.JFD2 }}</span>
                             </div>
                             <div class="info-pill blue">
                                 <strong>Jornadas de Investigación</strong>
@@ -105,4 +104,5 @@
             </div>
         </ng-template>
     </main>
+    <br>
 </div>

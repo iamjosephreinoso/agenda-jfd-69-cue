@@ -49,7 +49,7 @@
                 <div class="calendar-item fade-in-cascade" style="animation-delay: 0.4s; background-image: url('assets/img/docentes.png');"
                      [class.today-card]="isToday(16, 'SEPTIEMBRE')"
                      (mouseenter)="setHover(16)" (mouseleave)="setHover(null)"
-                     [routerLink]="['/ovas_investigation']" [queryParams]="{ tab: 'tab1' }">
+                     [routerLink]="['/curriculum_reform']" [queryParams]="{ tab: 'tab1' }">
                     <div class="card-overlay"></div>
                     <div class="card-content">
                         <div class="date-header">
@@ -57,7 +57,7 @@
                             <span class="month">SEPTIEMBRE</span>
                         </div>
                         <div class="content-body">
-                            <h4 class="category">JORNADAS TÉCNICAS DE RÚBRICAS Y AULAS BASES</h4>
+                            <h4 class="category">JORNADAS DE TÉCNICAS DE RÚBRICAS Y AULAS BASES</h4>
                             <p class="location"><i class="fas fa-map-marker-alt"></i> Edificio Guillermo Mensi</p>
                         </div>
                         <div class="card-action">
@@ -69,7 +69,7 @@
                 <div class="calendar-item fade-in-cascade" style="animation-delay: 0.5s; background-image: url('assets/img/docentes.png');"
                      [class.today-card]="isToday(17, 'SEPTIEMBRE')"
                      (mouseenter)="setHover(17)" (mouseleave)="setHover(null)"
-                     [routerLink]="['/ovas_investigation']" [queryParams]="{ tab: 'tab2' }">
+                     [routerLink]="['/curriculum_reform']" [queryParams]="{ tab: 'tab2' }">
                     <div class="card-overlay"></div>
                     <div class="card-content">
                         <div class="date-header">
@@ -77,7 +77,7 @@
                             <span class="month">SEPTIEMBRE</span>
                         </div>
                         <div class="content-body">
-                            <h4 class="category">JORNADAS TÉCNICAS DE RÚBRICAS Y AULAS BASES</h4>
+                            <h4 class="category">JORNADAS DE TÉCNICAS DE RÚBRICAS Y AULAS BASES</h4>
                             <p class="location"><i class="fas fa-map-marker-alt"></i> Edificio Guillermo Mensi</p>
                         </div>
                         <div class="card-action">
@@ -89,7 +89,7 @@
                 <div class="calendar-item fade-in-cascade" style="animation-delay: 0.6s; background-image: url('assets/img/docentes.png');"
                      [class.today-card]="isToday(18, 'SEPTIEMBRE')"
                      (mouseenter)="setHover(18)" (mouseleave)="setHover(null)"
-                     [routerLink]="['/ovas_investigation']" [queryParams]="{ tab: 'tab3' }">
+                     [routerLink]="['/curriculum_reform']" [queryParams]="{ tab: 'tab3' }">
                     <div class="card-overlay"></div>
                     <div class="card-content">
                         <div class="date-header">
@@ -97,7 +97,7 @@
                             <span class="month">SEPTIEMBRE</span>
                         </div>
                         <div class="content-body">
-                            <h4 class="category">JORNADAS TÉCNICAS DE RÚBRICAS Y AULAS BASES</h4>
+                            <h4 class="category">JORNADAS DE TÉCNICAS DE RÚBRICAS Y AULAS BASES</h4>
                             <p class="location"><i class="fas fa-map-marker-alt"></i> Edificio Guillermo Mensi</p>
                         </div>
                         <div class="card-action">
@@ -124,9 +124,9 @@
             <i class="fas fa-user-plus"></i> + INSCRIPCIONES TALLER
         </button>
         -->
-        <button [routerLink]="['/groups']"  class="btn-ups-style">
+        <a [routerLink]="['/groups']" class="btn-ups-style" style="text-decoration: none; cursor: pointer;">
             <i class="fas fa-users"></i> VER GRUPOS DE TRABAJO
-        </button>
+        </a>
     </div>
 
     <!-- Segunda Semana -->
@@ -147,7 +147,7 @@
                 <div class="calendar-item fade-in-cascade" style="animation-delay: 0.9s; background-image: url('assets/img/investigacion.png');"
                      [class.today-card]="isToday(21, 'SEPTIEMBRE')"
                      (mouseenter)="setHover(21)" (mouseleave)="setHover(null)"
-                     [routerLink]="['/lala']" [queryParams]="{ tab: 'tab1' }">
+                     [routerLink]="['/investigation']" [queryParams]="{ tab: 'tab1' }">
                     <div class="card-overlay"></div>
                     <div class="card-content">
                         <div class="date-header">
@@ -167,7 +167,7 @@
                 <div class="calendar-item fade-in-cascade" style="animation-delay: 1.0s; background-image: url('assets/img/investigacion.png');"
                      [class.today-card]="isToday(22, 'SEPTIEMBRE')"
                      (mouseenter)="setHover(22)" (mouseleave)="setHover(null)"
-                     [routerLink]="['/unissma_lala']" [queryParams]="{ tab: 'tab1' }">
+                     [routerLink]="['/investigation']" [queryParams]="{ tab: 'tab1' }">
                     <div class="card-overlay"></div>
                     <div class="card-content">
                         <div class="date-header">
@@ -186,7 +186,8 @@
                 <!-- Day 23 -->
                 <div class="calendar-item fade-in-cascade" style="animation-delay: 1.1s; background-image: url('assets/img/investigacion.png');"
                      [class.today-card]="isToday(23, 'SEPTIEMBRE')"
-                     (mouseenter)="setHover(23)" (mouseleave)="setHover(null)">
+                     (mouseenter)="setHover(23)" (mouseleave)="setHover(null)"
+                     [routerLink]="['/investigation']" [queryParams]="{ tab: 'tab1' }">
                     <div class="card-overlay"></div>
                     <div class="card-content">
                         <div class="date-header">
@@ -205,7 +206,8 @@
                 <!-- Day 24 -->
                 <div class="calendar-item fade-in-cascade" style="animation-delay: 1.2s; background-image: url('assets/img/lala.png');"
                      [class.today-card]="isToday(24, 'SEPTIEMBRE')"
-                     (mouseenter)="setHover(24)" (mouseleave)="setHover(null)">
+                     (mouseenter)="setHover(24)" (mouseleave)="setHover(null)"
+                     [routerLink]="['/lala']">
                     <div class="card-overlay"></div>
                     <div class="card-content">
                         <div class="date-header">
@@ -214,7 +216,7 @@
                         </div>
                         <div class="content-body">
                             <h4 class="category">FORMACIÓN CONSEJERÍA ACADÉMICA - LALA</h4>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Sede Cuenca</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Parroquia María Auxiliadora</p>
                         </div>
                         <div class="card-action">
                             <span class="btn-ver-mas">Ver más</span>
@@ -224,7 +226,8 @@
                 <!-- Day 25 -->
                 <div class="calendar-item fade-in-cascade" style="animation-delay: 1.3s; background-image: url('assets/img/seguridad.png');"
                      [class.today-card]="isToday(25, 'SEPTIEMBRE')"
-                     (mouseenter)="setHover(25)" (mouseleave)="setHover(null)">
+                     (mouseenter)="setHover(25)" (mouseleave)="setHover(null)"
+                     [routerLink]="['/unissma']">
                     <div class="card-overlay"></div>
                     <div class="card-content">
                         <div class="date-header">
@@ -232,6 +235,7 @@
                             <span class="month">SEPTIEMBRE</span>
                         </div>
                         <div class="content-body">
+                            <h4 class="category">UNISSMA</h4>
                             <h4 class="category">REUNIONES DE CARRERAS</h4>
                             <p class="location"><i class="fas fa-map-marker-alt"></i> Sede Cuenca</p>
                         </div>

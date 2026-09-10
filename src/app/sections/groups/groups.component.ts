@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ExcelService} from '../../services/excel.service';
 import Swal from 'sweetalert2';
-import {FirebaseService} from "../../services/firebase.service";
-import {first} from 'rxjs/operators';
 
 
 @Component({
@@ -17,31 +15,15 @@ export class GroupsComponent implements OnInit {
     pageSize: number = 12;
     currentPage: number = 1;
 
-    constructor(private excelService: ExcelService, private firebaseService: FirebaseService) {}
+    constructor(private excelService: ExcelService) {}
 
     ngOnInit(): void {
-        Promise.all([
-            this.excelService.readExcelFile('/assets/data/Grupos_66.xlsx'),
-            this.firebaseService.getUsers().pipe(first()).toPromise()
-        ]).then(([excelData, firestoreData]: any) => {
-            this.procesarDatosUnidos(excelData, firestoreData);
+        this.excelService.readExcelFile('/assets/data/Grupos_66.xlsx').then((excelData: any[]) => {
+            this.gruposOriginal = excelData;
+            this.gruposFiltrados = [...this.gruposOriginal];
         }).catch(err => {
-            console.error('Error al cargar datos:', err);
+            console.error('Error al cargar datos de Excel:', err);
         });
-    }
-
-    procesarDatosUnidos(excelData: any[], firestoreData: any[]): void {
-        // Excel ya viene como objetos usando sheet_to_json
-        this.gruposOriginal = excelData.map(excelRow => {
-            const matched = firestoreData.find(fireRow => {
-                const fireCedula = fireRow.cedula ? fireRow.cedula.toString().replace(/\D/g, '') : '';
-                const excelCedula = excelRow['CEDULA'] ? excelRow['CEDULA'].toString().replace(/\D/g, '') : '';
-                return fireCedula === excelCedula && fireCedula !== '';
-            });
-            return { ...excelRow, ...matched };
-        });
-
-        this.gruposFiltrados = [...this.gruposOriginal];
     }
 
 

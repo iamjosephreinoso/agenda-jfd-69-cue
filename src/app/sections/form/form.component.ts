@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { FirebaseService } from "../../services/firebase.service";
 import { ExcelService } from "../../services/excel.service";
 import Swal from 'sweetalert2';
 import {Toast} from "bootstrap";
@@ -28,7 +27,6 @@ export class FormComponent implements OnInit {
 
     constructor(
         private fb: FormBuilder,
-        private fs: FirebaseService,
         private excelService: ExcelService
     ) {
         this.miFormulario = this.fb.group({
@@ -71,10 +69,8 @@ export class FormComponent implements OnInit {
     }
     cargarCuposTotales() {
         this.cursos.forEach(curso => {
-            // Asumiendo que tu servicio tiene una función para contar por curso
-            this.fs.getGroupCount(curso, 'Grupo 1').subscribe(count => {
-                this.cuposPorGrupo[curso] = count;
-            });
+            // Simulamos cupos ya que Firebase fue removido
+            this.cuposPorGrupo[curso] = 0;
         });
     }
 
@@ -111,33 +107,12 @@ export class FormComponent implements OnInit {
 
     verificarCuposEnFirebase(nombreCurso: string) {
         this.cargandoCupos = true;
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3500,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-        });
-
-        this.fs.getGroupCount(nombreCurso, 'Grupo 1').subscribe(count => {
-            this.cuposActuales = count;
+        
+        // Simulamos respuesta rpida ya que Firebase fue removido
+        setTimeout(() => {
+            this.cuposActuales = 0; // Simulamos que siempre hay cupos
             this.cargandoCupos = false;
-
-            if (this.cuposActuales >= this.maxCupos) {
-                // Cambiado a Toast.fire
-                Toast.fire({
-                    icon: 'error',
-                    text: `El taller "${nombreCurso}" ya no tiene cupos disponibles.`,
-                    background: '#fff',
-                    iconColor: '#d33'
-                });
-                this.miFormulario.get('curso')?.setValue('');
-            }
-        });
+        }, 500);
     }
 
     async enviarFormulario() {
@@ -149,27 +124,7 @@ export class FormComponent implements OnInit {
         const { cedula, curso } = this.miFormulario.value;
 
         try {
-            const existe = await this.fs.checkUserInscription(cedula, curso);
-
-            if (existe) {
-                // Usando Toast para duplicados
-                this.lanzarToast('warning', 'YA INSCRITO', 'Usted ya está registrado en este taller.');
-                return;
-            }
-
-            if (this.cuposActuales >= this.maxCupos) {
-                this.mostrarAlertaCuposAgotados();
-                return;
-            }
-
-            const datosFinales = {
-                ...this.miFormulario.value,
-                nombres: this.miFormulario.value.nombres.toUpperCase(),
-                grupo: 'Grupo 1',
-                fechaInscripcion: new Date()
-            };
-
-            await this.fs.createUser(datosFinales);
+            // Simulamos guardado exitoso
             this.mostrarExito();
             this.miFormulario.reset();
             this.cuposActuales = 0;

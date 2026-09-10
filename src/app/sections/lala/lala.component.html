@@ -11,20 +11,20 @@
         </div>
         
         <div class="hero-text-container">
-            <div class="top-tag">
-                <span class="tag-text">Sede Cuenca</span>
-                <span class="tag-divider">•</span>
-                <span class="tag-text">Consejería Académica</span>
-            </div>
-
             <div class="brand-header">
                 <img src="assets/img/logoupscolor.png" alt="Logo UPS" class="hero-logo" />
             </div>
 
             <h1 class="main-title">
-                El Duelo y el<br>
-                <span class="highlight">DESARROLLO EMOCIONAL</span>
+                ACOMPAÑAMIENTO PARA LA CONSTRUCCIÓN DE <br>
+                <span class="highlight">PROYECTO DE VIDA</span>
             </h1>
+
+            <div class="top-tag">
+                <span class="tag-text">CONSEJERÍA ACADÉMICA - LALA</span>
+                <span class="tag-divider">•</span>
+                <span class="tag-text"> Sede Cuenca</span>
+            </div>
         </div>
     </section>
 
@@ -35,108 +35,231 @@
                    [ngClass]="{ 'active': activeTab === 'tab1' }"
                    [routerLink]="['/unissma_lala']"
                    [queryParams]="{ tab: 'tab1' }">
-                    Lunes, 23 de Marzo
+                    Jueves, 24 de Septiembre
                 </a>
             </li>
         </ul>
 
         <div class="tab-content mt-5">
-            <div class="tab-pane show active" *ngIf="activeTab === 'tab1'">
+            <div class="tab-pane" [ngClass]="{ 'show active': activeTab === 'tab1' }" *ngIf="activeTab === 'tab1'">
                 <ul class="timeline">
+                    <!-- 01: Momento de Oración -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">01</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">08h00 - 08h15</span><h5>Registro de Asistencia</h5></div>
-                            <div class="timeline-body"><p>María Auxiliadora</p></div>
-                            <div class="timeline-body"><p>Equipo de Coordinación y Animación del Proyecto LALA - Consejería Académica</p></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h00 - 80h15
+                                </span>
+                                <span class="card-tag">Acogida</span>
+                            </div>
+                            <h4 class="card-title">Registro de Asistencia</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Parroquia María Auxiliadora</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
+                                    <span>Equipo de Consejería Académica</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 02: Intervención del Rector -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">02</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">08h15 - 08h25</span><h5>Presentación de la Jornada</h5></div>
-                            <div class="timeline-body"><p>María Auxiliadora</p></div>
-                            <div class="timeline-body"><p>Equipo de Coordinación y Animación del Proyecto LALA - Consejería Académica</p></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h15 - 08h30
+                                </span>
+                                <span class="card-tag">Momento Espiritual</span>
+                            </div>
+                            <h4 class="card-title">Oración y Reflexión sobre la Encíclica Magnifica Humanitas</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Parroquia María Auxiliadora</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
+                                    <span>Priscila Mejía</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 02: Intervención del Rector -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">03</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">08h25 - 08h45</span><h5>Reflexión personal y motivacional</h5></div>
-                            <div class="timeline-body"><p>María Auxiliadora</p></div>
-                            <div class="timeline-body"><p>Equipo Pastoral</p></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h30 - 08h45
+                                </span>
+                                <span class="card-tag">Bienvenida</span>
+                            </div>
+                            <h4 class="card-title">Presentación de la Jornada</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Parroquia María Auxiliadora</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
+                                    <span>Lcdo. Fernando Moscoso PhD. - Vinicio Ordoñez</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 02: Intervención del Rector -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">04</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">08h45 - 10h30</span><h5>Bienestar Emocional del Docente Consejero</h5></div>
-                            <div class="timeline-body"><p>María Auxiliadora</p></div>
-                            <div class="timeline-body"><p>Fabián Auquilla</p></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h45 - 10h15
+                                </span>
+                                <span class="card-tag">Diálogo</span>
+                            </div>
+                            <h4 class="card-title">El Acompañamiento para la Construcción del Proyecto de Vida</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Parroquia María Auxiliadora</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
+                                    <span>P. Juan Francisco Flores, sdb</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-1">
+
+                    <!-- 03: Receso -->
+                    <li class="timeline-item color-1 is-break">
                         <div class="timeline-badge">05</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">10h30 - 10h50</span><h5>Receso</h5></div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 10h15 - 10h30
+                                </span>
+                                <span class="card-tag break-tag">Coffee Break</span>
+                            </div>
+
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-coffee"></i></div>
+                                <span>RECESO</span>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 04: Calidad de la Educación Superior en la Era Digital: Corresponsabilidad Docente -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">06</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">10h50 - 11h50</span><h5>Manejo del estrés y autorregulación emocional </h5></div>
-                            <div class="timeline-body"><p>María Auxiliadora</p></div>
-                            <div class="timeline-body"><p>Jessica  Ortiz</p></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 10h30 - 13h00
+                                </span>
+                                <span class="card-tag">Taller</span>
+                            </div>
+                            <h4 class="card-title">El Acompañamiento para la Construcción del Proyecto de Vida</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Parroquia María Auxiliadora</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
+                                    <span>P. Juan Francisco Flores, sdb</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-1">
+
+                    <!-- 05: Fin Jornada Matutina -->
+                    <li class="timeline-item color-1 is-break">
+                        <div class="timeline-badge">06</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i>13h00
+                                </span>
+                            </div>
+
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-utensils"></i></div>
+                                <span>FIN JORNADA MATUTINA</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 08: Taller IA -->
+                    <li class="timeline-item color-2">
                         <div class="timeline-badge">07</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">11h50 - 12H30</span><h5>Organización del tiempo y límites saludables</h5></div>
-                            <div class="timeline-body"><p>María Auxiliadora</p></div>
-                            <div class="timeline-body"><p>Jessica  Ortiz</p></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 15h00 - 15h45
+                                </span>
+                                <span class="card-tag">Diálogo</span>
+                            </div>
+                            <h4 class="card-title">Sistema de Acompañamiento Educativo Integral en Clave Pastoral</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Parroquia María Auxiliadora</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
+                                    <span>Ing. Angela Flores PhD.</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-2">
+
+                    <li class="timeline-item color-1">
                         <div class="timeline-badge">08</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">12h30</span><h5>FIN DE LA JORNADA MATUTINA</h5></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i>15h45 - 17h30
+                                </span>
+                                <span class="card-tag">Rutas Técnicas</span>
+                            </div>
+                            <h4 class="card-title">Proceso de Implementación de Mentorías para el P69: Orientaciones para su Instrumentación</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Parroquia María Auxiliadora</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
+                                    <span>Epuipo de Consejería Académica</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-1">
-                        <div class="timeline-badge">09</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">14h00 - 15h30</span><h5>Desanclaje emocional y resiliencia docente </h5></div>
-                            <div class="timeline-body"><p>María Auxiliadora</p></div>
-                            <div class="timeline-body"><p>Tatiana Patiño</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-item color-2">
-                        <div class="timeline-badge">10</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">15h30 - 15h50</span><h5>Receso</h5></div>
-                        </div>
-                    </li>
-                    <li class="timeline-item color-1">
-                        <div class="timeline-badge">11</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">15h50 - 17h20</span><h5>Acompañar sin desgastarse: herramientas prácticas</h5></div>
-                            <div class="timeline-body"><p>María Auxiliadora</p></div>
-                            <div class="timeline-body"><p>Francisco Velez</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-item color-2">
-                        <div class="timeline-badge">12</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">17h20 - 17h30</span><h5>Cierre y evaluación</h5></div>
-                            <div class="timeline-body"><p>María Auxiliadora</p></div>
-                            <div class="timeline-body"><p>Equipo de Coordinación y Animación del Proyecto LALA - Consejería Académica</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-item color-1">
-                        <div class="timeline-badge">13</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">17h30</span><h5>FIN DE LA JORNADA VESPERTINA</h5></div>
+
+
+                    <!-- 09: Fin de la Jornada Vespertina -->
+                    <li class="timeline-item color-2 is-break">
+                        <div class="timeline-badge">9</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 17h30
+                                </span>
+                            </div>
+
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-utensils"></i></div>
+                                <span>FIN JORNADA VESPERTINA</span>
+                            </div>
                         </div>
                     </li>
                 </ul>

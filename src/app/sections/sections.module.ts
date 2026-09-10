@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -10,7 +10,7 @@ import {AppModule} from "../app.module";
 import {RouterLink, RouterLinkWithHref} from "@angular/router";
 import { UnissmaComponent } from './unissma/unissma.component';
 import { LalaComponent } from './lala/lala.component';
-import { LineaComponent } from './linea/linea.component';
+import { AcademicoComponent } from './academico/academico.component';
 import { AvacComponent } from './avac/avac.component';
 import { AcreditacionComponent } from './acreditacion/acreditacion.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -30,9 +30,9 @@ const routes: Routes = [
     { path: 'teacher_training', component: TrainingComponent},
     { path: 'signup', component: MenuComponent },
     { path: 'groups', component: GroupsComponent },
-    { path: 'ovas_investigation', component: InvestigacionComponent },
-    { path: 'unissma_lala', component: UnissmaComponent},
-    { path: 'unadedvi', component: LineaComponent},
+    { path: 'investigation', component: InvestigacionComponent },
+    { path: 'unissma', component: UnissmaComponent},
+    { path: 'curriculum_reform', component: AcademicoComponent},
     { path: 'lala', component: LalaComponent},
     { path: 'acreditation', component: AcreditacionComponent},
     { path: 'avac', component: AvacComponent},
@@ -67,7 +67,7 @@ const routes: Routes = [
         TrainingComponent,
         UnissmaComponent,
         LalaComponent,
-        LineaComponent,
+        AcademicoComponent,
         AvacComponent,
         AcreditacionComponent,
         FormComponent,
