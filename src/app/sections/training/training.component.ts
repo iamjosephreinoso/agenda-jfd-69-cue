@@ -171,7 +171,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 1
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Dunia Ojeda
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 1 Guillermo Mensi
@@ -184,7 +184,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 2
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Fabian Cuesta
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 4 Guillermo Mensi
@@ -197,7 +197,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 3
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Alicia Cedeño
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 5 Guillermo Mensi
@@ -210,7 +210,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 4
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Floralba Aguilar
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 6 Guillermo Mensi
@@ -223,7 +223,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 5
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Sheila Serrano
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 7 Guillermo Mensi
@@ -236,7 +236,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 6
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Romel Rodas
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 10 Guillermo Mensi
@@ -249,7 +249,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 7
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Elena Coyago
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 13 Guillermo Mensi
@@ -262,7 +262,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 8
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Jack Bravo
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 16 Guillermo Mensi
@@ -275,7 +275,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 9
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Veronica Espinoza
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 18 Guillermo Mensi
@@ -288,7 +288,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 10
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Geovanna Zea
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 19 Guillermo Mensi
@@ -301,7 +301,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 11
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Fausto Saenz
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 20 Guillermo Mensi
@@ -314,7 +314,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 12
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Gilberto Brito
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 21 Guillermo Mensi
@@ -327,7 +327,7 @@ export class TrainingComponent implements OnInit {
                                         Grupo 13
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #555;">
-                                        Por Confirmar
+                                        Fernando Soto
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
                                         Aula 15 Mario Rizzini
