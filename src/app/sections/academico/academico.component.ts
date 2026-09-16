@@ -39,106 +39,126 @@ export class AcademicoComponent {
                         <table style="width: 100%; border-collapse: separate; border-spacing: 0 8px;">
                             <thead>
                                 <tr style="background-color: #003366; color: white;">
-                                    <th style="padding: 8px; border-radius: 12px 0 0 12px; font-weight: 600; text-align: center; font-size: 12px;">Área de Conocimiento</th>
-                                    <th style="padding: 8px; font-weight: 600; text-align: center; font-size: 12px;">Grupo</th>
-                                    <th style="padding: 8px; font-weight: 600; text-align: center; font-size: 12px;">Facilitadores</th>
+                                    <th style="padding: 8px; border-radius: 12px 0 0 12px; font-weight: 600; text-align: center; font-size: 12px;">Grupo</th>
+                                    <th style="padding: 8px; font-weight: 600; text-align: center; font-size: 12px;">Facilitador</th>
                                     <th style="padding: 8px; border-radius: 0 12px 12px 0; font-weight: 600; text-align: center; font-size: 12px;">Espacio Físico</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <!-- Grupo 1 -->
                                 <tr style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                                    <td style="padding: 10px; border-left: 6px solid #003366; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #333;">
-                                        Ciencias Administrativas y Económicas
-                                    </td>
-                                    <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
+                                    <td style="padding: 10px; border-left: 6px solid #003366; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
                                         Grupo 1
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #003366;">
-                                        <strong>Fabián Cuesta - Verónica Espinoza</strong>
+                                        <strong>Fabian Cuesta</strong>
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
-                                        Aula 1 Edificio Guillermo Mensi
+                                        Aula 1 Guillermo Mensi
                                     </td>
                                 </tr>
 
                                 <!-- Grupo 2 -->
                                 <tr style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                                    <td style="padding: 10px; border-left: 6px solid #ffcc00; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #333;">
-                                        Ciencia y Tecnología - Ciencias Exactas
-                                    </td>
-                                    <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
+                                    <td style="padding: 10px; border-left: 6px solid #ffcc00; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
                                         Grupo 2
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #003366;">
-                                        <strong>Romel Rodas - Sheila Serrano - Fernando Soto</strong>
+                                        <strong>Alicia Cedeño</strong>
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
-                                        Auditorio Leonidas Proaño
+                                        Aula 4 Guillermo Mensi
                                     </td>
                                 </tr>
 
                                 <!-- Grupo 3 -->
                                 <tr style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                                    <td style="padding: 10px; border-left: 6px solid #003366; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #333;">
-                                        Ciencias de la Vida - Ciencias de la Salud
-                                    </td>
-                                    <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
+                                    <td style="padding: 10px; border-left: 6px solid #003366; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
                                         Grupo 3
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #003366;">
-                                        <strong>Elena Coyago - Geovanna Zea</strong>
+                                        <strong>Floralba Aguilar</strong>
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
-                                        Auditorio Luis Arba
+                                        Aula 5 Guillermo Mensi
                                     </td>
                                 </tr>
 
                                 <!-- Grupo 4 -->
                                 <tr style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                                    <td style="padding: 10px; border-left: 6px solid #ffcc00; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #333;">
-                                        Ciencias Sociales y del Comportamiento Humano
-                                    </td>
-                                    <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
+                                    <td style="padding: 10px; border-left: 6px solid #ffcc00; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
                                         Grupo 4
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #003366;">
-                                        <strong>Floralba Aguilar - Gilberto Brito</strong>
+                                        <strong>Dunia Ojeda</strong>
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
-                                        Aula 4 Edificio Guillermo Mensi
+                                        Aula 6 Guillermo Mensi
                                     </td>
                                 </tr>
 
                                 <!-- Grupo 5 -->
                                 <tr style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                                    <td style="padding: 10px; border-left: 6px solid #003366; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #333;">
-                                        Educación
-                                    </td>
-                                    <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
+                                    <td style="padding: 10px; border-left: 6px solid #003366; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
                                         Grupo 5
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #003366;">
-                                        <strong>Alicia Cedeño - Fausto Sáenz</strong>
+                                        <strong>Elena Coyago</strong>
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
-                                        Aula 5 Edificio Guillermo Mensi
+                                        Aula 7 Guillermo Mensi
                                     </td>
                                 </tr>
 
                                 <!-- Grupo 6 -->
                                 <tr style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                                    <td style="padding: 10px; border-left: 6px solid #ffcc00; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #333;">
-                                        Razón y Fe
-                                    </td>
-                                    <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
+                                    <td style="padding: 10px; border-left: 6px solid #ffcc00; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
                                         Grupo 6
                                     </td>
                                     <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #003366;">
-                                        <strong>Dunia Ojeda - Merdardo Silva</strong>
+                                        <strong>Geovanna Zea</strong>
                                     </td>
                                     <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
-                                        Aula 6 Edificio Guillermo Mensi
+                                        Aula 10 Guillermo Mensi
+                                    </td>
+                                </tr>
+
+                                <!-- Grupo 7 -->
+                                <tr style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                                    <td style="padding: 10px; border-left: 6px solid #003366; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
+                                        Grupo 7
+                                    </td>
+                                    <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #003366;">
+                                        <strong>Romel Rodas</strong>
+                                    </td>
+                                    <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
+                                        Aula 13 Guillermo Mensi
+                                    </td>
+                                </tr>
+
+                                <!-- Grupo 8 -->
+                                <tr style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                                    <td style="padding: 10px; border-left: 6px solid #ffcc00; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
+                                        Grupo 8
+                                    </td>
+                                    <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #003366;">
+                                        <strong>Sheila Serrano</strong>
+                                    </td>
+                                    <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
+                                        Aula 16 Guillermo Mensi
+                                    </td>
+                                </tr>
+
+                                <!-- Grupo 9 -->
+                                <tr style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                                    <td style="padding: 10px; border-left: 6px solid #003366; border-radius: 8px 0 0 8px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; font-size: 11.5px; color: #003366; font-weight: bold; white-space: nowrap;">
+                                        Grupo 9
+                                    </td>
+                                    <td style="padding: 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left; font-size: 11.5px; color: #003366;">
+                                        <strong>Fernando Soto</strong>
+                                    </td>
+                                    <td style="padding: 10px; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 0 8px 8px 0; text-align: left; font-size: 11.5px; font-weight: bold; color: #555;">
+                                        Aula 18 Guillermo Mensi
                                     </td>
                                 </tr>
                             </tbody>

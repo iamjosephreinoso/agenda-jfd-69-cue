@@ -30,213 +30,1137 @@
     <div class="container_cro">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab1' }" (click)="activeTab = 'tab1'" role="button">Miércoles, 18 de Marzo</a>
+                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab1' }" (click)="activeTab = 'tab1'" role="button">Lunes, 21 de Septiembre</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab2' }" (click)="activeTab = 'tab2'" role="button">Jueves, 19 de Marzo</a>
+                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab2' }" (click)="activeTab = 'tab2'" role="button">Martes, 22 de Septiembre</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab3' }" (click)="activeTab = 'tab3'" role="button">Viernes, 20 de Marzo</a>
+                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab3' }" (click)="activeTab = 'tab3'" role="button">Miércoles, 23 de Septiembre</a>
             </li>
         </ul>
 
-        <!--
         <div class="tab-content mt-5">
             <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab1' }">
                 <ul class="timeline">
+                    <!-- 01: Vinculación perfiles -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">01</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">08h00 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                     <i class="fas fa-clock"></i> 08h00 - 08h15
+                                </span>
+                                <span class="card-tag">Apertura</span>
+                            </div>
+                            <h4 class="card-title">Vinculación de los Perfiles de Scopus y ORCID de los Investigadores</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 02: Apertura y encuadre -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">02</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">09h45 - 10h15</span><h5>RECESO</h5></div>
+                            <div class="card-top-bar">
+                    <span class="card-time-badge">
+                        <i class="fas fa-clock"></i> 08h15 - 08h25
+                                </span>
+                                <span class="card-tag">Taller</span>
+                            </div>
+                            <h4 class="card-title">Apertura, Encuadre del eje y Presentación de la Ficha Integrada</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 03: Bloque 1 -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">03</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">10h15 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h25 - 09h15
+                                </span>
+                                <span class="card-tag">Bloque 1</span>
+                            </div>
+                            <h4 class="card-title">Problema, Brecha y Pregunta Científica</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 04: Bloque 2 -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">04</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">12h00</span><h5>FIN JORNADA MATUTINA</h5></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 09h15 - 10h00
+                                </span>
+                                <span class="card-tag">Bloque 2</span>
+                            </div>
+                            <h4 class="card-title">Búsqueda Avanzada y Matriz de Literatura</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-1">
+
+                    <!-- 05: Receso Mañana -->
+                    <li class="timeline-item color-1 is-break">
                         <div class="timeline-badge">05</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">14h00 - 16h00</span><h5>Talleres de Investigación</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                    <span class="card-time-badge">
+                        <i class="fas fa-clock"></i> 10h00 - 10h15
+                    </span>
+                                <span class="card-tag break-tag">Coffee Break</span>
+                            </div>
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-coffee"></i></div>
+                                <span>RECESO</span>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 06: Bloque 3 -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">06</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">16h00 - 16h15</span><h5>RECESO</h5></div>
+                            <div class="card-top-bar">
+                            <span class="card-time-badge">
+                                <i class="fas fa-clock"></i> 10h15 - 10h50
+                            </span>
+                                <span class="card-tag">Bloque 3</span>
+                            </div>
+                            <h4 class="card-title">Datos Abiertos: Selección, Evaluación y Trazabilidad</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 07: Bloque 4 -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">07</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">16h15 - 18h00</span><h5>Talleres de Investigación</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                            <span class="card-time-badge">
+                                <i class="fas fa-clock"></i> 10h50 - 11h25
+                            </span>
+                                <span class="card-tag">Bloque 4</span>
+                            </div>
+                            <h4 class="card-title">Revistas JCR Q1/Q2: selección y alcance editorial</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 08: Bloque 5 -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">08</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">18h00</span><h5>FIN DE LA JORNADA</h5></div>
+                            <div class="card-top-bar">
+                            <span class="card-time-badge">
+                                <i class="fas fa-clock"></i> 11h25 - 11h50
+                            </span>
+                                <span class="card-tag">Bloque 5</span>
+                            </div>
+                            <h4 class="card-title">Uso Responsable de Inteligencia Artificial Generativa (ChatGPT)</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 09: Cierre Mañana -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">09</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                            <span class="card-time-badge">
+                                <i class="fas fa-clock"></i> 11h50 - 12h00
+                            </span>
+                                <span class="card-tag">Cierre</span>
+                            </div>
+                            <h4 class="card-title">Entrega y Retroalimentación de la Ficha Integrada mediante Lista de Cotejo</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 10: Receso Almuerzo -->
+                    <li class="timeline-item color-2 is-break">
+                        <div class="timeline-badge">10</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                            <span class="card-time-badge">
+                                <i class="fas fa-clock"></i> 12h00 - 14h00
+                            </span>
+                            </div>
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-utensils"></i></div>
+                                <span>FIN DE LA JORNADA MATUTINA</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 11: Apertura Tarde -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">11</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                            <span class="card-time-badge">
+                                <i class="fas fa-clock"></i> 14h00 - 14h10
+                            </span>
+                                <span class="card-tag">Apertura</span>
+                            </div>
+                            <h4 class="card-title">Retroalimentación Breve de la Ficha Integrada y transición al Trabajo Aplicado en Overleaf-Mendeley</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 12: Bloque 1 Aplicación -->
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">12</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                            <span class="card-time-badge">
+                                <i class="fas fa-clock"></i> 14h10 - 15h05
+                            </span>
+                                <span class="card-tag">Bloque 1</span>
+                            </div>
+                            <h4 class="card-title">Redacción de la Ficha de Contribución y el Título Provisional</h4>
+                            <div class="card-meta">
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                            </div>
+                        </div>
+                        </div>
+                    </li>
+
+                    <!-- 13: Bloque 2 Aplicación -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">13</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                            <span class="card-time-badge">
+                                <i class="fas fa-clock"></i> 15h05 - 16h00
+                            </span>
+                                <span class="card-tag">Bloque 2</span>
+                            </div>
+                            <h4 class="card-title">Construcción de la Matriz de Antecedentes</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 14: Receso Tarde -->
+                    <li class="timeline-item color-2 is-break">
+                        <div class="timeline-badge">14</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                            <span class="card-time-badge">
+                                <i class="fas fa-clock"></i> 16h00 - 16h15
+                            </span>
+                                <span class="card-tag break-tag">Coffee Break</span>
+                            </div>
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-coffee"></i></div>
+                                <span>RECESO</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 15: Bloque 3 Aplicación -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">15</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                    <span class="card-time-badge">
+                        <i class="fas fa-clock"></i> 16h15 - 16h50
+                    </span>
+                                <span class="card-tag">Bloque 3</span>
+                            </div>
+                            <h4 class="card-title">Selección del Dataset Principal</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 16: Bloque 4 Aplicación -->
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">16</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 16h50 - 17h25
+                                </span>
+                                <span class="card-tag">Bloque 4</span>
+                            </div>
+                            <h4 class="card-title">Elaboración de la Matriz Comparativa de Revistas</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 17: Bloque 5 Aplicación -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">17</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 17h25 - 17h50
+                                </span>
+                                <span class="card-tag">Bloque 5</span>
+                            </div>
+                            <h4 class="card-title">Registro Inicial del Uso de ChatGPT</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 18: Cierre General -->
+                    <li class="timeline-item color-2 is-break">
+                        <div class="timeline-badge">18</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 17h50 - 18h00
+                                </span>
+                                <span class="card-tag break-tag">Cierre</span>
+                            </div>
+                            <h4 class="card-title">Entrega Final de la Ficha Integrada del Protocolo Científico Reproducible y Retroalimentación mediante Lista de Cotejo</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="timeline-item color-1 is-break">
+                        <div class="timeline-badge">19</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 18h00
+                                </span>
+                            </div>
+
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-home"></i></div>
+                                <span>FIN JORNADA VESPERTINA</span>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
 
-            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab2' }">
+            <div class="tab-pane" [ngClass]="{ 'show active': activeTab === 'tab2' }" *ngIf="activeTab === 'tab2'">
                 <ul class="timeline">
+                    <!-- 01: Apertura Mañana -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">01</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">08h00 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h00 - 08h10
+                                </span>
+                                <span class="card-tag">Apertura</span>
+                            </div>
+                            <h4 class="card-title">Apertura, Encuadre del Eje y Presentación de la Ficha Integrada</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 02: Bloque 1 -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">02</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">09h45 - 10h15</span><h5>RECESO</h5></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h10 - 08h35
+                                </span>
+                                <span class="card-tag">Bloque 1</span>
+                            </div>
+                            <h4 class="card-title">Arquitectura y Lenguaje del Artículo Científico</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 03: Bloque 2 -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">03</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">10h15 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h35 - 09h15
+                                </span>
+                                <span class="card-tag">Bloque 2</span>
+                            </div>
+                            <h4 class="card-title">Metodología que Puede Escribirse y Replicarse</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 04: Bloque 3 -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">04</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">12h00</span><h5>FIN JORNADA MATUTINA</h5></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 09h15 - 10h00
+                                </span>
+                                <span class="card-tag">Bloque 3</span>
+                            </div>
+                            <h4 class="card-title">Calidad, Depuración y Manejo de Bases de Datos</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-1">
+
+                    <!-- 05: Receso Mañana -->
+                    <li class="timeline-item color-1 is-break">
                         <div class="timeline-badge">05</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">14h00 - 16h00</span><h5>Talleres de Investigación</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo3()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 10h00 - 10h15
+                                </span>
+                                <span class="card-tag break-tag">Coffee Break</span>
+                            </div>
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-coffee"></i></div>
+                                <span>RECESO</span>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 06: Bloque 4 -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">06</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">16h00 - 16h15</span><h5>RECESO</h5></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 10h15 - 10h45
+                                </span>
+                                <span class="card-tag">Bloque 4</span>
+                            </div>
+                            <h4 class="card-title">Del Objetivo al Análisis Estadístico</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 07: Bloque 5 -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">07</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">16h15 - 18h00</span><h5>Talleres de Investigación</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo3()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 10h45 - 11h15
+                                </span>
+                                <span class="card-tag">Bloque 5</span>
+                            </div>
+                            <h4 class="card-title">Redacción de Metodología y Resultados Estadísticos</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 08: Bloque 6 -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">08</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">18h00</span><h5>FIN DE LA JORNADA</h5></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 11h15 - 11h35
+                                </span>
+                                <span class="card-tag">Bloque 6</span>
+                            </div>
+                            <h4 class="card-title">Revisión Bibliográfica, Citación y Gestión de Referencias</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 09: Bloque 7 -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">09</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 11h35 - 11h50
+                                </span>
+                                <span class="card-tag">Bloque 7</span>
+                            </div>
+                            <h4 class="card-title">Discusión e Integración del Artículo</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 10: Cierre Mañana -->
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">10</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 11h50 - 12h00
+                                </span>
+                                <span class="card-tag">Cierre</span>
+                            </div>
+                            <h4 class="card-title">Entrega y Retroalimentación de la Ficha Integrada mediante Lista de Cotejo</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 11: Receso Almuerzo -->
+                    <li class="timeline-item color-1 is-break">
+                        <div class="timeline-badge">11</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 12h00 - 14h00
+                                </span>
+                            </div>
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-utensils"></i></div>
+                                <span>FIN DE LA JORNADA MATUTINA</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 12: Apertura Tarde -->
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">12</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 14h00 - 14h10
+                                </span>
+                                <span class="card-tag">Apertura</span>
+                            </div>
+                            <h4 class="card-title">Retroalimentación Breve de la Ficha Integrada y Transición al Trabajo Aplicado en Overleaf-Mendeley</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 13: Bloque 1 Aplicación -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">13</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 14h10 - 15h05
+                                </span>
+                                <span class="card-tag">Bloque 1</span>
+                            </div>
+                            <h4 class="card-title">Construcción de la Arquitectura Argumental del Artículo</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 14: Bloque 2 Aplicación -->
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">14</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 15h05 - 16h00
+                                </span>
+                                <span class="card-tag">Bloque 2</span>
+                            </div>
+                            <h4 class="card-title">Configuración del Proyecto Compartido en Overleaf</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 15: Receso Tarde -->
+                    <li class="timeline-item color-1 is-break">
+                        <div class="timeline-badge">15</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 16h00 - 16h15
+                                </span>
+                                <span class="card-tag break-tag">Coffee Break</span>
+                            </div>
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-coffee"></i></div>
+                                <span>RECESO</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 16: Bloque 3 Aplicación -->
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">16</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 16h15 - 16h50
+                                </span>
+                                <span class="card-tag">Bloque 3</span>
+                            </div>
+                            <h4 class="card-title">Elaboración de la Matriz de Alineación</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 17: Bloque 4 Aplicación -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">17</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 16h50 - 17h25
+                                </span>
+                                <span class="card-tag">Bloque 4</span>
+                            </div>
+                            <h4 class="card-title">Revisión Lingüística del Resumen y Secciones Redactadas</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 18: Bloque 5 Aplicación -->
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">18</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 17h25 - 17h50
+                                </span>
+                                <span class="card-tag">Bloque 5</span>
+                            </div>
+                            <h4 class="card-title">Redacción de Declaraciones Editoriales Preliminares</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 19: Cierre General -->
+                    <li class="timeline-item color-1 is-break">
+                        <div class="timeline-badge">19</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 17h50 - 18h00
+                                </span>
+                                <span class="card-tag break-tag">Cierre</span>
+                            </div>
+                            <h4 class="card-title">Entrega Final de la Ficha Integrada para la Construcción de un Artículo Científico y Retroalimentación mediante Lista de Cotejo</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item color-2 is-break">
+                        <div class="timeline-badge">20</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 18h00
+                                </span>
+                            </div>
+
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-home"></i></div>
+                                <span>FIN JORNADA VESPERTINA</span>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
 
-            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab3' }">
+            <div class="tab-pane" [ngClass]="{ 'show active': activeTab === 'tab3' }" *ngIf="activeTab === 'tab3'">
                 <ul class="timeline">
+                    <!-- 01: Apertura Mañana -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">01</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">08h00 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h00 - 08h10
+                                </span>
+                                <span class="card-tag">Apertura</span>
+                            </div>
+                            <h4 class="card-title">Apertura, Encuadre del Eje y Presentación de la Ficha Integrada</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 02: Bloque 1 -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">02</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">09h45 - 10h15</span><h5>RECESO</h5></div>
+                            <div class="card-top-bar">
+                            <span class="card-time-badge">
+                                <i class="fas fa-clock"></i> 08h10 - 09h00
+                            </span>
+                                <span class="card-tag">Bloque 1</span>
+                            </div>
+                            <h4 class="card-title">Ambiente Reproducible con Python</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 03: Bloque 2 -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">03</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">10h15 - 12h00</span><h5>Taller de Elaboración de Instrumentos de Valoración de OVAS</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo2()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 09h00 - 10h00
+                                </span>
+                                <span class="card-tag">Bloque 2</span>
+                            </div>
+                            <h4 class="card-title">Importación, Depuración y Calidad del Dato</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li class="timeline-item color-2">
+
+                    <!-- 04: Receso Mañana -->
+                    <li class="timeline-item color-2 is-break">
                         <div class="timeline-badge">04</div>
-                        <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">12h00</span><h5>FIN JORNADA MATUTINA</h5></div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 10h00 - 10h15
+                                </span>
+                                <span class="card-tag break-tag">Coffee Break</span>
+                            </div>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-coffee"></i></div>
+                                    <span>RECESO</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 05: Bloque 3 -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">05</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">14h00 - 16h00</span><h5>Talleres de Investigación</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo4()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 10h15 - 10h50
+                                </span>
+                                <span class="card-tag">Bloque 3</span>
+                            </div>
+                            <h4 class="card-title">Análisis Exploratorio, Método Científico, Métricas, Validación y Sensibilidad</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 06: Bloque 4 -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">06</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">16h00 - 16h15</span><h5>RECESO</h5></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 10h50 - 11h25
+                                </span>
+                                <span class="card-tag">Bloque 4</span>
+                            </div>
+                            <h4 class="card-title">Construcción de la HMI-Dashboard</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 07: Bloque 5 -->
                     <li class="timeline-item color-1">
                         <div class="timeline-badge">07</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">16h15 - 18h00</span><h5>Talleres de Investigación</h5></div>
-                            <div class="timeline-body"><p>Auditorios Edificio Guillermo Mensi</p></div>
-                            <p><button (click)="showGroupInfo4()" style="background-color: #003366; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.8rem">Ver Ubicaciones</button></p>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 11h25 - 11h50
+                                </span>
+                                <span class="card-tag">Bloque 5</span>
+                            </div>
+                            <h4 class="card-title">Figuras Vectoriales, Tablas LaTeX e Integración en Overleaf</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 08: Cierre Mañana -->
                     <li class="timeline-item color-2">
                         <div class="timeline-badge">08</div>
                         <div class="timeline-panel">
-                            <div class="timeline-meta"><span class="time">18h00</span><h5>FIN DE LA JORNADA</h5></div>
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 11h50 - 12h00
+                                </span>
+                                <span class="card-tag">Cierre</span>
+                            </div>
+                            <h4 class="card-title">Entrega y Retroalimentación de la Ficha Integrada mediante Lista de Cotejo</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
                         </div>
                     </li>
+
+                    <!-- 09: Receso Almuerzo -->
+                    <li class="timeline-item color-1 is-break">
+                        <div class="timeline-badge">09</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                            <span class="card-time-badge">
+                                <i class="fas fa-clock"></i> 12h00 - 14h00
+                            </span>
+                            </div>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-utensils"></i></div>
+                                    <span>RECESO ALMUERZO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 10: Apertura Tarde -->
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">10</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 14h00 - 14h10
+                                </span>
+                                <span class="card-tag">Apertura</span>
+                            </div>
+                            <h4 class="card-title">Retroalimentación Breve de la Ficha Integrada y Transición al Trabajo Aplicado en Overleaf-Mendeley</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 11: Paso 1 -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">11</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 14h10 - 14h40
+                                </span>
+                                <span class="card-tag">Paso 1</span>
+                            </div>
+                            <h4 class="card-title">Búsqueda y Selección de un Dataset Abierto Pertinente</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 12: Paso 2A -->
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">12</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 14h40 - 15h15
+                                </span>
+                                <span class="card-tag">Paso 2A</span>
+                            </div>
+                            <h4 class="card-title">Selección de Heurística/Algoritmo con Apoyo de ChatGPT</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 13: Paso 2B -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">13</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 15h15 - 16h00
+                                </span>
+                                <span class="card-tag">Paso 2B</span>
+                            </div>
+                            <h4 class="card-title">Construcción del HMI-dashboard en Python Mediante Ingeniería de Prompts</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 14: Receso Tarde -->
+                    <li class="timeline-item color-2 is-break">
+                        <div class="timeline-badge">14</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 16h00 - 16h15
+                                </span>
+                                <span class="card-tag break-tag">Coffee Break</span>
+                            </div>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-coffee"></i></div>
+                                    <span>RECESO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 15: Paso 3 -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">15</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 16h15 - 17h00
+                                </span>
+                                <span class="card-tag">Paso 3</span>
+                            </div>
+                            <h4 class="card-title">Generación del Archivo .bib para Overleaf con ChatGPT</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 16: Paso 4 -->
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">16</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 17h00 - 17h50
+                                </span>
+                                <span class="card-tag">Paso 4</span>
+                            </div>
+                            <h4 class="card-title">Redacción Asistida por ChatGPT en Overleaf</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 17: Cierre General -->
+                    <li class="timeline-item color-1 is-break">
+                        <div class="timeline-badge">17</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 17h50 - 18h00
+                                </span>
+                                <span class="card-tag break-tag">Cierre</span>
+                            </div>
+                            <h4 class="card-title">Entrega Final de la Ficha Integrada, HMI-dashboard, archivo .bib y Secciones Redactadas, con Retroalimentación Mediante Lista de COtejo</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Salas de Computo - Edificio Cornelio Merchán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 09: Fin de la Jornada Vespertina -->
+                    <li class="timeline-item color-2 is-break">
+                        <div class="timeline-badge">18</div>
+                        <div class="timeline-panel break-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 18h00
+                                </span>
+                            </div>
+
+                            <div class="meta-row location">
+                                <div class="meta-icon"><i class="fas fa-home"></i></div>
+                                <span>FIN JORNADA VESPERTINA</span>
+                            </div>
+                        </div>
+                    </li>
+
                 </ul>
             </div>
-        </div>
 
-        -->
-
-        <div class="under-construction-container">
-            <div class="construction-icon">
-                <!-- Usa FontAwesome para el ícono de herramientas -->
-                <i class="fas fa-tools"></i>
-            </div>
-            <h2 class="construction-title">Cronograma en Construcción</h2>
-            <p class="construction-message">
-                ¡Vuelva muy pronto para conocer todos los detalles sobre las Jornadas de Investigación!
-            </p>
         </div>
 
     </div>

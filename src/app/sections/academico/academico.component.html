@@ -16,8 +16,8 @@
             </div>
 
             <h1 class="main-title">
-                JORNADAS DE TÉCNICAS DE RÚBRICAS <br>
-                <span class="highlight">Y AULAS BASES</span>
+                JORNADAS <br>
+                <span class="highlight">TÉCNICAS</span>
             </h1>
 
             <div class="top-tag">
@@ -30,14 +30,16 @@
     <div class="container_cro">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab1' }" (click)="activeTab = 'tab1'" role="button">Miércoles, 16 de Septiembre</a>
+                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab1' }" (click)="activeTab = 'tab1'" role="button">Jueves, 17 de Septiembre</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab2' }" (click)="activeTab = 'tab2'" role="button">Jueves, 17 de Septiembre</a>
+                <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab2' }" (click)="activeTab = 'tab2'" role="button">Viernes, 18 de Septiembre</a>
             </li>
+            <!--
             <li class="nav-item">
                 <a class="nav-link" [ngClass]="{ 'active': activeTab === 'tab3' }" (click)="activeTab = 'tab3'" role="button">Viernes, 18 de Septiembre</a>
             </li>
+            -->
         </ul>
 
         <div class="tab-content mt-5">
@@ -49,11 +51,11 @@
                         <div class="timeline-panel">
                             <div class="card-top-bar">
                                 <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i> 08h30 - 10h15
+                                    <i class="fas fa-clock"></i> 08h30 - 08h40
                                 </span>
-                                <span class="card-tag">Conferencia</span>
+                                <span class="card-tag">Inauguración</span>
                             </div>
-                            <h4 class="card-title">Encuesta para Empleadores y Graduados</h4>
+                            <h4 class="card-title">Momento de Oración</h4>
                             <div class="card-meta">
                                 <div class="meta-row location">
                                     <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -61,7 +63,57 @@
                                 </div>
                                 <div class="meta-row speaker">
                                     <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
-                                    <span>German Parra - Wilson Calle</span>
+                                    <span>Departamento de Pastoral</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <!-- 04: Calidad de la Educación Superior en la Era Digital: Corresponsabilidad Docente -->
+                    <li class="timeline-item color-2">
+                        <div class="timeline-badge">02</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 08h40 - 09h10
+                                </span>
+                                <span class="card-tag">Síntesis</span>
+                            </div>
+                            <h4 class="card-title">Síntesis de los Talleres 2 y 3</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Teatro Carlos Crespi</span>
+                                </div>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
+                                    <span>Lcda. Alicia Cedeño Mgtr.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 04: Calidad de la Educación Superior en la Era Digital: Corresponsabilidad Docente -->
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">03</div>
+                        <div class="timeline-panel">
+                            <div class="card-top-bar">
+                                <span class="card-time-badge">
+                                    <i class="fas fa-clock"></i> 09h10 - 11h10
+                                </span>
+                                <span class="card-tag">Taller 4</span>
+                            </div>
+                            <h4 class="card-title">Transformación y Proyección Dentro del Macrocurrículo, Aportes de Cada Área</h4>
+                            <div class="card-meta">
+                                <div class="meta-row location">
+                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <span>Edificio Guillermo Mensi</span>
+                                </div>
+                                <div class="card-action">
+                                    <button class="btn-location-pill" (click)="showGroupInfoEncuesta()">
+                                        <i class="fas fa-location-dot"></i> Ver Ubicaciones
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -69,11 +121,11 @@
 
                     <!-- 03: Receso -->
                     <li class="timeline-item color-2 is-break">
-                        <div class="timeline-badge">02</div>
+                        <div class="timeline-badge">04</div>
                         <div class="timeline-panel break-panel">
                             <div class="card-top-bar">
                                 <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i> 10h15 - 10h35
+                                    <i class="fas fa-clock"></i> 11h10 - 11h30
                                 </span>
                                 <span class="card-tag break-tag">Coffee Break</span>
                             </div>
@@ -86,25 +138,24 @@
                     </li>
 
                     <!-- 04: Calidad de la Educación Superior en la Era Digital: Corresponsabilidad Docente -->
-                    <li class="timeline-item color-2">
-                        <div class="timeline-badge">03</div>
+                    <li class="timeline-item color-1">
+                        <div class="timeline-badge">05</div>
                         <div class="timeline-panel">
                             <div class="card-top-bar">
                                 <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i> 10h35 - 12h30
+                                    <i class="fas fa-clock"></i> 11h30 - 13h00
                                 </span>
-                                <span class="card-tag">Taller</span>
+                                <span class="card-tag">Plenaria</span>
                             </div>
-                            <h4 class="card-title">Encuesta para Empleadores y Graduados</h4>
+                            <h4 class="card-title">Plenaria Taller 4</h4>
                             <div class="card-meta">
                                 <div class="meta-row location">
                                     <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                    <span>Edificio Guillermo Mensi</span>
+                                    <span>Teatro Carlos Crespi</span>
                                 </div>
-                                <div class="card-action">
-                                    <button class="btn-location-pill" (click)="showGroupInfoEncuesta()">
-                                        <i class="fas fa-location-dot"></i> Ver Ubicaciones
-                                    </button>
+                                <div class="meta-row speaker">
+                                    <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
+                                    <span>Directores y Delegados del Área</span>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +167,7 @@
                         <div class="timeline-panel break-panel">
                             <div class="card-top-bar">
                                 <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i>12h30
+                                    <i class="fas fa-clock"></i>13h00
                                 </span>
                             </div>
 
@@ -129,15 +180,15 @@
 
                     <!-- 08: Taller IA -->
                     <li class="timeline-item color-2">
-                        <div class="timeline-badge">05</div>
+                        <div class="timeline-badge">07</div>
                         <div class="timeline-panel">
                             <div class="card-top-bar">
                                 <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i> 15h00 - 16h30
+                                    <i class="fas fa-clock"></i> 15h00 - 16h00
                                 </span>
                                 <span class="card-tag">Conferencia</span>
                             </div>
-                            <h4 class="card-title">Análisis de la Rúbrica y Actividades de Valoración de las Asignaturas Sumativas</h4>
+                            <h4 class="card-title">Herramientas para el Diagnósticos del Perfil de Egreso en la Construcción del Currículo</h4>
                             <div class="card-meta">
                                 <div class="meta-row location">
                                     <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -145,39 +196,23 @@
                                 </div>
                                 <div class="meta-row speaker">
                                     <div class="meta-icon"><i class="fas fa-user-tie"></i></div>
-                                    <span>Directores del Área de Conocimiento</span>
+                                    <span>Germán Parra</span>
                                 </div>
                             </div>
                         </div>
                     </li>
 
-                    <li class="timeline-item color-2 is-break">
-                        <div class="timeline-badge">06</div>
-                        <div class="timeline-panel break-panel">
-                            <div class="card-top-bar">
-                                <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i> 16h30 - 16h50
-                                </span>
-                                <span class="card-tag break-tag">Coffee Break</span>
-                            </div>
-
-                            <div class="meta-row location">
-                                <div class="meta-icon"><i class="fas fa-coffee"></i></div>
-                                <span>RECESO</span>
-                            </div>
-                        </div>
-                    </li>
-
+                    <!-- 04: Calidad de la Educación Superior en la Era Digital: Corresponsabilidad Docente -->
                     <li class="timeline-item color-1">
-                        <div class="timeline-badge">07</div>
+                        <div class="timeline-badge">08</div>
                         <div class="timeline-panel">
                             <div class="card-top-bar">
                                 <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i>16h50 - 18h00
+                                    <i class="fas fa-clock"></i> 16h00 - 18h00
                                 </span>
-                                <span class="card-tag">Taller</span>
+                                <span class="card-tag">Taller 5</span>
                             </div>
-                            <h4 class="card-title">Análisis de la Rúbrica y Actividades de Valoración de las Asignaturas Sumativas</h4>
+                            <h4 class="card-title">Elaboración de Herramientas para el Diagnóstico del Perfil de Egreso</h4>
                             <div class="card-meta">
                                 <div class="meta-row location">
                                     <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -192,10 +227,9 @@
                         </div>
                     </li>
 
-
                     <!-- 09: Fin de la Jornada Vespertina -->
                     <li class="timeline-item color-2 is-break">
-                        <div class="timeline-badge">08</div>
+                        <div class="timeline-badge">09</div>
                         <div class="timeline-panel break-panel">
                             <div class="card-top-bar">
                                 <span class="card-time-badge">
@@ -382,177 +416,6 @@
                 </ul>
             </div>
 
-            <div class="tab-pane fade" [ngClass]="{ 'show active': activeTab === 'tab3' }">
-                <ul class="timeline">
-                    <!-- 01: Momento de Oración -->
-                    <li class="timeline-item color-1">
-                        <div class="timeline-badge">01</div>
-                        <div class="timeline-panel">
-                            <div class="card-top-bar">
-                                <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i> 08h30 - 10h15
-                                </span>
-                                <span class="card-tag">Taller</span>
-                            </div>
-                            <h4 class="card-title">Estructuración del Aula Base y Discusión Microcurricular</h4>
-                            <div class="card-meta">
-                                <div class="meta-row location">
-                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                    <span>Edificio Guillermo Mensi</span>
-                                </div>
-                                <div class="card-action">
-                                    <button class="btn-location-pill" (click)="showGroupInfoEncuesta()">
-                                        <i class="fas fa-location-dot"></i> Ver Ubicaciones
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- 03: Receso -->
-                    <li class="timeline-item color-2 is-break">
-                        <div class="timeline-badge">02</div>
-                        <div class="timeline-panel break-panel">
-                            <div class="card-top-bar">
-                                <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i> 10h15 - 10h35
-                                </span>
-                                <span class="card-tag break-tag">Coffee Break</span>
-                            </div>
-
-                            <div class="meta-row location">
-                                <div class="meta-icon"><i class="fas fa-coffee"></i></div>
-                                <span>RECESO</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- 04: Calidad de la Educación Superior en la Era Digital: Corresponsabilidad Docente -->
-                    <li class="timeline-item color-2">
-                        <div class="timeline-badge">03</div>
-                        <div class="timeline-panel">
-                            <div class="card-top-bar">
-                                <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i> 10h35 - 12h30
-                                </span>
-                                <span class="card-tag">Taller</span>
-                            </div>
-                            <h4 class="card-title">Estructuración del Aula Base y Discusión Microcurricular</h4>
-                            <div class="card-meta">
-                                <div class="meta-row location">
-                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                    <span>Edificio Guillermo Mensi</span>
-                                </div>
-                                <div class="card-action">
-                                    <button class="btn-location-pill" (click)="showGroupInfoEncuesta()">
-                                        <i class="fas fa-location-dot"></i> Ver Ubicaciones
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- 05: Fin Jornada Matutina -->
-                    <li class="timeline-item color-1 is-break">
-                        <div class="timeline-badge">04</div>
-                        <div class="timeline-panel break-panel">
-                            <div class="card-top-bar">
-                                <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i>12h30
-                                </span>
-                            </div>
-
-                            <div class="meta-row location">
-                                <div class="meta-icon"><i class="fas fa-utensils"></i></div>
-                                <span>FIN JORNADA MATUTINA</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- 08: Taller IA -->
-                    <li class="timeline-item color-2">
-                        <div class="timeline-badge">05</div>
-                        <div class="timeline-panel">
-                            <div class="card-top-bar">
-                                <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i> 15h00 - 16h30
-                                </span>
-                                <span class="card-tag">Taller</span>
-                            </div>
-                            <h4 class="card-title">Presentación de las Aulas Base</h4>
-                            <div class="card-meta">
-                                <div class="meta-row location">
-                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                    <span>Edificio Guillermo Mensi</span>
-                                </div>
-                                <div class="card-action">
-                                    <button class="btn-location-pill" (click)="showGroupInfoEncuesta()">
-                                        <i class="fas fa-location-dot"></i> Ver Ubicaciones
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="timeline-item color-2 is-break">
-                        <div class="timeline-badge">06</div>
-                        <div class="timeline-panel break-panel">
-                            <div class="card-top-bar">
-                                <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i> 16h30 - 16h50
-                                </span>
-                                <span class="card-tag break-tag">Coffee Break</span>
-                            </div>
-
-                            <div class="meta-row location">
-                                <div class="meta-icon"><i class="fas fa-coffee"></i></div>
-                                <span>RECESO</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="timeline-item color-1">
-                        <div class="timeline-badge">07</div>
-                        <div class="timeline-panel">
-                            <div class="card-top-bar">
-                                <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i>16h50 - 18h00
-                                </span>
-                                <span class="card-tag">Taller</span>
-                            </div>
-                            <h4 class="card-title">Presentación de las Aulas Base</h4>
-                            <div class="card-meta">
-                                <div class="meta-row location">
-                                    <div class="meta-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                    <span>Edificio Guillermo Mensi</span>
-                                </div>
-                                <div class="card-action">
-                                    <button class="btn-location-pill" (click)="showGroupInfoEncuesta()">
-                                        <i class="fas fa-location-dot"></i> Ver Ubicaciones
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- 09: Fin de la Jornada Vespertina -->
-                    <li class="timeline-item color-2 is-break">
-                        <div class="timeline-badge">08</div>
-                        <div class="timeline-panel break-panel">
-                            <div class="card-top-bar">
-                                <span class="card-time-badge">
-                                    <i class="fas fa-clock"></i> 18h00
-                                </span>
-                            </div>
-
-                            <div class="meta-row location">
-                                <div class="meta-icon"><i class="fas fa-home"></i></div>
-                                <span>FIN JORNADA VESPERTINA</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
         </div>
     </div>
 </div>
